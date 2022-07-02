@@ -1,0 +1,364 @@
+
+/* Formateo */
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  *{
+    padding: 0;
+    margin: 0;
+  }
+    li{
+      list-style-type: none;
+    }
+  a{
+    text-decoration: none;
+    color: #000000;
+  }
+
+
+
+/* Import de fuentes */
+
+  @font-face {
+    font-family: "Lobster";
+    src: url(../Fonts/Lobster-Regular.ttf);
+ }
+
+
+
+
+  /* nav */
+  nav {
+    position: relative;
+    height: 130px;
+    background-color: #15243a;
+  }
+
+  .navbar__div__top{
+    height: 60%;
+    padding: 0px 150px;
+    display: grid;
+    background-color: #15243a;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100%;
+    
+  }
+  .navbar__div__bot{
+    height: 40%;
+    display: grid;
+    background-color: #263957;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 100%;
+    
+  }
+
+  .navbar__logo__div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .a__logo{
+    height: 100%;
+  }
+  .navbar__logo{
+    height: 100%;
+    padding: 10px 0 10px 50px;
+  }
+
+
+  /* botones centrales del nav */
+
+  .navbar__sports__div{
+    width: 100%;
+    align-self: center;
+    
+  }
+
+  .navbar__ul{
+    margin: auto;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .navbar__li{
+    list-style-type: none;
+    background-color: #5b79d2;
+    padding: 5px 10px;
+    border-radius: 20px;
+    
+  }
+
+  .navbar__central__buttons{
+    font-family: sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+  }
+
+  .navbar__central__buttons:hover{
+    color: #A6A6A6; /* ya esta checkeado con la herramienta de adobe */
+  }
+
+  .navbar__li__icons{
+    width: 14px;
+  }
+
+  /* botones a la derecha del nav */
+  .navbar__buttons__div__right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .navbar__right__buttons{
+    margin: 0 5% 0 5%;
+    width: 25px;
+  }
+
+  .navbar__right__buttons:hover{
+    filter: invert(69%) sepia(2%) saturate(70%) hue-rotate(29deg) brightness(98%) contrast(86%); /* debido a que es un svg no puedo utilizar color para cambiar el color por lo que utilizo un filtro */
+  }
+
+ 
+  /*Contenido general--------------------------*/
+
+  section{
+    display: flex;
+    
+  }
+  /*fin general--------------------------------*/
+
+  /*contenido de la izquierda------------------*/
+  .div__left{
+    width: 20%;
+    height: 650px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 300px;
+    align-items: center;
+
+  }
+  .left__li__div{
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+  }
+  /* fin del contenido de la izquierda---------*/
+
+
+
+
+  /*contenido del medio------------------------*/
+  .div__mid{
+    width: 60%;
+    height: 650px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .mid__div__1{
+    background-color: #fff;
+    width: 80%;
+    height: 20%;
+    border-bottom: 2px solid #15243a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .mid__div__2{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: #fff;
+    width: 80%;
+    height: 20%;
+    background-color: #e4e4e4;
+    border: 2px solid #15243a;
+  }
+
+  /* partido arriba */
+  .p__top__mid__div__2{
+    padding: 5% 0 0 5%;
+  }
+
+  .div__top__mid__div__2{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    
+    
+  }
+
+  .live__div__top{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+  }
+  .live__top__mid__div__2{
+    color: red;
+    width: fit-content;
+  }
+  .live__top{
+    margin-left: 2%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: red;
+
+  }
+
+  .div__match__top{
+    display: flex;
+    padding-bottom: 5%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .p__match__top{
+    font-size: 1.2rem;
+  }
+  /* fin partido de arriba */
+
+
+  /*fin del contenido del medio----------------*/
+
+
+
+  /*contenido de la derecha--------------------*/
+  .div__right{
+    width: 20%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  .div__right__special{
+    width: 85%;
+    height: 150px;
+    background-color: #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 3px solid #15243a;
+
+  }
+  .add{
+    width: 85%;
+    height: 400px;
+    
+  }
+
+  .add img{
+    width: 100%;
+    
+  }
+  /*fin del contenido de la derecha------------*/
+
+
+
+  /*Footer-------------------------------------*/
+  footer{
+    height: 200px;
+    width: 100%;
+    background-color: #252525;
+    display: flex;
+    padding: 10px;
+    color: #575656;
+  }
+  /*subtitulos*/
+  footer h3{
+    color: hsl(0, 0%, 100%);
+  }
+  footer h4{
+    color: #fff;
+  }
+  /*-----------*/
+
+  .footer__logo__div{
+   
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .footer__logo{
+    height: 70%;
+    padding: 10px 0 10px 50px;
+  }
+
+  .footer__text__div{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .text__div__1{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-around;
+  }
+  .div__1__div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text__div__2{
+    height: 100%;
+    width: 50%;
+    padding: 5px;
+    display: flex;
+  }
+  .div__2__div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer__contact__div{
+    width: 20%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-left: 2px outset hsl(0, 0%, 100%);
+  }
+  .contact__redes__div{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+  }
+
+  .div__socialmedia{
+    display: flex ;
+    flex-flow: column;
+    justify-content: center;
+    height: 80%;
+  }
+
+.images__socialmedia__footer{
+  height: 100%;
+}

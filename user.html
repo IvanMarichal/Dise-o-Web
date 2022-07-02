@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/user.css" />
     <link rel="icon" href="images/logo.svg" />
     <title>Lysis | Home</title>
   </head>
@@ -51,10 +50,28 @@
         <div class="div__form">
           <div class="div__login">
             <h2 class="h2__form">Login</h2>
+            <div class="div__inputs__form">
+              <label class="label__form" for="email__login">Ingrese su email</label>
+              <input class="input__form" id="email__login" type="email" placeholder="Email" required />
+              <label class="label__form" for="pass__login">Ingrese su contraseña</label>
+              <input class="input__form" id="pass__login" type="password" placeholder="Contraseña" required />
+            </div>
           </div>
           <hr class="hr__middle" />
           <div class="div__register">
             <h2 class="h2__form">Register</h2>
+            <div class="div__inputs__form">
+              <label class="label__form" for="name">Nombre</label>
+              <input class="input__form" id="name" type="text" placeholder="Nombre" required />
+              <label class="label__form" for="lastName">Apellido</label>
+              <input class="input__form" id="lastName" type="text" placeholder="Apellido" required />
+              <label class="label__form" for="email">Ingrese un email</label>
+              <input class="input__form" id="email" type="email" placeholder="Email" required />
+              <label class="label__form" for="pass">Contraseña</label>
+              <input class="input__form" id="pass" type="password" placeholder="Contraseña" required />
+              <label class="label__form" for="passConfirm">Repita la contraseña</label>
+              <input class="input__form" id="passConfirm" type="password" placeholder="Repetir contraseña" required />
+            </div>
           </div>
         </div>
       </div>

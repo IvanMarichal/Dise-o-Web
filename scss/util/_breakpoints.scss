@@ -1,0 +1,19 @@
+/// Breakpoints para ser usados en media queries con (min-width).
+/// Valores en px: 576px, 768px, 992px, 1200px.
+$breakpoints-up: (
+    // xsmall no es necesario porque sería 0.
+    'small': 36em,
+    'medium': 48em,
+    'large': 62em,
+    'xlarge': 75em
+);
+
+/// Breakpoints para ser usados en media queries con (max-width).
+/// Diferencia de .02px (0.001em) para evitar solapación.
+/// Valores en px: 575.98px, 767.98px, 991.98px, 1199.98px.
+$breakpoints-down: (
+    'xsmall': 35.999em,
+    'medium': 47.999em,
+    'large': 61.999em,
+    'xlarge': 74.999em
+);

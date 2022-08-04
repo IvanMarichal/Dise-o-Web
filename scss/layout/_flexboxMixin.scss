@@ -1,0 +1,12 @@
+/// Mixin para generar estilos para flexbox facilmente.
+/// @param {String} $dis Estilo ´display´.
+/// @param {String} $direction Estilo ´flex-direction´.
+/// @param {String} $wrap Estilo ´flex-wrap´.
+/// @param {String} $justify Estilo ´justify-content´.
+/// @param {String} $align Estilo ´align-items´.
+@mixin flex($dis, $direction, $wrap, $justify, $align) {
+    display: $dis;
+    flex-flow: $direction $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}

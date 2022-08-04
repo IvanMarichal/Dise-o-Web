@@ -1,0 +1,19 @@
+@use '../util';
+
+/// Mixin para generar media queries usando min-width.
+/// @param {String} $size Breakpoint perteneciente a $breakpoints-up.
+/// @content Estilos que quieran ser aplciados.
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+/// Mixin para generar media queries usando max-width.
+/// @param {String} $size Breakpoint perteneciente a $breakpoints-down.
+/// @content Estilos a ser aplicados.
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoints-down, $size)) {
+        @content;
+    }
+}

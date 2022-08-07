@@ -4,9 +4,11 @@
 /// @param {String} $wrap Estilo ´flex-wrap´.
 /// @param {String} $justify Estilo ´justify-content´.
 /// @param {String} $align Estilo ´align-items´.
-@mixin flex($dis, $direction, $wrap, $justify, $align) {
+/// @param {String} $gap Estilo ´gap´.
+@mixin flex($direction, $wrap, $justify, $align, $gap, $dis: flex) {
     display: $dis;
     flex-flow: $direction $wrap;
     justify-content: $justify;
     align-items: $align;
+    gap: $gap;
 }

@@ -1,0 +1,23 @@
+@use 'sass:math';
+
+/// Toma un valor en pixeles y devuelve su equivalente en rems.
+/// @param {Number} $px Valor que quiera convertir a rems. Puede, o no, tener unidades.
+/// @return {Number} $px en rems.
+@function rem($px) {
+    @if not unitless($px) {
+        $px: math.div($px, 1px);
+    }
+    
+    @return math.div($px, 16) * 1rem;
+}
+
+/// Toma un valor en pixeles y devuelve su equivalente en ems.
+/// @param {Number} $px Valor que quiera convertir a ems. Puede, o no, tener unidades.
+/// @return {Number} $px en ems.
+@function em($px) {
+    @if not unitless($px) {
+        $px: math.div($px, 1px);
+    }
+    
+    @return math.div($px, 16) * 1rem;
+}

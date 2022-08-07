@@ -1,7 +1,47 @@
 @forward 'globals';
+@forward 'util';
+@forward 'layout';
+@use 'globals/functions' as f;
+@use 'util/colors';
+@use 'layout/flexboxMixin' as flexMix;
 
 // import's para poder usar Font Awesome.
 @import "./fontawesome/scss/fontawesome.scss";
 @import "./fontawesome/scss/solid.scss";
 @import "./fontawesome/scss/brands.scss";
-// Terminan import's para Font Awesome.
+
+.nav {
+    @include flexMix.flex(column, nowrap, none, center, f.rem(16px));
+    width: f.rem(65px);
+    padding-top: f.rem(12px);
+    padding-right: f.rem(12px);
+    padding-left: f.rem(12px);
+
+    &__logo-link {
+        &__img{
+            width: f.rem(30px);
+        }
+    }
+
+    &__line {
+        width: f.rem(35px);
+        height: f.rem(1px);
+        background-color: colors.$gray-3;
+    }
+
+    &__user-links {
+        @include flexMix.flex(column, nowrap, none, center, f.rem(24px));
+
+        &__link {
+            color: colors.$gray-3;
+        }
+    }
+
+    &__sport-links {
+        @include flexMix.flex(column, nowrap, none, center, f.rem(32px));
+
+        &__link {
+            color: colors.$gray-3;
+        }
+    }
+}

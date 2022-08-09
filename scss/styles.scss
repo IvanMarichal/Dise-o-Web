@@ -23,7 +23,7 @@ body {
     padding-left: f.rem(12px);
 
     &__logo-link {
-        &__img{
+        &__img {
             width: f.rem(30px);
         }
     }
@@ -50,6 +50,8 @@ body {
 
 .aside-left {
     @include flexMix.flex(column, nowrap, none, flex-start, f.rem(19px));
+    width: f.rem(300px);
+    height: 100%;
     padding: f.rem(20px) f.rem(24px);
 
     &__back {
@@ -64,7 +66,8 @@ body {
     }
 
     &__live-container {
-        @include  flexMix.flex(column, nowrap, none, flex-start, f.rem(12px));
+        @include flexMix.flex(column, nowrap, none, flex-start, f.rem(12px));
+        width: 100%;
 
         &__title {
             color: colors.$red;
@@ -76,9 +79,10 @@ body {
             padding-top: f.rem(15px);
             padding-right: f.rem(12px);
             padding-left: f.rem(12px);
+            width: 100%;
             border: f.rem(0.7px) solid colors.$gray-3;
             border-radius: f.rem(10px);
-            
+
             &__live-matches {
                 @include flexMix.flex(row, nowrap, none, center, f.rem(12px));
 
@@ -99,7 +103,7 @@ body {
 
                         &__result-time {
                             @include flexMix.flex(column, nowrap, center, center, 0);
-                            
+
                             &__result {
                                 &__colon {
                                     color: colors.$gray-1;
@@ -129,4 +133,88 @@ body {
         }
     }
 
+    &__look-up {
+        @include flexMix.flex(row, nowrap, space-between, center, f.rem(0px));
+        width: 100%;
+        height: f.rem(35px);
+        color: colors.$gray-3;
+        padding-left: f.rem(12px);
+        padding-right: f.rem(12px);
+        border: f.rem(1px) solid colors.$gray-3;
+        border-radius: f.rem(10px);
+
+        &__search {
+            width: 100%;
+            height: f.rem(28px);
+        }
+        
+        &__submit {
+            height: 100%;
+            padding-left: f.rem(12px);
+            border-left: f.rem(1px) solid colors.$gray-3;
+            cursor: pointer;
+        }
+    }
+
+    &__country-list {
+        width: 100%;
+        list-style: none;
+        padding-left: f.rem(18px);
+        padding-right: f.rem(18px);
+        padding-top: f.rem(12px);
+        padding-bottom: f.rem(18px);
+        border: f.rem(1px) solid colors.$gray-3;
+        border-radius: f.rem(16px);
+        text-align: center;
+
+        &__heading {
+            font-size: f.rem(24px);
+            border-bottom: f.rem(1px) solid colors.$gray-3;
+            padding-bottom: f.rem(12px);
+        }
+
+        &__country {
+            border-bottom: f.rem(1px) solid colors.$gray-3;
+            padding-bottom: f.rem(8px);
+            padding-top: f.rem(8px);
+
+            &__button {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.main {
+    @include flexMix.flex(column, nowrap, none, flex-start, f.rem(32px));
+    padding: 36px 32px;
+    background: colors.$gray-8;
+    border-width: 0 f.rem(2px);
+    border-style: solid;
+    border-color: colors.$gray-4;
+
+    &__header {
+        color: colors.$gray-1;
+        font-weight: 700;
+        font-size: f.rem(20px);
+    }
+
+    &__popular-events {
+        @include flexMix.flex(column, nowrap, none, flex-start, 0);
+        padding: f.rem(16px) 0 f.rem(12px);
+        background: white;
+        border-radius: f.rem(10px);
+    }
+}
+
+.--color-gray-2 {
+    color: colors.$gray-2;
+}
+
+.--color-gray-3 {
+    color: colors.$gray-3;
+}
+
+.--color-gray-4 {
+    color: colors.$gray-4;
 }

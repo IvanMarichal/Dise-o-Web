@@ -1,104 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/logo.svg" />
-    <link rel="stylesheet" href="./dist/styles.css" />
-    <link rel="stylesheet" href="./dist/styles.css.map" />
-    <script
-      src="https://kit.fontawesome.com/d2e8cc781d.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Lysis | Home</title>
-  </head>
 
-  <body>
-    <nav class="nav">
-      <a href="" class="nav__logo-link">
-        <img
-          src="./images/logo.svg"
-          alt="logo de lysis"
-          class="nav__logo-link__img"
-        />
-      </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/logo.svg" />
+  <link rel="stylesheet" href="./dist/styles.css" />
+  <link rel="stylesheet" href="./dist/styles.css.map" />
+  <script src="https://kit.fontawesome.com/d2e8cc781d.js" crossorigin="anonymous"></script>
+  <title>Lysis | Home</title>
+</head>
 
-      <div class="nav__line"></div>
+<body>
+  <nav class="nav">
+    <a href="" class="nav__logo-link">
+      <img src="./images/logo.svg" alt="logo de lysis" class="nav__logo-link__img" />
+    </a>
 
-      <!-- Conjunto de enlaces para el usuario, pagina de usuario, configuracion, 
+    <div class="nav__line"></div>
+
+    <!-- Conjunto de enlaces para el usuario, pagina de usuario, configuracion, 
         buscar y favoritos. -->
-      <div class="nav__link-group">
-        <a href="https://www.google.com" class="nav__link-group__link">
-          <i class="fa-solid fa-user fa-xl"></i>
-        </a>
-        <a href="#" class="nav__link-group__link">
-          <i class="fa-solid fa-gear fa-xl"></i>
-        </a>
-        <a href="#" class="nav__link-group__link">
-          <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-        </a>
-        <a href="#" class="nav__link-group__link">
-          <i class="fa-solid fa-star fa-xl"></i>
-        </a>
+    <div class="nav__link-group">
+      <a href="https://www.google.com" class="nav__link-group__link">
+        <i class="fa-solid fa-user fa-xl"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-gear fa-xl"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-star fa-xl"></i>
+      </a>
+    </div>
+
+    <div class="nav__line"></div>
+
+    <!-- Conjunto de enlaces para acceder a deportes. -->
+    <div class="nav__link-group">
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-futbol fa-xl"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-volleyball fa-xl"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-basketball fa-xl"></i>
+      </a>
+    </div>
+  </nav>
+
+  <aside class="aside-left">
+    <button class="aside-left__back">
+      <i class="fa-solid fa-angle-left"></i>
+      Volver
+    </button>
+
+    <div class="aside-left__live-container">
+      <div class="aside-left__live-container__title">
+        <i class="fa-solid fa-circle fa-2xs"></i>
+        Live
       </div>
-
-      <div class="nav__line"></div>
-
-      <!-- Conjunto de enlaces para acceder a deportes. -->
-      <div class="nav__link-group">
-        <a href="#" class="nav__link-group__link">
-          <i class="fa-solid fa-futbol fa-xl"></i>
-        </a>
-        <a href="#" class="nav__link-group__link">
-          <i class="fa-solid fa-volleyball fa-xl"></i> 
-        </a>
-        <a href="#" class="nav__link-group__link">
-          <i class="fa-solid fa-basketball fa-xl"></i>
-        </a>
-      </div>
-    </nav>
-
-    <aside class="aside-left">
-      <button class="aside-left__back">
-        <i class="fa-solid fa-angle-left"></i>
-        Volver
-      </button>
-
-      <div class="aside-left__live-container">
-        <div class="aside-left__live-container__title">
-          <i class="fa-solid fa-circle fa-2xs"></i>
-          Live
-        </div>
 
       <div class="aside-left__live-container__match-set">
         <div class="aside-left__live-container__match-set__live-matches">
           <div class="aside-left__live-container__match-set__live-matches__match">
             <div class="aside-left__live-container__match-set__live-matches__match__info">
-              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona" class="aside-left__live-container__match-set__live-matches__match__info__shield">
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
+                class="aside-left__live-container__match-set__live-matches__match__info__shield">
               <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
                 <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
-                  3 <span class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">: </span> 2
+                  3 <span
+                    class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
+                  </span> 2
                 </p>
                 <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
                   90'
                 </p>
               </div>
-              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona" class="aside-left__live-container__match-set__live-matches__match__info__shield">
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
+                class="aside-left__live-container__match-set__live-matches__match__info__shield">
             </div>
           </div>
           <div class="aside-left__live-container__match-set__live-matches__match">
             <div class="aside-left__live-container__match-set__live-matches__match__info">
-              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona" class="aside-left__live-container__match-set__live-matches__match__info__shield">
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
+                class="aside-left__live-container__match-set__live-matches__match__info__shield">
               <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
                 <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
-                  3 <span class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">: </span> 2
+                  3 <span
+                    class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
+                  </span> 2
                 </p>
                 <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
                   90'
                 </p>
               </div>
-              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona" class="aside-left__live-container__match-set__live-matches__match__info__shield">
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
+                class="aside-left__live-container__match-set__live-matches__match__info__shield">
             </div>
           </div>
         </div>
@@ -106,8 +108,94 @@
         <button class="aside-left__live-container__match-set__more">
           <i class="fa-solid fa-ellipsis"></i>
         </button>
+      </div>
+    </div>
+
+    <form action="#" class="aside-left__look-up">
+      <input type="text" class="aside-left__look-up__search" placeholder="Buscar">
+      <button type="submit" class="aside-left__look-up__submit">
+        <i class="fa-solid fa-magnifying-glass --color-gray-2"></i>
+      </button>
+    </form>
+
+    <ul class="aside-left__country-list">
+      <li class="aside-left__country-list__heading">
+        Países
+      </li>
+      <li class="aside-left__country-list__country">
+        <button class="aside-left__country-list__country__button">
+          <i class="fa-solid fa-flag"></i>
+          España
+        </button>
+      </li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <h1 class="main__header">
+      Eventos populares
+    </h1>
+
+    <div class="main__popular-events">
+      <div class="main__popular-events__header">
+        <button class="main__popular-events__header__button">
+          Todos
+        </button>
+        <button class="main__popular-events__header__button">
+          En vivo
+        </button>
+        <button class="main__popular-events__header__button">
+          Completados
+        </button>
+        <button class="main__popular-events__header__button">
+          Programados
+        </button>
+        <button class="main__popular-events__header__button">
+          <i class="fa-solid fa-calendar"></i>
+        </button>
+      </div>
+      <div class="main__popular-events__col-names">
+        <p class="main__popular-events__col-names__name">Fecha</p>
+        <p class="main__popular-events__col-names__name">Partido</p>
+        <p class="main__popular-events__col-names__name">Liga</p>
+      </div>
+      <div class="main__popular-events__event-list">
+        <div class="main__popular-events__event-list__event">
+          <div class="main__popular-events__event-list__event__time-date">
+            <p class="main__popular-events__event-list__event__time-date__time">08:00</p>
+            <p class="main__popular-events__event-list__event___time-date__date">Mar 21</p>
+          </div>
+          <div class="main__popular-events__event-list__event__live-sign">
+            <i class="fa-solid fa-circle fa-2xs"></i>
+            Live
+          </div>
+          <div class="main__popular-events__event-list__event__match">
+            <div class="main__popular-events__event-list__event__match__team-left">
+              Barcelona
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
+                class="main__popular-events__event-list__event__match__team-left__shield">
+            </div>
+            <div class="main__popular-events__event-list__event__match__result">
+              1 <span class="main__popular-events__event-list__event__match__result__colon">:</span> 3
+            </div>
+            <div class="main__popular-events__event-list__event__match__team-right">
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
+                class="main__popular-events__event-list__event__match__team-rigt__shield">
+                Barcelona
+            </div>
+            <div class="main__popular-events__event-list__event__match__league">
+              <img src="./images/escudos/LaLigaLogo.png" alt="logo de la liga santander" class="main__popular-events__event-list__event__match__league__logo">
+              <div class="main__popular-events__event-list__event__match__league__name-country">
+                <p class="main__popular-events__event-list__event__match__league__name-country__name">LaLiga Santander</p>
+                <p class="main__popular-events__event-list__event__match__league__name-country__country">España</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </aside>
-  </body>
+    </div>
+  </main>
+
+</body>
+
 </html>

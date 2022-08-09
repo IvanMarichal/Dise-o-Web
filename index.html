@@ -5,33 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="images/logo.svg" />
-    <link rel="stylesheet" href="./dist/styles.css">
-    <link rel="stylesheet" href="./dist/styles.css.map">
-    <script src="https://kit.fontawesome.com/d2e8cc781d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dist/styles.css" />
+    <link rel="stylesheet" href="./dist/styles.css.map" />
+    <script
+      src="https://kit.fontawesome.com/d2e8cc781d.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Lysis | Home</title>
   </head>
 
   <body>
     <nav class="nav">
       <a href="" class="nav__logo-link">
-        <img src="./images/logo.svg" alt="logo de lysis" class="nav__logo-link__img">
+        <img
+          src="./images/logo.svg"
+          alt="logo de lysis"
+          class="nav__logo-link__img"
+        />
       </a>
 
       <div class="nav__line"></div>
 
       <!-- Conjunto de enlaces para el usuario, pagina de usuario, configuracion, 
-            buscar y favoritos. -->
-      <div class="nav__user-links">
-        <a href="https://www.google.com" class="nav__user-links__link">
+        buscar y favoritos. -->
+      <div class="nav__link-group">
+        <a href="https://www.google.com" class="nav__link-group__link">
           <i class="fa-solid fa-user fa-xl"></i>
         </a>
-        <a href="#" class="nav__user-links__link">
+        <a href="#" class="nav__link-group__link">
           <i class="fa-solid fa-gear fa-xl"></i>
         </a>
-        <a href="#" class="nav__user-links__link">
+        <a href="#" class="nav__link-group__link">
           <i class="fa-solid fa-magnifying-glass fa-xl"></i>
         </a>
-        <a href="#" class="nav__user-links__link">
+        <a href="#" class="nav__link-group__link">
           <i class="fa-solid fa-star fa-xl"></i>
         </a>
       </div>
@@ -39,16 +46,68 @@
       <div class="nav__line"></div>
 
       <!-- Conjunto de enlaces para acceder a deportes. -->
-      <div class="nav__sport-links">
-        <a href="#" class="nav__sport-links__link">
+      <div class="nav__link-group">
+        <a href="#" class="nav__link-group__link">
           <i class="fa-solid fa-futbol fa-xl"></i>
         </a>
-        <a href="#" class="nav__sport-links__link">
-          <i class="fa-solid fa-volleyball fa-xl"></i>
-        </a><a href="#" class="nav__sport-links__link">
+        <a href="#" class="nav__link-group__link">
+          <i class="fa-solid fa-volleyball fa-xl"></i> 
+        </a>
+        <a href="#" class="nav__link-group__link">
           <i class="fa-solid fa-basketball fa-xl"></i>
         </a>
       </div>
     </nav>
+
+    <aside class="aside-left">
+      <button class="aside-left__back">
+        <i class="fa-solid fa-angle-left"></i>
+        Volver
+      </button>
+
+      <div class="aside-left__live-container">
+        <div class="aside-left__live-container__title">
+          <i class="fa-solid fa-circle fa-2xs"></i>
+          Live
+        </div>
+
+      <div class="aside-left__live-container__match-set">
+        <div class="aside-left__live-container__match-set__live-matches">
+          <div class="aside-left__live-container__match-set__live-matches__match">
+            <div class="aside-left__live-container__match-set__live-matches__match__info">
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona" class="aside-left__live-container__match-set__live-matches__match__info__shield">
+              <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
+                <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
+                  3 <span class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">: </span> 2
+                </p>
+                <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
+                  90'
+                </p>
+              </div>
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona" class="aside-left__live-container__match-set__live-matches__match__info__shield">
+            </div>
+          </div>
+          <div class="aside-left__live-container__match-set__live-matches__match">
+            <div class="aside-left__live-container__match-set__live-matches__match__info">
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona" class="aside-left__live-container__match-set__live-matches__match__info__shield">
+              <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
+                <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
+                  3 <span class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">: </span> 2
+                </p>
+                <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
+                  90'
+                </p>
+              </div>
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona" class="aside-left__live-container__match-set__live-matches__match__info__shield">
+            </div>
+          </div>
+        </div>
+        <div class="aside-left__live-container__match-set__line"></div>
+        <button class="aside-left__live-container__match-set__more">
+          <i class="fa-solid fa-ellipsis"></i>
+        </button>
+        </div>
+      </div>
+    </aside>
   </body>
 </html>

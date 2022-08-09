@@ -14,6 +14,16 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  color: hsl(208deg, 50%, 15%);
+}
+
+input, textarea, input[placeholder] {
+  font-family: "Roboto";
+  border: none;
+}
+
+input:focus {
+  outline: none;
 }
 
 button {
@@ -21,6 +31,11 @@ button {
   margin: 0;
   background: transparent;
   border: transparent;
+  color: hsl(208deg, 50%, 15%);
+}
+
+ul {
+  padding: 0;
 }
 
 h1, h2, h3 {
@@ -10476,6 +10491,8 @@ body {
   justify-content: none;
   align-items: flex-start;
   gap: 1.1875rem;
+  width: 18.75rem;
+  height: 100%;
   padding: 1.25rem 1.5rem;
 }
 .aside-left__back {
@@ -10493,6 +10510,7 @@ body {
   justify-content: none;
   align-items: flex-start;
   gap: 0.75rem;
+  width: 100%;
 }
 .aside-left__live-container__title {
   color: hsl(0deg, 100%, 38%);
@@ -10507,6 +10525,7 @@ body {
   padding-top: 0.9375rem;
   padding-right: 0.75rem;
   padding-left: 0.75rem;
+  width: 100%;
   border: 0.04375rem solid hsl(217deg, 15%, 83%);
   border-radius: 0.625rem;
 }
@@ -10561,4 +10580,92 @@ body {
   font-size: 1.5rem;
   color: hsl(217deg, 15%, 83%);
   cursor: pointer;
+}
+.aside-left__look-up {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0rem;
+  width: 100%;
+  height: 2.1875rem;
+  color: hsl(217deg, 15%, 83%);
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border: 0.0625rem solid hsl(217deg, 15%, 83%);
+  border-radius: 0.625rem;
+}
+.aside-left__look-up__search {
+  width: 100%;
+  height: 1.75rem;
+}
+.aside-left__look-up__submit {
+  height: 100%;
+  padding-left: 0.75rem;
+  border-left: 0.0625rem solid hsl(217deg, 15%, 83%);
+  cursor: pointer;
+}
+.aside-left__country-list {
+  width: 100%;
+  list-style: none;
+  padding-left: 1.125rem;
+  padding-right: 1.125rem;
+  padding-top: 0.75rem;
+  padding-bottom: 1.125rem;
+  border: 0.0625rem solid hsl(217deg, 15%, 83%);
+  border-radius: 1rem;
+  text-align: center;
+}
+.aside-left__country-list__heading {
+  font-size: 1.5rem;
+  border-bottom: 0.0625rem solid hsl(217deg, 15%, 83%);
+  padding-bottom: 0.75rem;
+}
+.aside-left__country-list__country {
+  border-bottom: 0.0625rem solid hsl(217deg, 15%, 83%);
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+.aside-left__country-list__country__button {
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 36px 32px;
+  background: hsl(220deg, 33%, 96%);
+  border-width: 0 0.125rem;
+  border-style: solid;
+  border-color: hsl(0deg, 0%, 91%);
+}
+.main__header {
+  color: hsl(210deg, 6%, 58%);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.main__popular-events {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: flex-start;
+  gap: 0;
+  padding: 1rem 0 0.75rem;
+  background: white;
+  border-radius: 0.625rem;
+}
+
+.--color-gray-2 {
+  color: hsl(224deg, 8%, 74%);
+}
+
+.--color-gray-3 {
+  color: hsl(217deg, 15%, 83%);
+}
+
+.--color-gray-4 {
+  color: hsl(0deg, 0%, 91%);
 }/*# sourceMappingURL=styles.css.map */

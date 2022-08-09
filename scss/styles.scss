@@ -4,11 +4,16 @@
 @use 'globals/functions' as f;
 @use 'util/colors';
 @use 'layout/flexboxMixin' as flexMix;
+@use 'sass:color';
 
 // import's para poder usar Font Awesome.
 @import "./fontawesome/scss/fontawesome.scss";
 @import "./fontawesome/scss/solid.scss";
 @import "./fontawesome/scss/brands.scss";
+
+body {
+    @include flexMix.flex(row, nowrap, none, flex-start, none);
+}
 
 .nav {
     @include flexMix.flex(column, nowrap, none, center, f.rem(16px));
@@ -29,19 +34,99 @@
         background-color: colors.$gray-3;
     }
 
-    &__user-links {
+    &__link-group {
         @include flexMix.flex(column, nowrap, none, center, f.rem(24px));
 
         &__link {
             color: colors.$gray-3;
         }
-    }
 
-    &__sport-links {
-        @include flexMix.flex(column, nowrap, none, center, f.rem(32px));
-
-        &__link {
-            color: colors.$gray-3;
+        &__link:hover {
+            color: color.scale(colors.$gray-3, $lightness: 35%);
+            transition: all 0.5s;
         }
     }
+}
+
+.aside-left {
+    @include flexMix.flex(column, nowrap, none, flex-start, f.rem(19px));
+    padding: f.rem(20px) f.rem(24px);
+
+    &__back {
+        font-size: f.rem(16px);
+        color: colors.$gray-1;
+        cursor: pointer;
+    }
+
+    &__back:hover {
+        color: color.scale(colors.$gray-1, $lightness: 35%);
+        transition: all 0.5s;
+    }
+
+    &__live-container {
+        @include  flexMix.flex(column, nowrap, none, flex-start, f.rem(12px));
+
+        &__title {
+            color: colors.$red;
+            font-size: f.rem(20px);
+        }
+
+        &__match-set {
+            @include flexMix.flex(column, nowrap, center, center, f.rem(12px));
+            padding-top: f.rem(15px);
+            padding-right: f.rem(12px);
+            padding-left: f.rem(12px);
+            border: f.rem(0.7px) solid colors.$gray-3;
+            border-radius: f.rem(10px);
+            
+            &__live-matches {
+                @include flexMix.flex(row, nowrap, none, center, f.rem(12px));
+
+                &__match {
+                    @include flexMix.flex(row, nowrap, center, center, f.rem(10px));
+                    padding: 8px;
+                    background: white;
+                    border: f.rem(0.7px) solid colors.$gray-3;
+                    border-radius: f.rem(65px);
+
+                    &__info {
+                        @include flexMix.flex(row, nowrap, center, center, f.rem(5px));
+                        padding: f.rem(3px);
+
+                        &__shield {
+                            width: f.rem(20px);
+                        }
+
+                        &__result-time {
+                            @include flexMix.flex(column, nowrap, center, center, 0);
+                            
+                            &__result {
+                                &__colon {
+                                    color: colors.$gray-1;
+                                }
+                            }
+
+                            &__time {
+                                color: colors.$orange;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            &__line {
+                width: 100%;
+                height: f.rem(1px);
+                background-color: colors.$gray-3;
+            }
+
+            &__more {
+                font-size: f.rem(24px);
+                color: colors.$gray-3;
+                cursor: pointer;
+            }
+        }
+    }
+
 }

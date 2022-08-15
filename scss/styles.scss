@@ -106,6 +106,8 @@ body {
                             @include flexMix.flex(column, nowrap, center, center, 0);
 
                             &__result {
+                                white-space: nowrap;
+
                                 &__colon {
                                     color: colors.$gray-1;
                                 }
@@ -186,8 +188,9 @@ body {
 }
 
 .main {
-    @include flexMix.flex(column, nowrap, none, flex-start, f.rem(32px));
-    padding: 36px 32px;
+    @include flexMix.flex(column, nowrap, flex-start, center, f.rem(32px));
+    flex-grow: 2;
+    padding: f.rem(36px) f.rem(32px)    ;
     background: colors.$gray-8;
     border-width: 0 f.rem(2px);
     border-style: solid;
@@ -197,6 +200,7 @@ body {
         color: colors.$gray-1;
         font-weight: 700;
         font-size: f.rem(20px);
+        width: 100%
     }
 
     &__popular-events {
@@ -204,11 +208,13 @@ body {
         padding: f.rem(16px) 0 f.rem(12px);
         background: white;
         border-radius: f.rem(10px);
-
+        
         &__table {
             padding: f.rem(16px) 0 f.rem(12px);
             border-radius: f.rem(10px);
             border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
 
             &__button-set {
                 border-bottom: f.rem(2px) solid colors.$gray-4;
@@ -232,7 +238,12 @@ body {
             }
 
             &__col-name {
+                width: 100%;
                 border-bottom: f.rem(2px) solid colors.$gray-4;
+
+                &__cell:first-child {
+                    width: 10%;
+                }
 
                 &__cell {
                     &__layout {
@@ -248,21 +259,23 @@ body {
 
             &__event {
                 &__cell:first-child {
-                    padding-left: 30px;
+                    padding-left: f.rem(30px);
+                    width: 10%;
                 }
 
                 &__cell:last-child {
-                    padding-right: 30px;
+                    // padding-right: f.rem(30px);
                 }
 
                 &__cell:nth-child(2) {
-                    padding-left: 32px;
-                    padding-right: 32px;
+                    padding-left: f.rem(32px);
+                    padding-right: f.rem(32px);
                 }
 
                 &__cell {
                     padding-top: 16px;
                     padding-bottom: 16px;
+                    overflow: hidden;
 
                     &__hour-date {
                         @include flexMix.flex(column, nowrap, none, center, 0);
@@ -338,12 +351,17 @@ body {
     }
 
     &__table {
+        padding-top: f.rem(12px);
+        padding-bottom: f.rem(12px);
         border: f.rem(1px) solid colors.$gray-4;
         border-radius: f.rem(10px);
+        min-width: f.rem(300px);
 
         &__head {
+            
             &__row{
                 &__data {
+                    padding-left: f.rem(14px);
                     border-bottom: f.rem(1px) solid colors.$gray-4;
                     padding-bottom: f.rem(8px);
     
@@ -360,6 +378,7 @@ body {
             &__league {
                 &__info {
                     padding: f.rem(12px) f.rem(16px);
+                    border-bottom: f.rem(1px) solid colors.$gray-4;
 
                     &__logo-text {
                         @include flexMix.flex(row, nowrap, flex-start, center, f.rem(6px));
@@ -368,14 +387,14 @@ body {
                             width: f.rem(18px);
                         }
 
-                        &__text {
+                        &__league-country {
                             &__league {
-                                font-size: f.rem(12px);
+                                font-size: f.rem(14px);
                                 white-space: nowrap;
                             }
 
                             &__country {
-                                font-size: f.rem(10px);
+                                font-size: f.rem(12px);
                                 color: colors.$gray-1;
                                 white-space: nowrap;
                             }

@@ -10566,6 +10566,9 @@ body {
   align-items: center;
   gap: 0;
 }
+.aside-left__live-container__match-set__live-matches__match__info__result-time__result {
+  white-space: nowrap;
+}
 .aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon {
   color: hsl(210deg, 6%, 58%);
 }
@@ -10634,10 +10637,11 @@ body {
 .main {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: none;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   gap: 2rem;
-  padding: 36px 32px;
+  flex-grow: 2;
+  padding: 2.25rem 2rem;
   background: hsl(214deg, 33%, 96%);
   border-width: 0 0.125rem;
   border-style: solid;
@@ -10647,6 +10651,7 @@ body {
   color: hsl(210deg, 6%, 58%);
   font-weight: 700;
   font-size: 1.25rem;
+  width: 100%;
 }
 .main__popular-events {
   display: flex;
@@ -10662,6 +10667,8 @@ body {
   padding: 1rem 0 0.75rem;
   border-radius: 0.625rem;
   border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
 }
 .main__popular-events__table__button-set {
   border-bottom: 0.125rem solid hsl(0deg, 0%, 91%);
@@ -10683,7 +10690,11 @@ body {
   cursor: pointer;
 }
 .main__popular-events__table__col-name {
+  width: 100%;
   border-bottom: 0.125rem solid hsl(0deg, 0%, 91%);
+}
+.main__popular-events__table__col-name__cell:first-child {
+  width: 10%;
 }
 .main__popular-events__table__col-name__cell__layout {
   background: hsl(260deg, 60%, 99%);
@@ -10693,18 +10704,17 @@ body {
   text-align: center;
 }
 .main__popular-events__table__event__cell:first-child {
-  padding-left: 30px;
-}
-.main__popular-events__table__event__cell:last-child {
-  padding-right: 30px;
+  padding-left: 1.875rem;
+  width: 10%;
 }
 .main__popular-events__table__event__cell:nth-child(2) {
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .main__popular-events__table__event__cell {
   padding-top: 16px;
   padding-bottom: 16px;
+  overflow: hidden;
 }
 .main__popular-events__table__event__cell__hour-date {
   display: flex;
@@ -10779,10 +10789,14 @@ body {
   background-color: hsl(0deg, 0%, 85%);
 }
 .aside-right__table {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   border: 0.0625rem solid hsl(0deg, 0%, 91%);
   border-radius: 0.625rem;
+  min-width: 18.75rem;
 }
 .aside-right__table__head__row__data {
+  padding-left: 0.875rem;
   border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
   padding-bottom: 0.5rem;
 }
@@ -10792,6 +10806,7 @@ body {
 }
 .aside-right__table__body__league__info {
   padding: 0.75rem 1rem;
+  border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
 }
 .aside-right__table__body__league__info__logo-text {
   display: flex;
@@ -10803,12 +10818,12 @@ body {
 .aside-right__table__body__league__info__logo-text__logo {
   width: 1.125rem;
 }
-.aside-right__table__body__league__info__logo-text__text__league {
-  font-size: 0.75rem;
+.aside-right__table__body__league__info__logo-text__league-country__league {
+  font-size: 0.875rem;
   white-space: nowrap;
 }
-.aside-right__table__body__league__info__logo-text__text__country {
-  font-size: 0.625rem;
+.aside-right__table__body__league__info__logo-text__league-country__country {
+  font-size: 0.75rem;
   color: hsl(210deg, 6%, 58%);
   white-space: nowrap;
 }

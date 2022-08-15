@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -128,6 +128,18 @@
           España
         </button>
       </li>
+      <li class="aside-left__country-list__country">
+        <button class="aside-left__country-list__country__button">
+          <i class="fa-solid fa-flag"></i>
+          España
+        </button>
+      </li>
+      <li class="aside-left__country-list__country">
+        <button class="aside-left__country-list__country__button">
+          <i class="fa-solid fa-flag"></i>
+          España
+        </button>
+      </li>
     </ul>
   </aside>
 
@@ -137,64 +149,121 @@
     </h1>
 
     <div class="main__popular-events">
-      <div class="main__popular-events__header">
-        <button class="main__popular-events__header__button">
-          Todos
-        </button>
-        <button class="main__popular-events__header__button">
-          En vivo
-        </button>
-        <button class="main__popular-events__header__button">
-          Completados
-        </button>
-        <button class="main__popular-events__header__button">
-          Programados
-        </button>
-        <button class="main__popular-events__header__button">
-          <i class="fa-solid fa-calendar"></i>
-        </button>
-      </div>
-      <div class="main__popular-events__col-names">
-        <p class="main__popular-events__col-names__name">Fecha</p>
-        <p class="main__popular-events__col-names__name">Partido</p>
-        <p class="main__popular-events__col-names__name">Liga</p>
-      </div>
-      <div class="main__popular-events__event-list">
-        <div class="main__popular-events__event-list__event">
-          <div class="main__popular-events__event-list__event__time-date">
-            <p class="main__popular-events__event-list__event__time-date__time">08:00</p>
-            <p class="main__popular-events__event-list__event___time-date__date">Mar 21</p>
-          </div>
-          <div class="main__popular-events__event-list__event__live-sign">
-            <i class="fa-solid fa-circle fa-2xs"></i>
-            Live
-          </div>
-          <div class="main__popular-events__event-list__event__match">
-            <div class="main__popular-events__event-list__event__match__team-left">
-              Barcelona
-              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
-                class="main__popular-events__event-list__event__match__team-left__shield">
+      <table class="main__popular-events__table">
+        <tr class="main__popular-events__table__button-set">
+          <td colspan="3" class="main__popular-events__table__button-set__cell">
+            <div class="main__popular-events__table__button-set__cell__layout">
+              <button class="main__popular-events__table__button-set__cell__layout__button --color-purple --semibold">
+                Todos
+              </button>
+              <button class="main__popular-events__table__button-set__cell__layout__button">
+                En vivo
+              </button>
+              <button class="main__popular-events__table__button-set__cell__layout__button">
+                Completados
+              </button>
+              <button class="main__popular-events__table__button-set__cell__layout__button">
+                Programados
+              </button>
+              <button class="main__popular-events__table__button-set__cell__layout__button --ml-auto">
+                <i class="fa-solid fa-calendar"></i>
+              </button>
             </div>
-            <div class="main__popular-events__event-list__event__match__result">
-              1 <span class="main__popular-events__event-list__event__match__result__colon">:</span> 3
+          </td>
+        </tr>
+        <tr class="main__popular-events__table__col-name">
+          <td class="main__popular-events__table__col-name__cell">
+            <div class="main__popular-events__table__col-name__cell__layout">
+              <p class="main__popular-events__table__col-name__cell__layout__name">Fecha</p>
             </div>
-            <div class="main__popular-events__event-list__event__match__team-right">
-              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
-                class="main__popular-events__event-list__event__match__team-rigt__shield">
+          </td>
+          <td class="main__popular-events__table__col-name__cell">
+            <div class="main__popular-events__table__col-name__cell__layout">
+              <p class="main__popular-events__table__col-name__cell__layout__name">Partido</p>
+            </div>
+          </td>
+          <td class="main__popular-events__table__col-name__cell">
+            <div class="main__popular-events__table__col-name__cell__layout">
+              <p class="main__popular-events__table__col-name__cell__layout__name">Liga</p>
+            </div>
+          </td>
+        </tr>
+        <tr class="main__popular-events__table__event">
+          <td class="main__popular-events__table__event__cell">
+            <div class="main__popular-events__table__event__cell__hour-date">
+              <p class="main__popular-events__table__event__cell__hour-date__hour">08:00</p>
+              <p class="main__popular-events__table__event__cell__hour-date__date">Mar 21</p>
+            </div>
+          </td>
+          <td class="main__popular-events__table__event__cell">
+            <div class="main__popular-events__table__event__cell__layout">
+              <div class="main__popular-events__table__event__cell__layout__team">
                 Barcelona
-            </div>
-            <div class="main__popular-events__event-list__event__match__league">
-              <img src="./images/escudos/LaLigaLogo.png" alt="logo de la liga santander" class="main__popular-events__event-list__event__match__league__logo">
-              <div class="main__popular-events__event-list__event__match__league__name-country">
-                <p class="main__popular-events__event-list__event__match__league__name-country__name">LaLiga Santander</p>
-                <p class="main__popular-events__event-list__event__match__league__name-country__country">España</p>
+                <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
+                class="main__popular-events__table__event__cell__layout__team__shield">
+              </div>
+              <div class="main__popular-events__table__event__cell__layout__result">
+                <p class="main__popular-events__table__event__cell__layout__result__text">
+                  1 <span class="main__popular-events__table__event__cell__layout__result__text__colon">:</span> 3
+                </p>
+              </div>
+              <div class="main__popular-events__table__event__cell__layout__team">
+                <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
+                class="main__popular-events__table__event__cell__layout__team__shield">
+                Barcelona
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+          </td>
+          <td class="main__popular-events__table__event__cell">
+            <div class="main__popular-events__table__event__cell__logo-text">
+              <img src="./images/escudos/LaLigaLogo.png" alt="logo de la liga santander" 
+                class="main__popular-events__table__event__cell__logo-text__logo">
+              <div class="main__popular-events__table__event__cell__logo-text__text">
+                <p class="main__popular-events__table__event__cell__logo-text__text__league">
+                  LaLiga Santander
+                </p>
+                <p class="main__popular-events__table__event__cell__logo-text__text__country">
+                  España
+                </p>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
   </main>
+
+  <aside class="aside-right">
+    <div class="aside-right__ad"></div>
+    <table class="aside-right__table">
+      <thead class="aside-right__table__head">
+        <tr class="aside-rigt__table__head__row">
+          <td class="aside-right__table__head__row__data">
+            <h2 class="aside-right__table__head__row__data__h2">
+              Ligas populares
+            </h2>
+          </td>
+        </tr>
+      </thead>
+      <tbody class="aside-right__table__body">
+        <tr class="aside-right__table__body__league">
+          <td class="aside-right__table__body__league__info">
+            <div class="aside-right__table__body__league__info__logo-text">
+              <img src="./images/escudos/LaLigaLogo.png" alt="logo de la liga santander" 
+                class="aside-right__table__body__league__info__logo-text__logo" width="18px">
+              <div class="aside-right__table__body__league__info__logo-text__league-country">
+                <p class="aside-right__table__body__league__info__logo-text__league-country__league">
+                  LaLiga Santander
+                </p>
+                <p class="aside-right__table__body__league__info__logo-text__league-country__country">
+                  España
+                </p>
+              </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </aside>
 
 </body>
 

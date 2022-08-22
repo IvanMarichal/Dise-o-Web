@@ -22,7 +22,9 @@ body {
     padding-right: f.rem(12px);
     padding-left: f.rem(12px);
 
+    // Estilos para <a> del logo
     &__logo-link {
+        // Estilos para imagen dentro de <a>
         &__img {
             width: f.rem(30px);
         }
@@ -34,9 +36,11 @@ body {
         background-color: colors.$gray-3;
     }
 
+    // Estilos para el grupo de enlaces a los deportes
     &__link-group {
         @include flexMix.flex(column, nowrap, none, center, f.rem(24px));
 
+        // Color del enlace
         &__link {
             color: colors.$gray-3;
         }
@@ -48,12 +52,14 @@ body {
     }
 }
 
+// Menu de la izquieda
 .aside-left {
     @include flexMix.flex(column, nowrap, none, flex-start, f.rem(19px));
     width: f.rem(300px);
     height: 100%;
     padding: f.rem(20px) f.rem(24px);
 
+    // Boton de volver
     &__back {
         font-size: f.rem(16px);
         color: colors.$gray-1;
@@ -65,15 +71,18 @@ body {
         transition: all 0.5s;
     }
 
+    // Contenedor de eventos en vivo
     &__live-container {
         @include flexMix.flex(column, nowrap, none, flex-start, f.rem(12px));
         width: 100%;
 
+        // Titulo de color rojo -> ·Live
         &__title {
             color: colors.$red;
             font-size: f.rem(20px);
         }
 
+        // "Cuerpo" para el contenedor de eventos en vivo
         &__match-set {
             @include flexMix.flex(column, nowrap, center, center, f.rem(12px));
             padding-top: f.rem(15px);
@@ -83,9 +92,11 @@ body {
             border: f.rem(0.7px) solid colors.$gray-3;
             border-radius: f.rem(10px);
 
+            // Conjunto de eventos en vivo
             &__live-matches {
                 @include flexMix.flex(row, nowrap, none, center, f.rem(12px));
 
+                // Globito de evento
                 &__match {
                     @include flexMix.flex(row, nowrap, center, center, f.rem(10px));
                     padding: 8px;
@@ -93,25 +104,30 @@ body {
                     border: f.rem(0.7px) solid colors.$gray-3;
                     border-radius: f.rem(65px);
 
+                    // Informacion sobre evento, escudo, resultado y minuto
                     &__info {
                         @include flexMix.flex(row, nowrap, center, center, f.rem(5px));
                         padding: f.rem(3px);
 
+                        // Tamaño para escudos
                         &__shield {
                             width: f.rem(20px);
                         }
 
+                        // Resultado y minuto
                         &__result-time {
                             @include flexMix.flex(column, nowrap, center, center, 0);
 
                             &__result {
                                 white-space: nowrap;
 
+                                // Color para el dos puntos `:`
                                 &__colon {
                                     color: colors.$gray-1;
                                 }
                             }
 
+                            // Minuto
                             &__time {
                                 color: colors.$orange;
                             }
@@ -126,6 +142,7 @@ body {
                 background-color: colors.$gray-3;
             }
 
+            // Los tres puntos para ver mas
             &__more {
                 font-size: f.rem(24px);
                 color: colors.$gray-3;
@@ -134,6 +151,7 @@ body {
         }
     }
 
+    // Campo de busqueda
     &__look-up {
         @include flexMix.flex(row, nowrap, space-between, center, f.rem(0px));
         width: 100%;
@@ -144,11 +162,13 @@ body {
         border: f.rem(1px) solid colors.$gray-3;
         border-radius: f.rem(10px);
 
+        // Input
         &__search {
             width: 100%;
             height: f.rem(28px);
         }
         
+        // Boton icono lupa
         &__submit {
             height: 100%;
             padding-left: f.rem(12px);
@@ -157,6 +177,7 @@ body {
         }
     }
 
+    // Lista de paises
     &__country-list {
         width: 100%;
         list-style: none;
@@ -181,17 +202,13 @@ body {
             
             &__button {
                 font-size: f.rem(18px);
-
-            }
-
-            &__button {
                 cursor: pointer;
             }
         }
     }
 }
 
-.main {
+.main-home {
     @include flexMix.flex(column, nowrap, flex-start, center, f.rem(32px));
     flex-grow: 2;
     padding: f.rem(36px) f.rem(32px)    ;
@@ -391,7 +408,6 @@ body {
                     }
                 }
             }
-            
         }
 
         &__body {
@@ -426,6 +442,146 @@ body {
     }
 }
 
+.main-event {
+    @include flexMix.flex(column, nowrap, none, flex-start, f.rem(24px));
+    padding: f.rem(60px) f.rem(32px);
+    background-color: colors.$gray-8;
+    border-width: 0 f.rem(2px);
+    border-style: solid;
+    border-color: colors.$gray-4;
+    height: 100vh;
+    flex-grow: 2;
+
+    &__header{
+        font-weight: 700;
+        font-size: f.rem(20px);
+        line-height: f.rem(24px);
+        color: colors.$gray-1;
+    }
+
+    &__event {
+        @include flexMix.flex(column, nowrap, center, center, f.rem(16px));
+        padding: 0 0 f.rem(40px);
+        background: white;
+        border-radius: f.rem(10px);
+
+        &__top {
+            @include flexMix.flex(row, nowrap, center, center, f.rem(120px));
+            padding: f.rem(12px) f.rem(32px);
+            border-bottom: f.rem(1px) solid colors.$gray-3;
+
+            &__live-sign {
+                @include flexMix.flex(row, nowrap, none, center, f.rem(4px));
+                color: colors.$red;
+                background-color: colors.$live-background;
+                padding: f.rem(10px);
+                border-radius: f.rem(6px);
+                font-size: f.rem(13px);
+                width: fit-content;
+            }
+
+            &__league {
+                @include flexMix.flex(row, nowrap, none, center, f.rem(4px));
+                color: colors.$dark-text;
+
+                &__logo {
+                    width: f.rem(24px);
+                }
+            }
+        }
+
+        &__body {
+            @include flexMix.flex(row, nowrap, center, center, f.rem(64px));
+
+            &__shield-name {
+                @include flexMix.flex(column, nowrap, center, center, f.rem(4px));
+                &__shield {
+                    width: f.rem(52px);
+                }
+
+                &__name {
+                    font-size: f.rem(16px);
+                }
+            }
+
+            &__info {
+                @include flexMix.flex(column, nowrap, none, center, f.rem(8px));
+
+                &__result {
+                    font-size: f.rem(24px);
+
+                    &__colon {
+                        color: colors.$gray-3;
+                    }
+                }
+
+                &__minute {
+                    font-size: f.rem(16px);
+                    color: colors.$orange;
+                }
+            }
+        }
+    }
+
+    &__header-2 {
+        font-size: f.rem(20px);
+        font-weight: 700;
+        color: colors.$gray-1;
+    }
+
+    &__progress {
+        @include flexMix.flex(column, nowrap, none, flex-start, f.rem(20px));
+        padding: f.rem(16px) 0;
+        background: white;
+        border-radius: f.rem(10px);
+        width: 100%;
+
+        &__ocurrences {
+            @include flexMix.flex(column, nowrap, center, flex-start, f.rem(10px));
+            width: 100%;
+
+            &__ocurrence-right {
+                @include flexMix.flex(row, nowrap, none, center, f.rem(16px));
+                padding: 0 f.rem(20px) f.rem(12px);
+                border-bottom: f.rem(1px) solid colors.$gray-4;
+                width: 100%;
+
+                &__minute {
+                    color: colors.$gray-1;
+                }
+
+                &__team-icon {
+                    @include flexMix.flex(row, nowrap, none, center, 0);
+
+                    &__team-circle {
+                        @include flexMix.flex(row, nowrap, center, center, 0);
+                        width: f.rem(30px);
+                        height: f.rem(30px);
+                        border: f.rem(1px) solid colors.$gray-4;
+                        border-radius: 50%;
+
+                        &__team {
+                            width: f.rem(20px);
+                        }
+                    }
+
+                    &__icon-circle {
+                        @include flexMix.flex(row, nowrap, center, center, 0);
+                        width: f.rem(30px);
+                        height: f.rem(30px);
+                        border: f.rem(1px) solid colors.$gray-4;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.--flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
 .--fs-6 {
     font-size: f.rem(6px);
 }
@@ -440,6 +596,10 @@ body {
 
 .--color-purple {
     color: colors.$purple;
+}
+
+.--color-green {
+    color: colors.$green;
 }
 
 .--color-purple {

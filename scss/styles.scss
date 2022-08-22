@@ -218,13 +218,6 @@ body {
     border-color: colors.$gray-4;
     height: 100vh;
 
-    &__header {
-        color: colors.$gray-1;
-        font-weight: 700;
-        font-size: f.rem(20px);
-        width: 100%
-    }
-
     &__popular-events {
         @include flexMix.flex(column, nowrap, none, flex-start, 0);
         padding: 0 0 f.rem(12px);
@@ -253,7 +246,7 @@ body {
             table-layout: fixed;
             width: 100%;
             max-width: f.rem(900px);
-            min-width: 600px;
+            min-width: f.rem(600px);
 
             &__col-name {
                 width: 100%;
@@ -395,7 +388,6 @@ body {
         min-width: f.rem(300px);
 
         &__head {
-            
             &__row{
                 &__data {
                     padding-left: f.rem(14px);
@@ -443,7 +435,7 @@ body {
 }
 
 .main-event {
-    @include flexMix.flex(column, nowrap, none, flex-start, f.rem(24px));
+    @include flexMix.flex(column, nowrap, none, center, f.rem(24px));
     padding: f.rem(60px) f.rem(32px);
     background-color: colors.$gray-8;
     border-width: 0 f.rem(2px);
@@ -452,23 +444,20 @@ body {
     height: 100vh;
     flex-grow: 2;
 
-    &__header{
-        font-weight: 700;
-        font-size: f.rem(20px);
-        line-height: f.rem(24px);
-        color: colors.$gray-1;
-    }
-
     &__event {
         @include flexMix.flex(column, nowrap, center, center, f.rem(16px));
         padding: 0 0 f.rem(40px);
         background: white;
         border-radius: f.rem(10px);
+        width: 100%;
+        max-width: f.rem(800px);
+        min-width: f.rem(600px);
 
         &__top {
             @include flexMix.flex(row, nowrap, center, center, f.rem(120px));
             padding: f.rem(12px) f.rem(32px);
             border-bottom: f.rem(1px) solid colors.$gray-3;
+            width: 100%;
 
             &__live-sign {
                 @include flexMix.flex(row, nowrap, none, center, f.rem(4px));
@@ -487,6 +476,10 @@ body {
                 &__logo {
                     width: f.rem(24px);
                 }
+            }
+
+            &__add-fav:hover {
+                cursor: pointer;
             }
         }
 
@@ -523,18 +516,14 @@ body {
         }
     }
 
-    &__header-2 {
-        font-size: f.rem(20px);
-        font-weight: 700;
-        color: colors.$gray-1;
-    }
-
     &__progress {
         @include flexMix.flex(column, nowrap, none, flex-start, f.rem(20px));
         padding: f.rem(16px) 0;
         background: white;
         border-radius: f.rem(10px);
         width: 100%;
+        max-width: f.rem(800px);
+        min-width: f.rem(600px);
 
         &__ocurrences {
             @include flexMix.flex(column, nowrap, center, flex-start, f.rem(10px));
@@ -576,6 +565,14 @@ body {
             }
         }
     }
+}
+
+.--header {
+    font-weight: 700;
+    font-size: f.rem(20px);
+    line-height: f.rem(24px);
+    color: colors.$gray-1;
+    width: 100%
 }
 
 .--flex-row-reverse {

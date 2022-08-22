@@ -10632,12 +10632,10 @@ body {
 }
 .aside-left__country-list__country__button {
   font-size: 1.125rem;
-}
-.aside-left__country-list__country__button {
   cursor: pointer;
 }
 
-.main {
+.main-home {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -10651,13 +10649,13 @@ body {
   border-color: hsl(0deg, 0%, 91%);
   height: 100vh;
 }
-.main__header {
+.main-home__header {
   color: hsl(210deg, 6%, 58%);
   font-weight: 700;
   font-size: 1.25rem;
   width: 100%;
 }
-.main__popular-events {
+.main-home__popular-events {
   display: flex;
   flex-flow: column nowrap;
   justify-content: none;
@@ -10667,7 +10665,7 @@ body {
   background: white;
   border-radius: 0.625rem;
 }
-.main__popular-events__button-set {
+.main-home__popular-events__button-set {
   display: flex;
   flex-flow: row nowrap;
   justify-content: none;
@@ -10676,14 +10674,14 @@ body {
   padding: 1.5rem 1.5rem 1.5rem;
   width: 100%;
 }
-.main__popular-events__button-set__button {
+.main-home__popular-events__button-set__button {
   font-size: 1rem;
   color: hsl(210deg, 6%, 58%);
 }
-.main__popular-events__button-set__button:hover {
+.main-home__popular-events__button-set__button:hover {
   cursor: pointer;
 }
-.main__popular-events__table {
+.main-home__popular-events__table {
   padding: 1rem 0 0.75rem;
   border-radius: 0.625rem;
   border-collapse: collapse;
@@ -10692,69 +10690,69 @@ body {
   max-width: 56.25rem;
   min-width: 600px;
 }
-.main__popular-events__table__col-name {
+.main-home__popular-events__table__col-name {
   width: 100%;
   border-top: 0.125rem solid hsl(0deg, 0%, 91%);
   border-bottom: 0.125rem solid hsl(0deg, 0%, 91%);
 }
-.main__popular-events__table__col-name__cell:first-child {
+.main-home__popular-events__table__col-name__cell:first-child {
   width: 12%;
 }
-.main__popular-events__table__col-name__cell:last-child {
+.main-home__popular-events__table__col-name__cell:last-child {
   width: 25%;
 }
-.main__popular-events__table__col-name__cell__layout {
+.main-home__popular-events__table__col-name__cell__layout {
   background: hsl(260deg, 60%, 99%);
 }
-.main__popular-events__table__col-name__cell__layout__name {
+.main-home__popular-events__table__col-name__cell__layout__name {
   color: hsl(224deg, 8%, 74%);
   text-align: center;
 }
-.main__popular-events__table__event__cell:first-child {
+.main-home__popular-events__table__event__cell:first-child {
   width: 12%;
 }
-.main__popular-events__table__event__cell:last-child {
+.main-home__popular-events__table__event__cell:last-child {
   width: 25%;
 }
-.main__popular-events__table__event__cell:nth-child(2) {
+.main-home__popular-events__table__event__cell:nth-child(2) {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.main__popular-events__table__event__cell {
+.main-home__popular-events__table__event__cell {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
   overflow: hidden;
 }
-.main__popular-events__table__event__cell__time-live-sign {
+.main-home__popular-events__table__event__cell__time-live-sign {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-.main__popular-events__table__event__cell__hour-date {
+.main-home__popular-events__table__event__cell__hour-date {
   display: flex;
   flex-flow: column nowrap;
   justify-content: none;
   align-items: center;
   gap: 0;
 }
-.main__popular-events__table__event__cell__hour-date__hour {
+.main-home__popular-events__table__event__cell__hour-date__hour {
   font-size: 0.875rem;
 }
-.main__popular-events__table__event__cell__hour-date__date {
+.main-home__popular-events__table__event__cell__hour-date__date {
   font-size: 0.75rem;
   white-space: nowrap;
 }
-.main__popular-events__table__event__cell__layout {
+.main-home__popular-events__table__event__cell__layout {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
-.main__popular-events__table__event__cell__layout__live-sign {
+.main-home__popular-events__table__event__cell__layout__live-sign {
   display: flex;
   flex-flow: row nowrap;
   justify-content: none;
@@ -10769,7 +10767,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
 }
-.main__popular-events__table__event__cell__layout__team {
+.main-home__popular-events__table__event__cell__layout__team {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -10777,31 +10775,31 @@ body {
   gap: 0.25rem;
   font-size: 1rem;
 }
-.main__popular-events__table__event__cell__layout__team__shield {
+.main-home__popular-events__table__event__cell__layout__team__shield {
   width: 1.75rem;
 }
-.main__popular-events__table__event__cell__layout__result__text {
+.main-home__popular-events__table__event__cell__layout__result__text {
   font-size: 1.125rem;
   white-space: nowrap;
 }
-.main__popular-events__table__event__cell__layout__result__text__colon {
+.main-home__popular-events__table__event__cell__layout__result__text__colon {
   color: hsl(210deg, 6%, 58%);
 }
-.main__popular-events__table__event__cell__logo-text {
+.main-home__popular-events__table__event__cell__logo-text {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   gap: 0.375rem;
 }
-.main__popular-events__table__event__cell__logo-text__logo {
+.main-home__popular-events__table__event__cell__logo-text__logo {
   width: 1.25rem;
 }
-.main__popular-events__table__event__cell__logo-text__text__league {
+.main-home__popular-events__table__event__cell__logo-text__text__league {
   font-size: 0.8125rem;
   white-space: nowrap;
 }
-.main__popular-events__table__event__cell__logo-text__text__country {
+.main-home__popular-events__table__event__cell__logo-text__text__country {
   font-size: 0.6875rem;
   color: hsl(210deg, 6%, 58%);
   white-space: nowrap;
@@ -10860,6 +10858,182 @@ body {
   white-space: nowrap;
 }
 
+.main-event {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 3.75rem 2rem;
+  background-color: hsl(214deg, 33%, 96%);
+  border-width: 0 0.125rem;
+  border-style: solid;
+  border-color: hsl(0deg, 0%, 91%);
+  height: 100vh;
+  flex-grow: 2;
+}
+.main-event__header {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: hsl(210deg, 6%, 58%);
+}
+.main-event__event {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 0 2.5rem;
+  background: white;
+  border-radius: 0.625rem;
+}
+.main-event__event__top {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 7.5rem;
+  padding: 0.75rem 2rem;
+  border-bottom: 0.0625rem solid hsl(217deg, 15%, 83%);
+}
+.main-event__event__top__live-sign {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 0.25rem;
+  color: hsl(0deg, 100%, 38%);
+  background-color: hsl(354deg, 83%, 95%);
+  padding: 0.625rem;
+  border-radius: 0.375rem;
+  font-size: 0.8125rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.main-event__event__top__league {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 0.25rem;
+  color: hsl(208deg, 50%, 15%);
+}
+.main-event__event__top__league__logo {
+  width: 1.5rem;
+}
+.main-event__event__body {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.main-event__event__body__shield-name {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+.main-event__event__body__shield-name__shield {
+  width: 3.25rem;
+}
+.main-event__event__body__shield-name__name {
+  font-size: 1rem;
+}
+.main-event__event__body__info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-event__event__body__info__result {
+  font-size: 1.5rem;
+}
+.main-event__event__body__info__result__colon {
+  color: hsl(217deg, 15%, 83%);
+}
+.main-event__event__body__info__minute {
+  font-size: 1rem;
+  color: hsl(29deg, 79%, 52%);
+}
+.main-event__header-2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: hsl(210deg, 6%, 58%);
+}
+.main-event__progress {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1rem 0;
+  background: white;
+  border-radius: 0.625rem;
+  width: 100%;
+}
+.main-event__progress__ocurrences {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.625rem;
+  width: 100%;
+}
+.main-event__progress__ocurrences__ocurrence-right {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1.25rem 0.75rem;
+  border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
+  width: 100%;
+}
+.main-event__progress__ocurrences__ocurrence-right__minute {
+  color: hsl(210deg, 6%, 58%);
+}
+.main-event__progress__ocurrences__ocurrence-right__team-icon {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 0;
+}
+.main-event__progress__ocurrences__ocurrence-right__team-icon__team-circle {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 1.875rem;
+  height: 1.875rem;
+  border: 0.0625rem solid hsl(0deg, 0%, 91%);
+  border-radius: 50%;
+}
+.main-event__progress__ocurrences__ocurrence-right__team-icon__team-circle__team {
+  width: 1.25rem;
+}
+.main-event__progress__ocurrences__ocurrence-right__team-icon__icon-circle {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 1.875rem;
+  height: 1.875rem;
+  border: 0.0625rem solid hsl(0deg, 0%, 91%);
+  border-radius: 50%;
+}
+
+.--flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
 .--fs-6 {
   font-size: 0.375rem;
 }
@@ -10874,6 +11048,10 @@ body {
 
 .--color-purple {
   color: hsl(253deg, 81%, 58%);
+}
+
+.--color-green {
+  color: hsl(165deg, 48%, 50%);
 }
 
 .--color-purple {

@@ -10649,12 +10649,6 @@ body {
   border-color: hsl(0deg, 0%, 91%);
   height: 100vh;
 }
-.main-home__header {
-  color: hsl(210deg, 6%, 58%);
-  font-weight: 700;
-  font-size: 1.25rem;
-  width: 100%;
-}
 .main-home__popular-events {
   display: flex;
   flex-flow: column nowrap;
@@ -10688,7 +10682,7 @@ body {
   table-layout: fixed;
   width: 100%;
   max-width: 56.25rem;
-  min-width: 600px;
+  min-width: 37.5rem;
 }
 .main-home__popular-events__table__col-name {
   width: 100%;
@@ -10862,7 +10856,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
   justify-content: none;
-  align-items: flex-start;
+  align-items: center;
   gap: 1.5rem;
   padding: 3.75rem 2rem;
   background-color: hsl(214deg, 33%, 96%);
@@ -10871,12 +10865,6 @@ body {
   border-color: hsl(0deg, 0%, 91%);
   height: 100vh;
   flex-grow: 2;
-}
-.main-event__header {
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  color: hsl(210deg, 6%, 58%);
 }
 .main-event__event {
   display: flex;
@@ -10887,6 +10875,9 @@ body {
   padding: 0 0 2.5rem;
   background: white;
   border-radius: 0.625rem;
+  width: 100%;
+  max-width: 50rem;
+  min-width: 37.5rem;
 }
 .main-event__event__top {
   display: flex;
@@ -10896,6 +10887,7 @@ body {
   gap: 7.5rem;
   padding: 0.75rem 2rem;
   border-bottom: 0.0625rem solid hsl(217deg, 15%, 83%);
+  width: 100%;
 }
 .main-event__event__top__live-sign {
   display: flex;
@@ -10922,6 +10914,9 @@ body {
 }
 .main-event__event__top__league__logo {
   width: 1.5rem;
+}
+.main-event__event__top__add-fav:hover {
+  cursor: pointer;
 }
 .main-event__event__body {
   display: flex;
@@ -10960,11 +10955,6 @@ body {
   font-size: 1rem;
   color: hsl(29deg, 79%, 52%);
 }
-.main-event__header-2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: hsl(210deg, 6%, 58%);
-}
 .main-event__progress {
   display: flex;
   flex-flow: column nowrap;
@@ -10975,6 +10965,8 @@ body {
   background: white;
   border-radius: 0.625rem;
   width: 100%;
+  max-width: 50rem;
+  min-width: 37.5rem;
 }
 .main-event__progress__ocurrences {
   display: flex;
@@ -11028,6 +11020,14 @@ body {
   height: 1.875rem;
   border: 0.0625rem solid hsl(0deg, 0%, 91%);
   border-radius: 50%;
+}
+
+.--header {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: hsl(210deg, 6%, 58%);
+  width: 100%;
 }
 
 .--flex-row-reverse {

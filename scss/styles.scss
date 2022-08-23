@@ -209,15 +209,6 @@ body {
 }
 
 .main-home {
-    @include flexMix.flex(column, nowrap, flex-start, center, f.rem(32px));
-    flex-grow: 2;
-    padding: f.rem(36px) f.rem(32px)    ;
-    background: colors.$gray-8;
-    border-width: 0 f.rem(2px);
-    border-style: solid;
-    border-color: colors.$gray-4;
-    height: 100vh;
-
     &__popular-events {
         @include flexMix.flex(column, nowrap, none, flex-start, 0);
         padding: 0 0 f.rem(12px);
@@ -252,6 +243,7 @@ body {
                 width: 100%;
                 border-top: f.rem(2px) solid colors.$gray-4;
                 border-bottom: f.rem(2px) solid colors.$gray-4;
+                background: colors.$gray-6;
 
                 &__cell:first-child {
                     width: 12%;
@@ -263,8 +255,6 @@ body {
 
                 &__cell {
                     &__layout {
-                        background: colors.$gray-6;
-    
                         &__name {
                             color: colors.$gray-2;
                             text-align: center;
@@ -435,15 +425,6 @@ body {
 }
 
 .main-event {
-    @include flexMix.flex(column, nowrap, none, center, f.rem(24px));
-    padding: f.rem(60px) f.rem(32px);
-    background-color: colors.$gray-8;
-    border-width: 0 f.rem(2px);
-    border-style: solid;
-    border-color: colors.$gray-4;
-    height: 100vh;
-    flex-grow: 2;
-
     &__event {
         @include flexMix.flex(column, nowrap, center, center, f.rem(16px));
         padding: 0 0 f.rem(40px);
@@ -567,6 +548,115 @@ body {
     }
 }
 
+.main-league {
+    &__table-container {
+        background: white;
+        border-radius: f.rem(10px);
+        overflow: hidden;
+
+        &__standings {
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
+            min-width: f.rem(600px);
+            max-width: f.rem(900px);    
+        
+            &__body {
+                &__row:first-child {
+                    background: colors.$gray-6;
+                    border-radius: f.rem(10px);
+                    color: colors.$gray-2;
+                }
+                
+                &__row {
+                    &__cell:not(:nth-child(2)){
+                        width: 5%;
+                        text-align: center;
+                    }
+
+                    &__cell:first-child {
+                        padding-left: f.rem(24px);
+                        width: 6%;
+                        text-align: left;
+                    }
+
+                    &__cell:nth-child(2) {
+                        width: 22%;
+                    }
+
+                    &__cell:last-child {
+                        padding-right: f.rem(24px);
+                    }
+
+                    &__cell {
+                        padding: f.rem(8px) 0;
+
+                        &__team {
+                            @include flexMix.flex(row, nowrap, none, center, f.rem(8px));
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }   
+
+    &__events {
+        background: white;
+        border-radius: f.rem(10px);
+        overflow: hidden;
+        
+        &__table {
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
+            min-width: f.rem(600px);
+            max-width: f.rem(900px);
+
+            &__row {
+                &__cell:first-child{
+                    width: 10%;
+                    padding-left: f.rem(16px);
+                }
+
+                &__cell:nth-child(3) {
+                    width: 10%;
+                    padding-right: f.rem(16px);
+                }
+
+                &__cell {
+                    text-align: center;
+
+                    &__info {
+                        @include flexMix.flex(column, nowrap, none, center, f.rem(4px));
+                        padding: f.rem(8px) 0;
+
+                        &__text {
+                            white-space: nowrap;
+                        }
+
+                        &__team {
+                            @include flexMix.flex(row, nowrap, none, center, f.rem(4px));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.--main {
+    @include flexMix.flex(column, nowrap, flex-start, center, f.rem(32px));
+    flex-grow: 2;
+    padding: f.rem(36px) f.rem(32px);
+    background: colors.$gray-8;
+    border-width: 0 f.rem(2px);
+    border-style: solid;
+    border-color: colors.$gray-4;
+    height: 100vh;
+}
+
 .--header {
     font-weight: 700;
     font-size: f.rem(20px);
@@ -575,12 +665,53 @@ body {
     width: 100%
 }
 
+// Estilos para conjuntos de botones en tablas.
+.--button-set {
+    @include flexMix.flex(row, nowrap, none, none, f.rem(16px));
+    padding: f.rem(24px) f.rem(24px) f.rem(24px);
+    width: 100%;
+
+    &__button {
+        font-size: f.rem(16px);
+        color: colors.$gray-1;
+    }
+
+    &__button:hover{
+        cursor: pointer;
+    }
+}
+
+// Estilos para la fila de los nombres de las columnas en tablas.
+.--col-name {
+    width: 100%;
+    border-top: f.rem(2px) solid colors.$gray-4;
+    border-bottom: f.rem(2px) solid colors.$gray-4;
+    background: colors.$gray-6;
+
+    &__name {
+        color: colors.$gray-2;
+        text-align: center;
+    }
+}
+
 .--flex-row-reverse {
     flex-direction: row-reverse;
 }
 
 .--fs-6 {
     font-size: f.rem(6px);
+}
+
+.--w-16 {
+    width: f.rem(16px);
+}
+
+.--w-24 {
+    width: f.rem(24px);
+}
+
+.--w-32 {
+    width: f.rem(32px);
 }
 
 .--ml-auto {

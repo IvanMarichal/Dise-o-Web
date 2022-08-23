@@ -139,19 +139,109 @@
 			</ul>
     </aside>
 
-		<main class="main-league">
-			<h1 class="main-league__header">
-				Clasificaciones
-			</h1>
-			<div class="main-league__standings">
-				<div class="main-league__standings__button-set">
-					
-				</div>
-			</div>
-		</main>
+	<main class="main-league --main">
+		<h1 class="main-league__header --header">
+			Clasificaciones
+		</h1>
+    <div class="main-league__table-container">
+      <table class="main-league__table-container__standings">
+        <tbody class="main-league__table-container__standings__body">
+          <tr class="main-league__table-container__standings__body__row">
+            <td class="main-league__table-container__standings__body__row__cell">#</td>
+            <td class="main-league__table-container__standings__body__row__cell">Equipo</td>
+            <td class="main-league__table-container__standings__body__row__cell">PJ</td>
+            <td class="main-league__table-container__standings__body__row__cell">G</td>
+            <td class="main-league__table-container__standings__body__row__cell">P</td>
+            <td class="main-league__table-container__standings__body__row__cell">E</td>
+            <td class="main-league__table-container__standings__body__row__cell">GF</td>
+            <td class="main-league__table-container__standings__body__row__cell">GC</td>
+            <td class="main-league__table-container__standings__body__row__cell">DG</td>
+          </tr>
+          <tr class="main-league__table-container__standings__body__row">
+              <td class="main-league__table-container__standings__body__row__cell">1.</td>
+              <td class="main-league__table-container__standings__body__row__cell">
+                <div class="main-league__table-container__standings__body__row__cell__team">
+                  <img src="./images/escudos/3.png" alt="escudo barcelona" class="main-league__table-container__standings__body__row__cell__team__shield --w-32">
+                  Barcelona
+                </div>
+              </td>
+              <td class="main-league__table-container__standings__body__row__cell">8</td>
+              <td class="main-league__table-container__standings__body__row__cell">8</td>
+              <td class="main-league__table-container__standings__body__row__cell">8</td>
+              <td class="main-league__table-container__standings__body__row__cell">8</td>
+              <td class="main-league__table-container__standings__body__row__cell">8</td>
+              <td class="main-league__table-container__standings__body__row__cell">8</td>
+              <td class="main-league__table-container__standings__body__row__cell">8</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+    <h2 class="main-league__header-2 --header">
+      Partidos
+    </h2>
+    <div class="main-league__events">
+      <div class="main-league__events__button-set --button-set">
+        <button class="main-league__events__button-set__button --button-set__button --color-purple --semibold">
+          Todos
+        </button>
+        <button class="main-league__events__button-set__button --button-set__button">
+          En vivo
+        </button>
+        <button class="main-league__events__button-set__button --button-set__button">
+        Completados
+        </button>
+        <button class="main-league__events__button-set__button --button-set__button">
+          Programados
+        </button>
+        <button class="main-league__events__button-set__button --button-set__button --ml-auto">
+          <i class="fa-solid fa-calendar"></i>
+        </button>
+      </div>
+      <table class="main-league__events__table">
+        <tr class="main-league__events__table__row --col-name">
+          <td class="main-league__events__table__row__cell">
+            <p class="main-league__events__table__row__cell__text --col-name__name">Fecha</p>
+          </td>
+          <td class="main-league__events__table__row__cell">
+            <p class="main-league__events__table__row__cell__text --col-name__name">Partido</p>
+          </td>
+          <td class="main-league__events__table__row__cell">
+            <p class="main-league__events__table__row__cell__text --col-name__name">Res</p>
+          </td>
+        </tr>
+        <tr class="main-league__events__table__row main-league__events__table__row--event">
+          <td class="main-league__events__table__row__cell">
+            <div class="main-league__events__table__row__cell__info">
+              <p class="main-league__events__table__row__cell__info__text">14:00</p>
+              <p class="main-league__events__table__row__cell__info__text">Lun 21/7</p>
+            </div>
+          </td>
+          <td class="main-league__events__table__row__cell">
+            <div class="main-league__events__table__row__cell__info">
+              <div class="main-league__events__table__row__cell__info__team">
+                <img src="./images/escudos/3.png" alt="escudo barcelona" class="main-league__events__table__row__cell__info__team__shield --w-24">
+                Barcelona
+              </div>
+              <div class="main-league__events__table__row__cell__info__team">
+                <img src="./images/escudos/3.png" alt="escudo barcelona" class="main-league__events__table__row__cell__info__team__shield --w-24">
+                Barcelona
+              </div>
+            </div>
+          </td>
+          <td class="main-league__events__table__row__cell">
+            <div class="main-league__events__table__row__cell__info">
+              <p class="main-league__events__table__row__cell__info__res">1</p>
+              <p class="main-league__events__table__row__cell__info__res">2</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+	</main>
 
-		<aside class="aside-right">
-			<div class="aside-right__ad"></div>
-		</aside>
+	<aside class="aside-right">
+		<div class="aside-right__ad"></div>
+	</aside>
 </body>
 </html>

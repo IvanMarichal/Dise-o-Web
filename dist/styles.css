@@ -10447,7 +10447,7 @@ readers do not read off random characters that represent icons */
 body {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: none;
+  justify-content: center;
   align-items: flex-start;
   gap: none;
 }
@@ -10462,6 +10462,7 @@ body {
   padding-top: 0.75rem;
   padding-right: 0.75rem;
   padding-left: 0.75rem;
+  height: 100%;
 }
 .nav__logo-link__img {
   width: 1.875rem;
@@ -10801,7 +10802,9 @@ body {
   padding-bottom: 0.75rem;
   border: 0.0625rem solid hsl(0deg, 0%, 91%);
   border-radius: 0.625rem;
-  min-width: 18.75rem;
+  width: 100%;
+  min-width: 15rem;
+  max-width: 18.75rem;
 }
 .aside-right__table__head__row__data {
   padding-left: 0.875rem;
@@ -10997,43 +11000,6 @@ body {
   border-radius: 0.625rem;
   overflow: hidden;
 }
-.main-league__table-container__standings {
-  border-collapse: collapse;
-  table-layout: fixed;
-  width: 100%;
-  min-width: 37.5rem;
-  max-width: 56.25rem;
-}
-.main-league__table-container__standings__body__row:first-child {
-  background: hsl(260deg, 60%, 99%);
-  border-radius: 0.625rem;
-  color: hsl(224deg, 8%, 74%);
-}
-.main-league__table-container__standings__body__row__cell:not(:nth-child(2)) {
-  width: 5%;
-  text-align: center;
-}
-.main-league__table-container__standings__body__row__cell:first-child {
-  padding-left: 1.5rem;
-  width: 6%;
-  text-align: left;
-}
-.main-league__table-container__standings__body__row__cell:nth-child(2) {
-  width: 22%;
-}
-.main-league__table-container__standings__body__row__cell:last-child {
-  padding-right: 1.5rem;
-}
-.main-league__table-container__standings__body__row__cell {
-  padding: 0.5rem 0;
-}
-.main-league__table-container__standings__body__row__cell__team {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: none;
-  align-items: center;
-  gap: 0.5rem;
-}
 .main-league__events {
   background: white;
   border-radius: 0.625rem;
@@ -11044,7 +11010,7 @@ body {
   table-layout: fixed;
   width: 100%;
   min-width: 37.5rem;
-  max-width: 56.25rem;
+  max-width: 39.0625rem;
 }
 .main-league__events__table__row__cell:first-child {
   width: 10%;
@@ -11076,19 +11042,121 @@ body {
   gap: 0.25rem;
 }
 
+.main-team__shield-name {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 2.625rem;
+  width: 100%;
+}
+.main-team__prog-event {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem 0;
+  background: white;
+  border-radius: 0.625rem;
+  width: 100%;
+  max-width: 39.0625rem;
+  min-width: 37.5rem;
+}
+.main-team__prog-event__team {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.3125rem;
+}
+.main-team__prog-event__team > img {
+  width: 3rem;
+}
+.main-team__prog-event__result-date {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 0.125rem;
+}
+.main-team__prog-event__result-date__text:nth-child(2) {
+  font-size: 1rem;
+}
+.main-team__players {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.625rem;
+}
+.main-team__players__player {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0 0.5rem;
+  background: white;
+  border-radius: 0.625rem;
+}
+.main-team__players__player img {
+  width: 4.0625rem;
+  height: 4.0625rem;
+  border-radius: 50%;
+  box-shadow: 0.0625rem 0 0.25rem -0.0625rem hsl(208deg, 50%, 15%);
+}
+.main-team__players__player p {
+  text-align: center;
+  width: 2.375rem;
+}
+.main-team__players__player__posi-country {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.375rem;
+  padding: 0.125rem 0;
+  border-width: 0.04375rem 0;
+  border-style: solid;
+  border-color: hsl(0deg, 0%, 91%);
+}
+.main-team__logo-league {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.4375rem;
+  width: 100%;
+}
+.main-team__logo-league > img {
+  width: 3rem;
+}
+
 .--main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
-  flex-grow: 2;
+  flex-grow: 0.3;
   padding: 2.25rem 2rem;
   background: hsl(214deg, 33%, 96%);
   border-width: 0 0.125rem;
   border-style: solid;
   border-color: hsl(0deg, 0%, 91%);
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
+  width: 43.125rem;
+  max-width: 45rem;
 }
 
 .--header {
@@ -11127,6 +11195,53 @@ body {
   text-align: center;
 }
 
+.--standings-table-container {
+  background: white;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+
+.--standings-table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  min-width: 37.5rem;
+  max-width: 39.0625rem;
+}
+.--standings-table > tbody > tr:first-child {
+  background: hsl(260deg, 60%, 99%);
+  border-radius: 0.625rem;
+  color: hsl(224deg, 8%, 74%);
+}
+.--standings-table > tbody > tr > td:not(:nth-child(2)) {
+  width: 5%;
+  text-align: center;
+}
+.--standings-table > tbody > tr > td:first-child {
+  padding-left: 1.5rem;
+  width: 6%;
+  text-align: left;
+}
+.--standings-table > tbody > tr > td:nth-child(2) {
+  width: 22%;
+}
+.--standings-table > tbody > tr > td:last-child {
+  padding-right: 1.5rem;
+}
+.--standings-table > tbody > tr > td {
+  padding: 0.5rem 0;
+}
+.--standings-table > tbody > tr > td > .--standings__team {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 0.5rem;
+}
+.--standings-table > tbody > tr > td > .--standings__team > img {
+  width: 2rem;
+}
+
 .--flex-row-reverse {
   flex-direction: row-reverse;
 }
@@ -11145,6 +11260,14 @@ body {
 
 .--w-32 {
   width: 2rem;
+}
+
+.--w-48 {
+  width: 3rem;
+}
+
+.--w-72 {
+  width: 4.5rem;
 }
 
 .--ml-auto {

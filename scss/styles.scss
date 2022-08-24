@@ -12,7 +12,7 @@
 @import "./fontawesome/scss/brands.scss";
 
 body {
-    @include flexMix.flex(row, nowrap, none, flex-start, none);
+    @include flexMix.flex(row, nowrap, center, flex-start, none);
 }
 
 .nav {
@@ -21,6 +21,7 @@ body {
     padding-top: f.rem(12px);
     padding-right: f.rem(12px);
     padding-left: f.rem(12px);
+    height: 100%;
 
     // Estilos para <a> del logo
     &__logo-link {
@@ -375,7 +376,9 @@ body {
         padding-bottom: f.rem(12px);
         border: f.rem(1px) solid colors.$gray-4;
         border-radius: f.rem(10px);
-        min-width: f.rem(300px);
+        width: 100%;
+        min-width: f.rem(240px);
+        max-width: f.rem(300px);
 
         &__head {
             &__row{
@@ -553,53 +556,6 @@ body {
         background: white;
         border-radius: f.rem(10px);
         overflow: hidden;
-
-        &__standings {
-            border-collapse: collapse;
-            table-layout: fixed;
-            width: 100%;
-            min-width: f.rem(600px);
-            max-width: f.rem(900px);    
-        
-            &__body {
-                &__row:first-child {
-                    background: colors.$gray-6;
-                    border-radius: f.rem(10px);
-                    color: colors.$gray-2;
-                }
-                
-                &__row {
-                    &__cell:not(:nth-child(2)){
-                        width: 5%;
-                        text-align: center;
-                    }
-
-                    &__cell:first-child {
-                        padding-left: f.rem(24px);
-                        width: 6%;
-                        text-align: left;
-                    }
-
-                    &__cell:nth-child(2) {
-                        width: 22%;
-                    }
-
-                    &__cell:last-child {
-                        padding-right: f.rem(24px);
-                    }
-
-                    &__cell {
-                        padding: f.rem(8px) 0;
-
-                        &__team {
-                            @include flexMix.flex(row, nowrap, none, center, f.rem(8px));
-                        }
-                    }
-
-
-                }
-            }
-        }
     }   
 
     &__events {
@@ -612,7 +568,7 @@ body {
             table-layout: fixed;
             width: 100%;
             min-width: f.rem(600px);
-            max-width: f.rem(900px);
+            max-width: f.rem(625px);
 
             &__row {
                 &__cell:first-child{
@@ -646,15 +602,100 @@ body {
     }
 }
 
+.main-team {
+    &__shield-name {
+        @include flexMix.flex(row, nowrap, none, center, f.rem(24px));
+        font-weight: 600;
+        font-size: f.rem(36px);
+        line-height: f.rem(42px);
+        width: 100%
+    }
+
+    &__prog-event {
+        @include flexMix.flex(row, nowrap, center, center, f.rem(64px));
+        padding: f.rem(16px) 0;
+        background: white;
+        border-radius: f.rem(10px);
+        width: 100%;
+        max-width: f.rem(625px);
+        min-width: f.rem(600px);
+
+        &__team {
+            @include flexMix.flex(row, nowrap, none, center, f.rem(12px));
+            font-size: f.rem(18px);
+            line-height: f.rem(21px);
+
+            & > img {
+                width: f.rem(48px);
+            }
+        }
+
+        &__result-date {
+            @include flexMix.flex(column, nowrap, none, center, f.rem(2px));
+            &__text:nth-child(2) {
+                font-size: f.rem(16px);
+            }
+        }
+
+    }
+    &__players {
+        @include flexMix.flex(row, wrap, space-between, center, f.rem(10px));
+
+        &__player {
+            @include flexMix.flex(column, nowrap, center, center, f.rem(4px));
+            padding: f.rem(4px) 0 f.rem(8px);
+            background: white;
+            border-radius: f.rem(10px);
+
+            & img {
+                width: f.rem(65px);
+                height: f.rem(65px);
+                border-radius: 50%;
+                box-shadow: f.rem(1px) 0 f.rem(4px) f.rem(-1px) colors.$dark-text;
+            }
+
+            & p {
+                text-align: center;
+                width: f.rem(38px)
+            }
+
+            &__posi-country {
+                @include flexMix.flex(row, nowrap, center, center, f.rem(38px));
+                padding: f.rem(2px) 0;
+                border-width: f.rem(.7) 0;
+                border-style: solid;
+                border-color: colors.$gray-4;
+            }
+
+        }
+    }
+
+    &__logo-league {
+        @include flexMix.flex(row, nowrap, none, center, f.rem(12px));
+        font-weight: 600;
+        font-size: f.rem(20px);
+        line-height: f.rem(23px);
+        width: 100%;
+
+        & > img {
+            width: f.rem(48px);
+        }
+    }
+
+}
+
 .--main {
     @include flexMix.flex(column, nowrap, flex-start, center, f.rem(32px));
-    flex-grow: 2;
+    flex-grow: 0.3;
     padding: f.rem(36px) f.rem(32px);
     background: colors.$gray-8;
     border-width: 0 f.rem(2px);
     border-style: solid;
     border-color: colors.$gray-4;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
+    width: f.rem(690px);
+    max-width: f.rem(720px);
 }
 
 .--header {
@@ -694,6 +735,62 @@ body {
     }
 }
 
+.--standings-table-container {
+    background: white;
+    border-radius: f.rem(10px);
+    overflow: hidden;
+}
+
+// Tabla de clasificaciones para ligas
+.--standings-table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    min-width: f.rem(600px);
+    max-width: f.rem(625px);    
+
+    & > tbody {
+        & > tr:first-child {
+            background: colors.$gray-6;
+            border-radius: f.rem(10px);
+            color: colors.$gray-2;
+        }
+        
+        & > tr {
+            & > td:not(:nth-child(2)){
+                width: 5%;
+                text-align: center;
+            }
+
+            & > td:first-child {
+                padding-left: f.rem(24px);
+                width: 6%;
+                text-align: left;
+            }
+
+            & > td:nth-child(2) {
+                width: 22%;
+            }
+
+            & > td:last-child {
+                padding-right: f.rem(24px);
+            }
+
+            & > td {
+                padding: f.rem(8px) 0;
+
+                & > .--standings__team {
+                    @include flexMix.flex(row, nowrap, none, center, f.rem(8px));
+                }
+
+                & > .--standings__team > img {
+                    width: f.rem(32px);
+                }
+            }
+        }
+    }
+}
+
 .--flex-row-reverse {
     flex-direction: row-reverse;
 }
@@ -712,6 +809,14 @@ body {
 
 .--w-32 {
     width: f.rem(32px);
+}
+
+.--w-48 {
+    width: f.rem(48px);
+}
+
+.--w-72 {
+    width: f.rem(72px);
 }
 
 .--ml-auto {

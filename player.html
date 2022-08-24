@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/styles.css">
+  <link rel="stylesheet" href="./dist/styles.css.map">
+  <script src="https://kit.fontawesome.com/d2e8cc781d.js" crossorigin="anonymous"></script>
+  <title>Lysis | Jugador</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <a href="" class="nav__logo-link">
+      <img src="./images/logo.svg" alt="logo de lysis" class="nav__logo-link__img" />
+    </a>
+
+    <div class="nav__line"></div>
+
+    <!-- Conjunto de enlaces para el usuario, pagina de usuario, configuracion, 
+            buscar y favoritos. -->
+    <div class="nav__link-group">
+      <a href="https://www.google.com" class="nav__link-group__link">
+        <i class="fa-solid fa-user fa-xl"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-gear fa-xl"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-star fa-xl"></i>
+      </a>
+    </div>
+
+    <div class="nav__line"></div>
+
+    <!-- Conjunto de enlaces para acceder a deportes. -->
+    <div class="nav__link-group">
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-futbol fa-xl --color-purple"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-volleyball fa-xl"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-basketball fa-xl"></i>
+      </a>
+    </div>
+  </nav>
+
+  <aside class="aside-left">
+    <button class="aside-left__back">
+      <i class="fa-solid fa-angle-left"></i>
+      Volver
+    </button>
+
+    <div class="aside-left__live-container">
+      <div class="aside-left__live-container__title">
+        <i class="fa-solid fa-circle fa-2xs"></i>
+        Live
+      </div>
+
+      <div class="aside-left__live-container__match-set">
+        <div class="aside-left__live-container__match-set__live-matches">
+          <div class="aside-left__live-container__match-set__live-matches__match">
+            <div class="aside-left__live-container__match-set__live-matches__match__info">
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
+                class="aside-left__live-container__match-set__live-matches__match__info__shield">
+              <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
+                <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
+                  3 <span
+                    class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
+                  </span> 2
+                </p>
+                <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
+                  90'
+                </p>
+              </div>
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
+                class="aside-left__live-container__match-set__live-matches__match__info__shield">
+            </div>
+          </div>
+          <div class="aside-left__live-container__match-set__live-matches__match">
+            <div class="aside-left__live-container__match-set__live-matches__match__info">
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
+                class="aside-left__live-container__match-set__live-matches__match__info__shield">
+              <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
+                <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
+                  3 <span
+                    class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
+                  </span> 2
+                </p>
+                <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
+                  90'
+                </p>
+              </div>
+              <img src="./images/escudos/3.png" alt="escudo de futbol club barcelona"
+                class="aside-left__live-container__match-set__live-matches__match__info__shield">
+            </div>
+          </div>
+        </div>
+        <div class="aside-left__live-container__match-set__line"></div>
+        <button class="aside-left__live-container__match-set__more">
+          <i class="fa-solid fa-ellipsis"></i>
+        </button>
+      </div>
+    </div>
+
+    <form action="#" class="aside-left__look-up">
+      <input type="text" class="aside-left__look-up__search" placeholder="Buscar">
+      <button type="submit" class="aside-left__look-up__submit">
+        <i class="fa-solid fa-magnifying-glass --color-gray-2"></i>
+      </button>
+    </form>
+
+    <ul class="aside-left__country-list">
+      <li class="aside-left__country-list__heading">
+        Países
+      </li>
+      <li class="aside-left__country-list__country">
+        <button class="aside-left__country-list__country__button">
+          <i class="fa-solid fa-globe --color-gray-3"></i>
+          España
+        </button>
+      </li>
+      <li class="aside-left__country-list__country">
+        <button class="aside-left__country-list__country__button">
+          <i class="fa-solid fa-globe --color-gray-3"></i>
+          España
+        </button>
+      </li>
+      <li class="aside-left__country-list__country">
+        <button class="aside-left__country-list__country__button">
+          <i class="fa-solid fa-globe --color-gray-3"></i>
+          España
+        </button>
+      </li>
+    </ul>
+  </aside>
+
+  <main class="main-player --main">
+    <div class="main-player__player-team">
+      <div class="main-player__player-team__info">
+        <img src="./images/escudos/3.png" alt="foto rodrigo garcia" class="main-player__player-team__info__img">
+        <div class="main-player__player-team__info__text-group">
+          <p class="main-player__player-team__info__text-group__name">
+            Rodrigo Garcia
+          </p>
+          <div class="main-player__player-team__info__text-group__more-info">
+            <p class="main-player__player-team__info__text-group__more-info">Mediocampista (Barcelona)</p>
+            <p class="main-player__player-team__info__text-group__more-info">Edad 18 (dd-mm-yyy)</p>
+          </div>
+        </div>
+      </div>
+      <img src="./images/escudos/3.png" alt="escudo barcelona" class="main-player__player-team__img">
+    </div>
+    <h1 class="main-player__header --header">
+      Ultimos partidos
+    </h1>
+    <div class="main-player__table-container">
+      <table class="main-player__table-container__last-events">
+        <tbody class="main-player__table-container__last-events__body">
+          <tr class="main-player__table-container__last-events__body__row">
+            <td class="main-player__table-container__last-events__body__row__cell">Fecha</td>
+            <td class="main-player__table-container__last-events__body__row__cell">Partido</td>
+            <td class="main-player__table-container__last-events__body__row__cell">Res</td>
+            <td class="main-player__table-container__last-events__body__row__cell">Goles</td>
+          </tr>
+          <tr class="main-player__table-container__last-events__body__row">
+            <td class="main-player__table-container__last-events__body__row__cell">
+              <div class="main-player__table-container__last-events__body__row__cell__live-sign">
+                <i class="fa-solid fa-circle --fs-6"></i>
+                Live
+              </div>
+              <div class="main-home__popular-events__table__event__cell__time-live-sign">
+              </div>
+            </td>
+            <td class="main-player__table-container__last-events__body__row__cell">
+              <div class="main-player__table-container__last-events__body__row__cell__team">
+                <img src="./images/escudos/3.png" alt="escudo barcelona" class="main-player__table-container__last-events__body__row__cell__team__shield">
+                Barcelona
+              </div>
+              <div class="main-player__table-container__last-events__body__row__cell__team">
+                <img src="./images/escudos/3.png" alt="escudo barcelona" class="main-player__table-container__last-events__body__row__cell__team__shield">
+                Barcelona
+              </div>
+            </td>
+            <td class="main-player__table-container__last-events__body__row__cell">
+              <div class="main-player__table-container__last-events__body__row__cell__layout">
+                <p class="main-player__table-container__last-events__body__row__cell__layout__result">1</p>
+                <p class="main-player__table-container__last-events__body__row__cell__layout__result">2</p>
+              </div>
+            </td>
+            <td class="main-player__table-container__last-events__body__row__cell">0</td>
+          </tr>
+          <tr class="main-player__table-container__last-events__body__row">
+            <td class="main-player__table-container__last-events__body__row__cell">
+              <p class="main-player__table-container__last-events__body__row__cell__layout__date-time">14:00</p>
+              <p class="main-player__table-container__last-events__body__row__cell__layout__date-time">Lun 21/7</p>
+            </td>
+            <td class="main-player__table-container__last-events__body__row__cell">
+              <div class="main-player__table-container__last-events__body__row__cell__team">
+                <img src="./images/escudos/3.png" alt="escudo barcelona" class="main-player__table-container__last-events__body__row__cell__team__shield">
+                Barcelona
+              </div>
+              <div class="main-player__table-container__last-events__body__row__cell__team">
+                <img src="./images/escudos/3.png" alt="escudo barcelona" class="main-player__table-container__last-events__body__row__cell__team__shield">
+                Barcelona
+              </div>
+            </td>
+            <td class="main-player__table-container__last-events__body__row__cell">
+              <div class="main-player__table-container__last-events__body__row__cell__layout">
+                <p class="main-player__table-container__last-events__body__row__cell__layout__result">1</p>
+                <p class="main-player__table-container__last-events__body__row__cell__layout__result">2</p>
+              </div>
+            </td>
+            <td class="main-player__table-container__last-events__body__row__cell">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2 class="main-player__header-2 --header">
+      Equipos a los que perteneció
+    </h2>
+    <div class="main-player__table-container">
+      <table class="main-player__table-container__team-history">
+        <tbody class="main-player__table-container__team-history__body">
+          <tr class="main-player__table-container__team-history__body__row">
+            <td class="main-player__table-container__team-history__body__row__cell">F. Ing</td>
+            <td class="main-player__table-container__team-history__body__row__cell">F. Sal</td>
+            <td class="main-player__table-container__team-history__body__row__cell">Equipo</td>
+            <td class="main-player__table-container__team-history__body__row__cell">Pos.</td>
+          </tr>
+          <tr class="main-player__table-container__team-history__body__row">
+            <td class="main-player__table-container__team-history__body__row__cell">02/04/22</td>
+            <td class="main-player__table-container__team-history__body__row__cell">03/04/22</td>
+            <td class="main-player__table-container__team-history__body__row__cell">
+              <div class="main-player__table-container__team-history__body__row__cell__layout">
+                <img src="./images/escudos/3.png" alt="escudo barcelona" class="main-player__table-container__team-history__body__row__cell__layout__img">
+                Barcelona
+              </div>
+            </td>
+            <td class="main-player__table-container__team-history__body__row__cell">Mediocampista</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <aside class="aside-right">
+    <div class="aside-right__ad"></div>
+  </aside>
+</body>
+
+</html>

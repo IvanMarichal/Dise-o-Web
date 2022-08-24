@@ -11141,13 +11141,166 @@ body {
   width: 3rem;
 }
 
+.main-player__player-team {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4.875rem;
+  padding: 1.125rem 2.25rem;
+  background: white;
+  border-radius: 0.625rem;
+  width: 100%;
+}
+.main-player__player-team__info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-player__player-team__info__img {
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+  box-shadow: 0.0625rem 0 0.25rem -0.0625rem hsl(208deg, 50%, 15%);
+}
+.main-player__player-team__info__text-group {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.main-player__player-team__info__text-group > p {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+}
+.main-player__player-team__info__text-group > div p {
+  font-size: 0.875rem;
+}
+.main-player__player-team__img {
+  width: 5.9375rem;
+  height: 5.9375rem;
+}
+.main-player__table-container {
+  background: white;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  padding-bottom: 0.75rem;
+}
+.main-player__table-container__last-events {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  min-width: 37.5rem;
+  max-width: 39.0625rem;
+}
+.main-player__table-container__last-events tbody tr:first-child td {
+  padding: 0.375rem 0;
+  color: hsl(224deg, 8%, 74%);
+  font-size: 0.75rem;
+  text-align: center;
+}
+.main-player__table-container__last-events tbody tr:not(:first-child) td:nth-child(3), .main-player__table-container__last-events tbody tr:not(:first-child) td:last-child {
+  font-weight: 700;
+  font-size: 0.9375rem;
+}
+.main-player__table-container__last-events tbody tr:not(:first-child) td:nth-child(3) div {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-player__table-container__last-events tbody tr:not(:first-child) td {
+  text-align: center;
+  padding: 0.375rem 0;
+}
+.main-player__table-container__last-events tbody tr:not(:first-child) td div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+.main-player__table-container__last-events tbody tr:not(:first-child) td div img {
+  width: 1.5rem;
+}
+.main-player__table-container__last-events tbody tr:not(:first-child) td div.main-player__table-container__last-events__body__row__cell__live-sign {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.3125rem;
+  background: hsl(354deg, 83%, 95%);
+  color: hsl(0deg, 100%, 38%);
+  font-size: 0.8125rem;
+  padding: 0.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+.main-player__table-container__last-events tbody tr:nth-child(2) td:nth-child(3) {
+  color: hsl(0deg, 100%, 38%);
+}
+.main-player__table-container__last-events tbody tr {
+  border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
+}
+.main-player__table-container__last-events tbody tr td:first-child {
+  padding-left: 1rem;
+  width: 18%;
+}
+.main-player__table-container__last-events tbody tr td:last-child {
+  padding-right: 1rem;
+  width: 18%;
+}
+.main-player__table-container__last-events tbody tr td:nth-child(3) {
+  width: 18%;
+}
+.main-player__table-container__team-history {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+  min-width: 37.5rem;
+  max-width: 39.0625rem;
+}
+.main-player__table-container__team-history tbody tr:first-child td {
+  padding: 0.375rem 0;
+  color: hsl(224deg, 8%, 74%);
+  font-size: 0.75rem;
+  text-align: center;
+}
+.main-player__table-container__team-history tbody tr:not(:first-child) td {
+  text-align: center;
+  padding: 0.375rem 0;
+}
+.main-player__table-container__team-history tbody tr:not(:first-child) td div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+.main-player__table-container__team-history tbody tr:not(:first-child) td div img {
+  width: 1.5rem;
+}
+.main-player__table-container__team-history tbody tr {
+  border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
+}
+.main-player__table-container__team-history tbody tr td:first-child, .main-player__table-container__team-history tbody tr td:nth-child(2) {
+  width: 20%;
+}
+
 .--main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
-  flex-grow: 0.3;
   padding: 2.25rem 2rem;
   background: hsl(214deg, 33%, 96%);
   border-width: 0 0.125rem;

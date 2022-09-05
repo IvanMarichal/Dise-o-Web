@@ -854,6 +854,60 @@ body {
     }
 }
 
+.main-ev-per-sport {
+    &__league {
+        @include flexMix.flex(row, nowrap, none, center, f.rem(8px));
+        font-size: f.rem(24px);
+        padding-bottom: f.rem(24px);
+        border-bottom: f.rem(1px) solid colors.$dark-text;
+        width: 100%;
+
+        &__logo {
+            width: f.rem(48px);
+        }
+    }
+
+    &__event {
+        @include flexMix.flex(row, nowrap, space-between, center, 0);
+        padding: f.rem(12px) f.rem(32px);
+        background: white;
+        border-radius: f.rem(10px);
+        width: 100%;
+
+        &__info:first-child {
+            @include flexMix.flex(column, nowrap, none, center, 0);
+
+            > p + p {
+                font-size: f.rem(14px);
+            }
+
+            > p {    
+                font-size: f.rem(16px);
+            }
+
+            p{
+                white-space: nowrap;
+            }
+        }
+
+        &__info {
+            @include flexMix.flex(row, nowrap, center, center, f.rem(8px));
+
+            &__team {
+                @include flexMix.flex(row, nowrap, none, center, f.rem(12px));
+
+                &__shield {
+                    width: f.rem(42px);
+                }
+    
+                &__vs {
+                    font-size: f.rem(16px);
+                }
+            }
+        }
+    }
+}
+
 .--main {
     @include flexMix.flex(column, nowrap, flex-start, center, f.rem(32px));
     padding: f.rem(36px) f.rem(32px);
@@ -968,6 +1022,10 @@ body {
     font-size: f.rem(6px);
 }
 
+.--fs-32 {
+    font-size: f.rem(32px);
+}
+
 .--w-16 {
     width: f.rem(16px);
 }
@@ -986,6 +1044,10 @@ body {
 
 .--w-72 {
     width: f.rem(72px);
+}
+
+.--gap-48 {
+    gap: f.rem(48px);
 }
 
 .--ml-auto {

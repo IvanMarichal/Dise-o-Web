@@ -429,7 +429,7 @@ body {
 
 .main-event {
     &__event {
-        @include flexMix.flex(column, nowrap, center, center, f.rem(16px));
+        @include flexMix.flex(column, nowrap, center, center, f.rem(32px));
         padding: 0 0 f.rem(40px);
         background: white;
         border-radius: f.rem(10px);
@@ -908,6 +908,181 @@ body {
     }
 }
 
+.main-set {
+    &__event {
+        @include flexMix.flex(column, nowrap, center, center, f.rem(32px));
+        padding: 0 0 f.rem(40px);
+        background: white;
+        border-radius: f.rem(10px);
+        width: 100%;
+        max-width: f.rem(800px);
+        min-width: f.rem(600px);
+
+        &__top {
+            @include flexMix.flex(row, nowrap, space-between, center, 0);
+            padding: f.rem(12px) f.rem(64px);
+            border-bottom: f.rem(1px) solid colors.$gray-3;
+            width: 100%;
+
+            &__live-sign {
+                @include flexMix.flex(row, nowrap, none, center, f.rem(4px));
+                color: colors.$red;
+                background-color: colors.$live-background;
+                padding: f.rem(10px);
+                border-radius: f.rem(6px);
+                font-size: f.rem(13px);
+                width: fit-content;
+            }
+
+            &__league {
+                @include flexMix.flex(row, nowrap, none, center, f.rem(4px));
+                color: colors.$dark-text;
+
+                &__logo {
+                    width: f.rem(24px);
+                }
+            }
+
+            &__add-fav:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__body {
+            @include flexMix.flex(row, nowrap, center, center, f.rem(64px));
+
+            &__shield-name {
+                @include flexMix.flex(column, nowrap, center, center, f.rem(4px));
+                &__shield {
+                    width: f.rem(52px);
+                }
+
+                &__name {
+                    font-size: f.rem(16px);
+                }
+            }
+
+            &__info {
+                @include flexMix.flex(column, nowrap, none, center, f.rem(8px));
+
+                &__result {
+                    font-size: f.rem(24px);
+
+                    &__colon {
+                        color: colors.$gray-3;
+                    }
+                }
+
+                &__minute {
+                    font-size: f.rem(16px);
+                    color: colors.$orange;
+                }
+            }
+        }
+    }
+
+    &__scores {
+        background: white;
+        border-radius: f.rem(12px);
+        overflow: hidden;
+
+        &__table {
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 100%;
+            min-width: f.rem(600px);
+            max-width: f.rem(625px);    
+
+            & > tbody {
+                & > tr:first-child {
+                    background: colors.$gray-6;
+                    border-radius: f.rem(10px);
+                    color: colors.$gray-2;
+                }
+                
+                & > tr {
+                    border-bottom: f.rem(1px) solid #EAEAEA;
+
+                    & > td:not(:first-child){
+                        width: 2%;
+                    }
+                    
+                    & > td:first-child {
+                        padding-left: f.rem(24px);
+                        width: 13%;
+                    }
+                    
+                    & > td:last-child {
+                        padding-right: f.rem(24px);
+                    }
+                    
+                    & > td {
+                        padding: f.rem(8px) 0;
+                        
+                        & > .--team {
+                            @include flexMix.flex(row, nowrap, none, center, f.rem(8px));
+                        }
+                        
+                        & > .--team > img {
+                            width: f.rem(32px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__progress {
+        @include flexMix.flex(column, nowrap, none, flex-start, f.rem(20px));
+        padding: f.rem(16px) 0;
+        background: white;
+        border-radius: f.rem(10px);
+        width: 100%;
+        max-width: f.rem(800px);
+        min-width: f.rem(600px);
+
+        &__ocurrences {
+            @include flexMix.flex(column, nowrap, center, flex-start, f.rem(10px));
+            width: 100%;
+
+            &__ocurrence-right {
+                @include flexMix.flex(row, nowrap, none, center, f.rem(16px));
+                padding: 0 f.rem(20px) f.rem(12px);
+                border-bottom: f.rem(1px) solid colors.$gray-4;
+                width: 100%;
+
+                &__minute {
+                    color: colors.$gray-1;
+                }
+
+                &__team-icon {
+                    @include flexMix.flex(row, nowrap, none, center, 0);
+
+                    &__team-circle {
+                        @include flexMix.flex(row, nowrap, center, center, 0);
+                        width: f.rem(30px);
+                        height: f.rem(30px);
+                        border: f.rem(1px) solid colors.$gray-4;
+                        border-radius: 50%;
+
+                        &__team {
+                            width: f.rem(20px);
+                        }
+                    }
+
+                    &__icon-circle {
+                        @include flexMix.flex(row, nowrap, center, center, 0);
+                        width: f.rem(30px);
+                        height: f.rem(30px);
+                        border: f.rem(1px) solid colors.$gray-4;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .--main {
     @include flexMix.flex(column, nowrap, flex-start, center, f.rem(32px));
     padding: f.rem(36px) f.rem(32px);
@@ -964,7 +1139,7 @@ body {
     overflow: hidden;
 }
 
-// Tabla de clasificaciones para ligas
+// Tabla de clasificaciones para ligas.
 .--standings-table {
     border-collapse: collapse;
     table-layout: fixed;

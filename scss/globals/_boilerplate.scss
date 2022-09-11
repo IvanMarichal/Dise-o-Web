@@ -20,6 +20,10 @@ body {
     color: colors.$dark-text;
 }
 
+input {
+    all: unset;
+}
+
 input, textarea, input[placeholder] {
     font-family: 'Roboto';
     border: none;

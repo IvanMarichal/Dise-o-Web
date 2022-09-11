@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/logo.svg" />
+  <link rel="stylesheet" href="./dist/styles.css" />
+  <link rel="stylesheet" href="./dist/styles.css.map" />
+  <script src="https://kit.fontawesome.com/d2e8cc781d.js" crossorigin="anonymous"></script>
+  <title>Lysis | Cuenta</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <a href="" class="nav__logo-link">
+      <img src="./images/logo.svg" alt="logo de lysis" class="nav__logo-link__img" />
+    </a>
+
+    <div class="nav__line"></div>
+
+    <!-- Conjunto de enlaces para el usuario, pagina de usuario, configuracion, 
+        buscar y favoritos. -->
+    <div class="nav__link-group">
+      <a href="https://www.google.com" class="nav__link-group__link">
+        <i class="fa-solid fa-user fa-xl"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-gear fa-xl"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-star fa-xl"></i>
+      </a>
+    </div>
+
+    <div class="nav__line"></div>
+
+    <!-- Conjunto de enlaces para acceder a deportes. -->
+    <div class="nav__link-group">
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-futbol fa-xl --color-purple"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-volleyball fa-xl"></i>
+      </a>
+      <a href="#" class="nav__link-group__link">
+        <i class="fa-solid fa-basketball fa-xl"></i>
+      </a>
+    </div>
+  </nav>
+
+  <aside class="aside-left">
+    <div class="aside-left__config-container">
+        <div class="aside-left__config-container__title">
+            Configuración
+        </div>
+        <div class="aside-left__config-container__config-group">
+            <a href="#" class="aside-left__config-container__config-group__link --color-purple">
+                Cuenta
+            </a>
+            <a href="#" class="aside-left__config-container__config-group__link">
+                Favoritos
+            </a>
+        </div>
+  </aside>
+
+  <main class="main-config-account --main">
+    <h1 class="main-config-account__header --header">
+      Editar perfil
+    </h1>
+    <div class="main-config-account__form-container">
+        <form action="#" method="post" class="main-config-account__form-container__form">
+            <label class="main-config-account__form-container__label">
+                Cambiar nombre de usuario:
+            </label>
+            <input type="text" id="userName" class="main-config-account__form-container__input" placeholder="Nuevo nombre de usuario aqui">
+            <label class="main-config-account__form-container__label">
+                Cambiar correo:
+            </label>
+            <input type="email" id="userEmail" class="main-config-account__form-container__input" placeholder="Nuevo correo aqui">
+            <label class="main-config-account__form-container__label">
+                Cambiar contraseña:
+            </label>
+            <input type="password" id="userNewPassword" class="main-config-account__form-container__input" placeholder="Nueva contraseña aqui">
+            <label class="main-config-account__form-container__label">
+                Contraseña actual:
+            </label>
+            <input type="password" id="userPassword" class="main-config-account__form-container__input" placeholder="Contraseña actual aqui">
+        </form>
+    </div>
+  </main>
+
+  <aside class="aside-right">
+<div class="aside-right__ad"></div>
+  </aside>
+
+</body>
+
+</html>

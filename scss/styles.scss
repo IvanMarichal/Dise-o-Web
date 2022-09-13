@@ -1104,12 +1104,17 @@ body {
 }
 
 .main-login {
-    @include flexMix.flex(row, nowrap, center, center, f.rem(128px));
+    @include flexMix.flex(row, wrap, flex-start, center, f.rem(128px));
     background: white;
-    width: 100%;
+    padding: f.rem(128px);
+    height: 100%;
+    min-height: 100vh;
+    width: f.rem(1306px);
+    max-width: f.rem(1336px); 
 
     &__presentation {
         @include flexMix.flex(column, nowrap, none, flex-start, f.rem(32px));
+        width: 50%;
 
         &__logo-name {
             @include flexMix.flex(row, nowrap, none, center, f.rem(32px));
@@ -1188,7 +1193,10 @@ body {
             @include flexMix.flex(column, nowrap, flex-start, center, f.rem(16px));
         }
 
-        
+        &__label {
+            width: 100%;
+            padding-left: f.rem(8px);
+        }
 
         &__input {
             width: f.rem(330px);
@@ -1210,6 +1218,7 @@ body {
             box-shadow: f.rem(0px) f.rem(1px) f.rem(10px) colors.$gray-1;
             border-radius: f.rem(10px);
             color: white;
+            font-size: f.rem(16px);
         }
     }
 }

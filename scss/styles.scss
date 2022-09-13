@@ -1166,9 +1166,29 @@ body {
         @include flexMix.flex(column, nowrap, flex-start, center, f.rem(24px));
         width: 100%;
 
-        &__form {
-            @include flexMix.flex(column, nowrap, flex-start, left, f.rem(16px));
+        &__photo-edit {
+            @include flexMix.flex(column, nowrap, flex-end, flex-end, none);
+            width: f.rem(128px);
+            height: f.rem(128px);
+            background: colors.$gray-3;
+            margin-bottom: f.rem(24px);
+            border-radius: f.rem(64px);
+
+            &__btn {
+                @include flexMix.flex(column, nowrap, center, center, none);
+                width: f.rem(32px);
+                height: f.rem(32px);
+                background: white;
+                border-radius: f.rem(18px);
+                color: colors.$dark-text;
+            }
         }
+
+        &__form {
+            @include flexMix.flex(column, nowrap, flex-start, center, f.rem(16px));
+        }
+
+        
 
         &__input {
             width: f.rem(330px);
@@ -1179,6 +1199,17 @@ body {
             border: f.rem(0.7px) solid black;
             border-radius: f.rem(10px);
             background: white;
+        }
+
+        &__btn {
+            padding: f.rem(12px);
+            width: f.rem(250px);
+            height: f.rem(42px);
+            margin-top: f.rem(64px);
+            background: colors.$purple;
+            box-shadow: f.rem(0px) f.rem(1px) f.rem(10px) colors.$gray-1;
+            border-radius: f.rem(10px);
+            color: white;
         }
     }
 }

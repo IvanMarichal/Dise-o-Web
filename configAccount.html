@@ -27,7 +27,7 @@
         <i class="fa-solid fa-user fa-xl"></i>
       </a>
       <a href="#" class="nav__link-group__link">
-        <i class="fa-solid fa-gear fa-xl"></i>
+        <i class="fa-solid fa-gear fa-xl --color-purple"></i>
       </a>
       <a href="#" class="nav__link-group__link">
         <i class="fa-solid fa-magnifying-glass fa-xl"></i>
@@ -42,7 +42,7 @@
     <!-- Conjunto de enlaces para acceder a deportes. -->
     <div class="nav__link-group">
       <a href="#" class="nav__link-group__link">
-        <i class="fa-solid fa-futbol fa-xl --color-purple"></i>
+        <i class="fa-solid fa-futbol fa-xl"></i>
       </a>
       <a href="#" class="nav__link-group__link">
         <i class="fa-solid fa-volleyball fa-xl"></i>
@@ -79,24 +79,22 @@
         </a>
       </div>
         <form action="#" method="post" class="main-config-account__form-container__form">
-            <div class="main-config-account__form-container__label">
-              <label>
-                  Cambiar nombre de usuario:
-              </label>
+            <div class="main-config-account__form-container__label-input">
+              <label> Cambiar nombre de usuario: </label>
+              <input type="text" id="userName" class="main-config-account__form-container__input" placeholder="Nuevo nombre de usuario aqui">
             </div>
-            <input type="text" id="userName" class="main-config-account__form-container__input" placeholder="Nuevo nombre de usuario aqui">
-            <label class="main-config-account__form-container__label">
-                Cambiar correo:
-            </label>
-            <input type="email" id="userEmail" class="main-config-account__form-container__input" placeholder="Nuevo correo aqui">
-            <label class="main-config-account__form-container__label">
-                Cambiar contraseña:
-            </label>
-            <input type="password" id="userNewPassword" class="main-config-account__form-container__input" placeholder="Nueva contraseña aqui">
-            <label class="main-config-account__form-container__label">
-                Contraseña actual:
-            </label>
-            <input type="password" id="userPassword" class="main-config-account__form-container__input" placeholder="Contraseña actual aqui">
+            <div class="main-config-account__form-container__label-input">
+              <label> Cambiar correo: </label>
+              <input type="email" id="userEmail" class="main-config-account__form-container__input" placeholder="Nuevo correo aqui">
+            </div>
+            <div class="main-config-account__form-container__label-input">
+              <label> Cambiar contraseña: </label>
+              <input type="password" id="userNewPassword" class="main-config-account__form-container__input" placeholder="Nueva contraseña aqui">
+            </div>
+            <div class="main-config-account__form-container__label-input">
+              <label> Contraseña actual: </label>
+              <input type="password" id="userPassword" class="main-config-account__form-container__input" placeholder="Contraseña actual aqui">
+            </div>
             <button type="submit" class="main-config-account__form-container__btn">
               Guardar cambios
             </button>

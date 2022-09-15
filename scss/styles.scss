@@ -15,6 +15,13 @@ body {
     @include flexMix.flex(row, nowrap, center, flex-start, none);
 }
 
+.container-main {
+    @include flexMix.flex(row, nowrap, center, flex-start, none);
+    box-shadow: -1px 10px 59px -12px rgba(0,0,0,0.24);
+    -webkit-box-shadow: -1px 10px 59px -12px rgba(0,0,0,0.24);
+    -moz-box-shadow: -1px 10px 59px -12px rgba(0,0,0,0.24);
+}
+
 .nav {
     @include flexMix.flex(column, nowrap, none, center, f.rem(16px));
     width: f.rem(65px);
@@ -382,8 +389,9 @@ body {
 }
 
 .aside-right {
-    @include flexMix.flex(column, nowrap, none, center, f.rem(69px));
+    @include flexMix.flex(column, nowrap, none, center, f.rem(5px));
     padding: f.rem(40px) f.rem(38px);
+    
 
     &__ad {
         width: f.rem(240px);
@@ -399,6 +407,7 @@ body {
         width: 100%;
         min-width: f.rem(240px);
         max-width: f.rem(300px);
+        margin-top: f.rem(40px);
 
         &__head {
             &__row{
@@ -444,6 +453,16 @@ body {
                 }
             }
         }
+    }
+
+    &__ad-delete {
+        @include flexMix.flex(column, nowrap, center, center, none);
+        text-decoration: underline;
+        color: colors.$dark-text;
+        font-size: f.rem(12px);
+        font-weight: bold;
+    
+
     }
 }
 
@@ -1104,7 +1123,7 @@ body {
 }
 
 .main-login {
-    @include flexMix.flex(row, wrap, flex-start, center, f.rem(64px));
+    @include flexMix.flex(row, wrap, space-between, center, f.rem(64px));
     background: white;
     padding: f.rem(128px);
     height: 100%;
@@ -1142,7 +1161,7 @@ body {
 
     &__login-card {
         @include flexMix.flex(column, nowrap, none, center, f.rem(38px));
-        width: f.rem(300px);
+        width: f.rem(417px);
         height: f.rem(515px);
         padding: f.rem(32px) f.rem(12px);
         background: colors.$gray-8;
@@ -1151,10 +1170,19 @@ body {
 
         &__login {
             @include flexMix.flex(column, nowrap, none, center, f.rem(36px));
+            width: f.rem(334px);
 
             &__h2 {
                 font-size: f.rem(36px);
                 line-height: f.rem(42px);
+            }
+
+            &__email-input {
+                width: f.rem(334px);
+            }
+
+            &__passwd-input {
+                width: f.rem(334px);
             }
 
             &__passwd-reset {

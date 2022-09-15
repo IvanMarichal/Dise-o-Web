@@ -10456,6 +10456,17 @@ body {
   gap: none;
 }
 
+.container-main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: none;
+  box-shadow: -1px 10px 59px -12px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: -1px 10px 59px -12px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: -1px 10px 59px -12px rgba(0, 0, 0, 0.24);
+}
+
 .nav {
   display: flex;
   flex-flow: column nowrap;
@@ -10817,7 +10828,7 @@ body {
   flex-flow: column nowrap;
   justify-content: none;
   align-items: center;
-  gap: 4.3125rem;
+  gap: 0.3125rem;
   padding: 2.5rem 2.375rem;
 }
 .aside-right__ad {
@@ -10833,6 +10844,7 @@ body {
   width: 100%;
   min-width: 15rem;
   max-width: 18.75rem;
+  margin-top: 2.5rem;
 }
 .aside-right__table__head__row__data {
   padding-left: 0.875rem;
@@ -10865,6 +10877,17 @@ body {
   font-size: 0.75rem;
   color: hsl(210deg, 6%, 58%);
   white-space: nowrap;
+}
+.aside-right__ad-delete {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: none;
+  text-decoration: underline;
+  color: hsl(208deg, 50%, 15%);
+  font-size: 0.75rem;
+  font-weight: bold;
 }
 
 .main-event__event {
@@ -11587,7 +11610,7 @@ body {
 .main-login {
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   gap: 4rem;
   background: white;
@@ -11634,7 +11657,7 @@ body {
   justify-content: none;
   align-items: center;
   gap: 2.375rem;
-  width: 18.75rem;
+  width: 26.0625rem;
   height: 32.1875rem;
   padding: 2rem 0.75rem;
   background: hsl(214deg, 33%, 96%);
@@ -11647,10 +11670,17 @@ body {
   justify-content: none;
   align-items: center;
   gap: 2.25rem;
+  width: 20.875rem;
 }
 .main-login__login-card__login__h2 {
   font-size: 2.25rem;
   line-height: 2.625rem;
+}
+.main-login__login-card__login__email-input {
+  width: 20.875rem;
+}
+.main-login__login-card__login__passwd-input {
+  width: 20.875rem;
 }
 .main-login__login-card__login__passwd-reset {
   font-weight: 600;

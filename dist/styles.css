@@ -11886,6 +11886,18 @@ body {
   font-size: 1rem;
 }
 
+.main-mark__event {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 1.5rem;
+  width: 38.75rem;
+  height: 11.5625rem;
+  background: white;
+  border-radius: 0.625rem;
+}
+
 .--main {
   display: flex;
   flex-flow: column nowrap;

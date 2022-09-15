@@ -1379,6 +1379,17 @@ body {
 
 }
 
+.main-mark {
+
+     &__event {
+        @include flexMix.flex(row, nowrap, none, center, f.rem(24px));
+        width: f.rem(620px);
+        height: f.rem(185px);
+        background: white;
+        border-radius: f.rem(10px);
+     }
+}
+
 .--main {
     @include flexMix.flex(column, nowrap, flex-start, center, f.rem(32px));
     padding: f.rem(36px) f.rem(32px);

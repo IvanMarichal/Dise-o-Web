@@ -11886,16 +11886,167 @@ body {
   font-size: 1rem;
 }
 
-.main-mark__event {
+.main-mark__event-match {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: none;
+  justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
   width: 38.75rem;
   height: 11.5625rem;
   background: white;
   border-radius: 0.625rem;
+  padding: 2.25rem;
+}
+.main-mark__event-match__group-event {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.main-mark__event-match__favs-img {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+.main-mark__container-mark {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 0 1.25rem;
+}
+.main-mark__container-mark__group-selector {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.125rem;
+  padding: 0.75rem 1.125rem;
+  background: white;
+  border-radius: 0.625rem;
+  width: 15.625rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+.main-mark__table-marks {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: none;
+  padding: 0 0 0.75rem;
+  width: 38.75rem;
+  background: white;
+  border-radius: 0.625rem;
+}
+.main-mark__table-marks__table {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: none;
+  width: 38.8125rem;
+}
+.main-mark__table-marks__table > tbody {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+.main-mark__table-marks__table > tbody > tr:first-child {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 7.5rem;
+  background: hsl(260deg, 60%, 99%);
+  padding: 0.5rem 0 0.5rem 1.875rem;
+  border-radius: 0.75rem;
+  width: 100%;
+}
+.main-mark__table-marks__table > tbody > tr:first-child > td:first-child {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+.main-mark__table-marks__table > tbody > tr:first-child > td:first-child p {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.main-mark__table-marks__table > tbody > tr:first-child > td:not(:first-child) {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: center;
+  gap: 12.5rem;
+}
+.main-mark__table-marks__table > tbody > tr:first-child > td:not(:first-child) p {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.main-mark__table-marks__table > tbody > tr:not(:first-child) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: none;
+  align-items: center;
+  gap: 5.625rem;
+  padding: 0.5rem 1.875rem;
+  width: 38.8125rem;
+  height: 2.5rem;
+}
+.main-mark__table-marks__table > tbody > tr:not(:first-child) > td:first-child {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: none;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 0px;
+  width: 8.125rem;
+  height: 1.3125rem;
+}
+.main-mark__table-marks__table > tbody > tr:not(:first-child) > td:first-child p {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.main-mark__table-marks__table > tbody > tr:not(:first-child) > td:first-child > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: none;
+  align-items: center;
+  gap: 0.3125rem;
+  width: 4.375rem;
+  height: 1.25rem;
+}
+.main-mark__table-marks__table > tbody > tr:not(:first-child) > td:not(:first-child) {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: none;
+  width: 20.0625rem;
+  height: 1.5rem;
+}
+.main-mark__table-marks__table > tbody > tr:not(:first-child) > td:not(:first-child) > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: none;
+  align-items: center;
+  gap: 0.3125rem;
+  height: 1.25rem;
+}
+.main-mark__table-marks__table > tbody > tr:not(:first-child) > td:not(:first-child) p {
+  font-size: 0.75rem;
+  font-weight: 400;
 }
 
 .--main {
@@ -12070,6 +12221,10 @@ body {
 
 .--color-purple {
   color: hsl(253deg, 81%, 58%);
+}
+
+.--color-gray-1 {
+  color: hsl(210deg, 6%, 58%);
 }
 
 .--color-gray-2 {

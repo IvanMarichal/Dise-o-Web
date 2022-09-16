@@ -12199,6 +12199,7 @@ body {
   width: 15.625rem;
   text-align: center;
   font-size: 1.125rem;
+  cursor: pointer;
 }
 
 .--fs-6 {

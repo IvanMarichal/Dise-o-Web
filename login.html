@@ -13,44 +13,47 @@
 <body>
   <main class="container-main">
     <nav class="nav">
-      <a href="" class="nav__logo-link">
-        <img src="./images/logo.svg" alt="logo de lysis" class="nav__logo-link__img" />
-      </a>
+			<a href="./index.html" class="nav__logo-link">
+				<img src="./images/logo.svg" alt="logo de lysis" class="nav__logo-link__img" />
+			</a>
 
-      <div class="nav__line"></div>
+			<div class="nav__line"></div>
 
-      <!-- Conjunto de enlaces para el usuario, pagina de usuario, configuracion, 
-          buscar y favoritos. -->
-      <div class="nav__link-group">
-        <a href="https://www.google.com" class="nav__link-group__link">
-          <i class="fa-solid fa-user fa-xl --color-purple"></i>
-        </a>
-        <a href="#" class="nav__link-group__link">
-          <i class="fa-solid fa-gear fa-xl"></i>
-        </a>
-        <a href="#" class="nav__link-group__link">
-          <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-        </a>
-        <a href="#" class="nav__link-group__link">
-          <i class="fa-solid fa-star fa-xl"></i>
-        </a>
-      </div>
+			<!-- Conjunto de enlaces para el usuario, pagina de usuario, configuracion, 
+					buscar y favoritos. -->
+			<div class="nav__link-group">
+				<a href="./login.html" class="nav__link-group__link">
+					<i class="fa-solid fa-user fa-xl --color-purple"></i>
+				</a>
+				<a href="./configAccount.html" class="nav__link-group__link">
+					<i class="fa-solid fa-gear fa-xl"></i>
+				</a>
+				<a href="#" class="nav__link-group__link">
+					<i class="fa-solid fa-magnifying-glass fa-xl"></i>
+				</a>
+				<a href="./configFavorites.html" class="nav__link-group__link">
+					<i class="fa-solid fa-star fa-xl"></i>
+				</a>
+			</div>
 
-      <div class="nav__line"></div>
+			<div class="nav__line"></div>
 
-      <!-- Conjunto de enlaces para acceder a deportes. -->
-      <div class="nav__link-group">
-        <a href="#" class="nav__link-group__link">
-          <i class="fa-solid fa-futbol fa-xl"></i>
+				<!-- Conjunto de enlaces para acceder a deportes. -->
+			<div class="nav__link-group">
+				<a href="./eventsPerSport.html" class="nav__link-group__link">
+					<i class="fa-solid fa-futbol fa-xl"></i>
+				</a>
+				<a href="#" class="nav__link-group__link">
+					<i class="fa-solid fa-volleyball fa-xl"></i>
+				</a>
+				<a href="#" class="nav__link-group__link">
+					<i class="fa-solid fa-basketball fa-xl"></i>
+				</a>
+        <a href="./eventsPerMark.html" class="nav__link-group__link">
+          <i class="fa-solid fa-person-running fa-xl"></i>
         </a>
-        <a href="#" class="nav__link-group__link">
-          <i class="fa-solid fa-volleyball fa-xl"></i>
-        </a>
-        <a href="#" class="nav__link-group__link">
-          <i class="fa-solid fa-basketball fa-xl"></i>
-        </a>
-      </div>
-    </nav>
+			</div> 
+		</nav>
 
     <main class="main-login">
       <div class="main-login__presentation">
@@ -74,7 +77,7 @@
             <a href="#" class="main-login__login-card__login__passwd-reset">
               ¿Olvidaste tu contraseña?
             </a>
-            <input type="submit" value="Iniciar sesión" class="main-login__card-login__login__submit --login-btn">
+            <button type="submit" class="main-login__card-login__login__submit --login-btn">Iniciar sesión</button>
         </form>
         <button class="main-login__login-card__register --login-btn">
           Registrate

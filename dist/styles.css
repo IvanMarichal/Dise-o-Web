@@ -10674,6 +10674,103 @@ body {
   color: hsl(210deg, 6%, 58%);
   font-weight: 500;
 }
+.aside-left__title {
+  font-size: 1.25rem;
+}
+.aside-left__league-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: none;
+  gap: none;
+}
+.aside-left__league-container__league-group {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  border: 0.0625rem solid hsl(217deg, 15%, 83%);
+  border-radius: 0.625rem 0.625rem 0rem 0rem;
+  padding: 0.75rem 1rem;
+}
+.aside-left__league-container__league-group__league-info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem;
+}
+.aside-left__league-container__league-group__open {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: none;
+}
+.aside-left__league-container__league-group__open:hover {
+  cursor: pointer;
+}
+.aside-left__league-container__table-info {
+  display: none;
+}
+.aside-left__league-container__table-info__head-group {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6.25rem;
+  padding: 0.375rem;
+  background: hsl(260deg, 60%, 99%);
+  border-bottom: hsl(217deg, 15%, 83%) solid 0.0625rem;
+  border-left: hsl(217deg, 15%, 83%) solid 0.0625rem;
+  border-right: hsl(217deg, 15%, 83%) solid 0.0625rem;
+  font-size: 0.75rem;
+  color: hsl(210deg, 6%, 58%);
+}
+.aside-left__league-container__table-info__head-group__name {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: none;
+  gap: none;
+}
+.aside-left__league-container__table-info__head-group__stats-group {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+}
+.aside-left__league-container__table-info__team-info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3.125rem;
+  font-size: 0.75rem;
+  border-bottom: hsl(217deg, 15%, 83%) solid 0.0625rem;
+  border-left: hsl(217deg, 15%, 83%) solid 0.0625rem;
+  border-right: hsl(217deg, 15%, 83%) solid 0.0625rem;
+  height: 2.5rem;
+}
+.aside-left__league-container__table-info__team-info__image-name {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.aside-left__league-container__table-info__team-info__team-stats {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.125rem;
+  padding: 0.75rem;
+  color: hsl(210deg, 6%, 58%);
+}
 
 .main-home__popular-events {
   display: flex;
@@ -11760,6 +11857,9 @@ body {
   border-radius: 0.625rem;
   color: white;
   font-size: 1rem;
+}
+.main-config-account__form-container__btn:hover {
+  cursor: pointer;
 }
 
 .main-config-favorites {

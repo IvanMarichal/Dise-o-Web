@@ -234,6 +234,81 @@ body {
             }
         }
     }
+
+    &__title {
+                font-size: f.rem(20px);
+    }
+
+    &__league-container {
+        @include flexMix.flex(column, nowrap, none, none, none);
+
+        
+
+        &__league-group {
+            @include flexMix.flex(row, nowrap, flex-start, center, f.rem(24px));
+            border: f.rem(1px) solid colors.$gray-3;
+            border-radius: f.rem(10px) f.rem(10px) f.rem(0px) f.rem(0px);
+            padding: f.rem(12px) f.rem(16px);
+
+            &__league-info {
+                @include flexMix.flex(row, nowrap, flex-start, center, f.rem(12px));
+            }
+
+            &__open {
+                @include flexMix.flex(row, nowrap, center, flex-end, none);
+            }
+
+            &__open:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__table-info {
+            display: none;
+        }
+
+        &__table-info__head-group {
+            @include flexMix.flex(row, nowrap, space-between, center, f.rem(100px));
+            padding: f.rem(6px);
+            background: colors.$gray-6;
+            border-bottom: colors.$gray-3 solid f.rem(1px);
+            border-left: colors.$gray-3 solid f.rem(1px);
+            border-right: colors.$gray-3 solid f.rem(1px);
+            font-size: f.rem(12px);
+            color: colors.$gray-1;
+
+            &__name {
+                @include flexMix.flex(column, nowrap, flex-start, none, none);
+            }
+
+            &__stats-group {
+                @include flexMix.flex(row, nowrap, flex-end, center, f.rem(12px));
+            }
+        }
+
+        &__table-info__team-info {
+            @include flexMix.flex(row, nowrap, flex-end, center, f.rem(50px));
+            font-size: f.rem(12px);
+            border-bottom: colors.$gray-3 solid f.rem(1px);
+            border-left: colors.$gray-3 solid f.rem(1px);
+            border-right: colors.$gray-3 solid f.rem(1px);
+            height: f.rem(40px);
+
+            &__image-name {
+                @include flexMix.flex(row, nowrap, flex-start, center, f.rem(8px));
+                padding: f.rem(16px);
+            }
+
+            &__team-stats {
+                @include flexMix.flex(row, nowrap, flex-start, center, f.rem(18px));
+                padding: f.rem(12px);
+                color: colors.$gray-1;
+                
+            }
+        }
+
+
+    }
 }
 
 .main-home {
@@ -1254,6 +1329,10 @@ body {
             border-radius: f.rem(10px);
             color: white;
             font-size: f.rem(16px);
+        }
+
+        &__btn:hover {
+            cursor: pointer;
         }
     }
 }

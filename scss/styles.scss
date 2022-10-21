@@ -1615,6 +1615,128 @@ body {
 
 }
 
+.section-modal {
+    @include flexMix.flex(column, nowrap, center, flex-end, f.rem(4px));
+    padding: f.rem(12px) f.rem(16px);
+    margin: f.rem(96px);
+    width: f.rem(755px);
+    height: f.rem(545px);
+    border-radius: f.rem(16px);
+    border: f.rem(1px) solid colors.$gray-3;
+    background: white;
+    box-shadow: 0px f.rem(8px) f.rem(15px) rgba(0, 0, 0, 0.15);
+    display: none;
+    position: absolute;
+
+    &__close {
+        margin-left: 98%;
+        cursor: pointer;
+    }
+
+    &__main-container {
+        @include flexMix.flex(column, nowrap, center, center, f.rem(24px));
+        padding: f.rem(12px) f.rem(48px) f.rem(36px);
+
+        &__title {
+            font-family: 'Roboto';
+            font-size: f.rem(48px);
+            font-weight: 700;
+            color: colors.$dark-text;
+        }
+
+        &__card-group {
+            @include flexMix.flex(row, nowrap, space-between, center, none);
+            width: f.rem(624px);
+
+            &__card-container {
+                @include flexMix.flex(column, nowrap, space-between, flex-start, f.rem(18px));
+                padding: f.rem(28px) f.rem(24px);
+                background: colors.$gray-5;
+                width: f.rem(237px);
+                height: f.rem(372px);
+                box-shadow: 0px f.rem(4px) f.rem(15px) rgba(0, 0, 0, 0.15);
+                border-radius: f.rem(16px);
+
+                &__body {
+                    @include flexMix.flex(column, nowrap, none, flex-start, f.rem(18px));
+
+                    &__type {
+                        font-family: 'Roboto';
+                        font-weight: 400;
+                        font-size: f.rem(12px);
+                        color: colors.$dark-text;
+                    }
+
+                    &__price-description {
+                        @include flexMix.flex(column, nowrap, none, flex-start, f.rem(12px));
+
+                        &__price {
+                            font-family: 'Roboto';
+                            font-weight: 700;
+                            font-size: f.rem(24px);
+                            color: colors.$dark-text;
+                        }
+
+                        &__description {
+                            font-family: 'Roboto';
+                            font-weight: 300;
+                            font-size: f.rem(12px);
+                            color: colors.$dark-text;
+                        }
+
+                        &__price-time {
+                            @include flexMix.flex(row, nowrap, none, flex-end, f.rem(0px));
+
+                            &__price {
+                                font-family: 'Roboto';
+                                font-weight: 700;
+                                font-size: f.rem(24px);
+                                color: colors.$dark-text;
+                            }
+                        }
+                    }
+
+                    &__pros-group {
+                        @include flexMix.flex(column, nowrap, none, flex-start, f.rem(8px));
+
+                        &__image-pro {
+                            @include flexMix.flex(row, nowrap, none, center, f.rem(4px));
+
+                            &__image {
+                                width: f.rem(24px);
+                                height: auto;
+                            }
+
+                            &__pro {
+                                font-family: 'Roboto';
+                                font-weight: 400;
+                                font-size: f.rem(12px);
+                                color: colors.$dark-text;
+                            }
+                        }
+                    }
+                }
+
+                &__button {
+                    @include flexMix.flex(column, nowrap, none, flex-end, f.rem(10px));
+                    padding: f.rem(8px) f.rem(20px);
+                    background: linear-gradient(90deg, #070B7E 13.65%, #D80C6D 81.12%);
+                    border: f.rem(0.7px) solid colors.$gray-4;
+                    border-radius: f.rem(10px);
+                    cursor: pointer;
+
+                    &__text {
+                        font-family: 'Roboto';
+                        font-weight: 600;
+                        font-size: f.rem(18px);
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .--main {
     @include flexMix.flex(column, nowrap, flex-start, center, f.rem(32px));
     padding: f.rem(36px) f.rem(32px);

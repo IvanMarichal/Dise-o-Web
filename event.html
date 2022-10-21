@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/d2e8cc781d.js" crossorigin="anonymous"></script>
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/openLeaguesAsideLeft.js"></script>
+    <script src="./js/openSubscriptionModal.js"></script>
     <title>Lysis | Evento</title>
 </head>
 <body>
@@ -57,229 +58,350 @@
 			</div> 
 		</nav>
 
-      <aside class="aside-left">
-        <button class="aside-left__back">
-          <i class="fa-solid fa-angle-left"></i>
-          Volver
-        </button>
-    
-        <div class="aside-left__live-container">
-          <div class="aside-left__live-container__title">
+    <aside class="aside-left">
+      <button class="aside-left__back">
+        <i class="fa-solid fa-angle-left"></i>
+        Volver
+      </button>
+  
+      <div class="aside-left__live-container">
+        <div class="aside-left__live-container__title">
+          <i class="fa-solid fa-circle fa-2xs"></i>
+          Live
+        </div>
+  
+        <div class="aside-left__live-container__match-set">
+          <div class="aside-left__live-container__match-set__live-matches">
+            <div class="aside-left__live-container__match-set__live-matches__match">
+              <div class="aside-left__live-container__match-set__live-matches__match__info">
+                <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
+                  class="aside-left__live-container__match-set__live-matches__match__info__shield">
+                <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
+                  <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
+                    3 <span
+                      class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
+                    </span> 2
+                  </p>
+                  <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
+                    90'
+                  </p>
+                </div>
+                <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
+                  class="aside-left__live-container__match-set__live-matches__match__info__shield">
+              </div>
+            </div>
+            <div class="aside-left__live-container__match-set__live-matches__match">
+              <div class="aside-left__live-container__match-set__live-matches__match__info">
+                <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
+                  class="aside-left__live-container__match-set__live-matches__match__info__shield">
+                <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
+                  <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
+                    3 <span
+                      class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
+                    </span> 2
+                  </p>
+                  <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
+                    90'
+                  </p>
+                </div>
+                <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
+                  class="aside-left__live-container__match-set__live-matches__match__info__shield">
+              </div>
+            </div>
+          </div>
+          <div class="aside-left__live-container__match-set__line"></div>
+          <button class="aside-left__live-container__match-set__more">
+            <i class="fa-solid fa-ellipsis"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="aside-left__title">
+          Ligas
+      </div>
+
+      <div class="aside-left__league-container">
+        <div class="aside-left__league-container__league-group">
+          <div class="aside-left__league-container__league-group__league-info">
+            <img class="aside-left__league-container__league-group__league-info__img"
+            src="./images/escudos/LaLigaLogo.png" alt="logo de liga" width="8%">
+            <div class="aside-left__league-container__league-group__league-info__name">
+              LaLiga Santander
+            </div>
+          </div>
+          <a class="aside-left__league-container__league-group__open" id="aside-left__league-container__league-group__open-id">
+            <i class="fa-solid fa-angle-down --color-gray-1" id=""></i>
+          </a>
+        </div>
+        <div class="aside-left__league-container__table-info" id="aside-left__league-container__table-info__anchor">
+          <div class="aside-left__league-container__table-info__head-group">
+            <div class="aside-left__league-container__table-info__head-group__name">
+              Equipo
+            </div>
+            <div class="aside-left__league-container__table-info__head-group__stats-group">
+              <div class="aside-left__league-container__table-info__head-group__stats-group__stats">
+                Gol
+              </div>
+              <div class="aside-left__league-container__table-info__head-group__stats-group__stats">
+                G
+              </div>
+              <div class="aside-left__league-container__table-info__head-group__stats-group__stats">
+                Pts
+              </div>
+            </div>
+          </div>
+          <div class="aside-left__league-container__table-info__team-info">
+            <div class="aside-left__league-container__table-info__team-info__image-name">
+              <img class="aside-left__league-container__table-info__team-info__image-name__img" 
+                src="./images/escudos/barcelona.png" alt="escudo" width="18%">
+              <div class="aside-left__league-container__table-info__team-info__image-name__name">
+                Barcelona
+              </div>
+            </div>
+            <div class="aside-left__league-container__table-info__team-info__team-stats">
+              <div class="aside-left__league-container__table-info__team-info__team-stats__stats">
+                1
+              </div>
+              <div class="aside-left__league-container__table-info__team-info__team-stats__stats">
+                3
+              </div>
+              <div class="aside-left__league-container__table-info__team-info__team-stats__stats">
+                2
+              </div>
+            </div>
+          </div>
+
+          <div class="aside-left__league-container__table-info__team-info">
+            <div class="aside-left__league-container__table-info__team-info__image-name">
+              <img class="aside-left__league-container__table-info__team-info__image-name__img" 
+                src="./images/escudos/barcelona.png" alt="escudo" width="18%">
+              <div class="aside-left__league-container__table-info__team-info__image-name__name">
+                Barcelona
+              </div>
+            </div>
+            <div class="aside-left__league-container__table-info__team-info__team-stats">
+              <div class="aside-left__league-container__table-info__team-info__team-stats__stats">
+                1
+              </div>
+              <div class="aside-left__league-container__table-info__team-info__team-stats__stats">
+                3
+              </div>
+              <div class="aside-left__league-container__table-info__team-info__team-stats__stats">
+                2
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-event --main">
+      <h1 class="main-event__header --header">
+        Evento
+      </h1>
+      <div class="main-event__event">
+        <div class="main-event__event__top">
+          <div class="main-event__event__top__live-sign">
             <i class="fa-solid fa-circle fa-2xs"></i>
             Live
           </div>
-    
-          <div class="aside-left__live-container__match-set">
-            <div class="aside-left__live-container__match-set__live-matches">
-              <div class="aside-left__live-container__match-set__live-matches__match">
-                <div class="aside-left__live-container__match-set__live-matches__match__info">
-                  <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
-                    class="aside-left__live-container__match-set__live-matches__match__info__shield">
-                  <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
-                    <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
-                      3 <span
-                        class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
-                      </span> 2
-                    </p>
-                    <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
-                      90'
-                    </p>
-                  </div>
-                  <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
-                    class="aside-left__live-container__match-set__live-matches__match__info__shield">
+          <div class="main-event__event__top__league">
+            <img src="./images/escudos/LaLigaLogo.png" alt="logo laliga santander" class="main-event__event__top__league__logo">
+            LaLiga Santander
+          </div>
+          <button class="main-event__event__top__add-fav">
+            <i class="fa-solid fa-circle-plus fa-lg --color-gray-3"></i>
+          </button>
+        </div>
+        <div class="main-event__event__body">
+          <div class="main-event__event__body__shield-name">
+            <img src="./images/escudos/barcelona.png" alt="escudo barcelona" class="main-event__event__body__shield-name__shield">
+            <p class="main-event__event__body__shield-name__name">
+              Barcelona
+            </p>
+          </div>
+          <div class="main-event__event__body__info">
+            <p class="main-event__event__body__info__result">
+              1
+              <span class="main-event__event__body__info__result__colon">: </span>
+              0
+            </p>
+            <p class="main-event__event__body__info__minute">45'</p>
+          </div>
+          <div class="main-event__event__body__shield-name">
+            <img src="./images/escudos/barcelona.png" alt="escudo barcelona" class="main-event__event__body__shield-name__shield">
+            <p class="main-event__event__body__shield-name__name">
+              Barcelona
+            </p>
+          </div>
+        </div>
+      </div>
+      <h2 class="main-event__header-2 --header">
+        Progreso del evento
+      </h2>
+      <div class="main-event__progress">
+          <div class="main-event__progress__ocurrences">
+            <div class="main-event__progress__ocurrences__ocurrence-right">
+              <p class="main-event__progress__ocurrences__ocurrence-right__minute">23'</p>
+              <div class="main-event__progress__ocurrences__ocurrence-right__team-icon">
+                <div class="main-event__progress__ocurrences__ocurrence-right__team-icon__team-circle">
+                  <img src="./images/escudos/barcelona.png" alt="escudo barcelona" class="main-event__progress__ocurrences__ocurrence-right__team-icon__team-circle__team">
+                </div>
+                <div class="main-event__progress__ocurrences__ocurrence-right__team-icon__icon-circle">
+                  <i class="fa-solid fa-futbol --color-green"></i>
+                </div>  
+              </div>
+              <p class="main-event__progress__ocurrences__ocurrence-right__player">
+                Rodrigo Garcia
+              </p>
+            </div>
+            <div class="main-event__progress__ocurrences__ocurrence-right --flex-row-reverse">
+              <p class="main-event__progress__ocurrences__ocurrence-right__minute">23'</p>
+              <div class="main-event__progress__ocurrences__ocurrence-right__team-icon">
+                <div class="main-event__progress__ocurrences__ocurrence-right__team-icon__team-circle">
+                  <img src="./images/escudos/barcelona.png" alt="escudo barcelona" class="main-event__progress__ocurrences__ocurrence-right__team-icon__team-circle__team">
+                </div>
+                <div class="main-event__progress__ocurrences__ocurrence-right__team-icon__icon-circle">
+                  <i class="fa-solid fa-futbol --color-green"></i>
                 </div>
               </div>
-              <div class="aside-left__live-container__match-set__live-matches__match">
-                <div class="aside-left__live-container__match-set__live-matches__match__info">
-                  <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
-                    class="aside-left__live-container__match-set__live-matches__match__info__shield">
-                  <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
-                    <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
-                      3 <span
-                        class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
-                      </span> 2
-                    </p>
-                    <p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
-                      90'
-                    </p>
+              <p class="main-event__progress__ocurrences__ocurrence-right__player">
+                Rodrigo Garcia
+              </p>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <aside class="aside-right">
+      <div class="aside-right__ad"></div>
+      <a href="#" class="aside-right__ad-delete">
+        ¿Quieres eliminar los anuncios?
+      </a>
+    </aside>
+  </main>
+
+  <section class="section-modal">
+    <button class="section-modal__close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+      <div class="section-modal__main-container">
+        <div class="section-modal__main-container__title">
+          Precios
+        </div>
+
+        <div class="section-modal__main-container__card-group">
+
+          <div class="section-modal__main-container__card-group__card-container">
+            <div class="section-modal__main-container__card-group__card-container__body">
+              <div class="section-modal__main-container__card-group__card-container__body__type">
+                Básico
+              </div>
+              <div class="section-modal__main-container__card-group__card-container__body__price-description">
+                <div class="section-modal__main-container__card-group__card-container__body__price-description__price">
+                  Gratis
+                </div>
+                <div class="section-modal__main-container__card-group__card-container__body__price-description__description">
+                  Plan gratis para todos los usuarios
+                </div>
+              </div>
+              <div class="section-modal__main-container__card-group__card-container__body__pros-group">
+                <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro">
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__image">
+                    <i class="fa-solid fa-circle-check"></i>
                   </div>
-                  <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
-                    class="aside-left__live-container__match-set__live-matches__match__info__shield">
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__pro">
+                    Acceso a todos los resultados
+                  </div>
+                </div>
+                <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro">
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__image">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__pro">
+                    Lista de favoritos
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="aside-left__live-container__match-set__line"></div>
-            <button class="aside-left__live-container__match-set__more">
-              <i class="fa-solid fa-ellipsis"></i>
+            <button class="section-modal__main-container__card-group__card-container__button">
+              <div class="section-modal__main-container__card-group__card-container__button__text">
+                Comenzar
+              </div>
             </button>
           </div>
-        </div>
         
-        <div class="aside-left__title">
-            Ligas
-        </div>
-
-        <div class="aside-left__league-container">
-          <div class="aside-left__league-container__league-group">
-            <div class="aside-left__league-container__league-group__league-info">
-              <img class="aside-left__league-container__league-group__league-info__img"
-              src="./images/escudos/LaLigaLogo.png" alt="logo de liga" width="8%">
-              <div class="aside-left__league-container__league-group__league-info__name">
-                LaLiga Santander
+          <div class="section-modal__main-container__card-group__card-container">
+            <div class="section-modal__main-container__card-group__card-container__body">
+              <div class="section-modal__main-container__card-group__card-container__body__type">
+                Premium
               </div>
-            </div>
-            <a class="aside-left__league-container__league-group__open" id="aside-left__league-container__league-group__open-id">
-              <i class="fa-solid fa-angle-down --color-gray-1" id=""></i>
-            </a>
-          </div>
-          <div class="aside-left__league-container__table-info" id="aside-left__league-container__table-info__anchor">
-            <div class="aside-left__league-container__table-info__head-group">
-              <div class="aside-left__league-container__table-info__head-group__name">
-                Equipo
-              </div>
-              <div class="aside-left__league-container__table-info__head-group__stats-group">
-                <div class="aside-left__league-container__table-info__head-group__stats-group__stats">
-                  Gol
-                </div>
-                <div class="aside-left__league-container__table-info__head-group__stats-group__stats">
-                  G
-                </div>
-                <div class="aside-left__league-container__table-info__head-group__stats-group__stats">
-                  Pts
-                </div>
-              </div>
-            </div>
-            <div class="aside-left__league-container__table-info__team-info">
-              <div class="aside-left__league-container__table-info__team-info__image-name">
-                <img class="aside-left__league-container__table-info__team-info__image-name__img" 
-                  src="./images/escudos/barcelona.png" alt="escudo" width="18%">
-                <div class="aside-left__league-container__table-info__team-info__image-name__name">
-                  Barcelona
-                </div>
-              </div>
-              <div class="aside-left__league-container__table-info__team-info__team-stats">
-                <div class="aside-left__league-container__table-info__team-info__team-stats__stats">
-                  1
-                </div>
-                <div class="aside-left__league-container__table-info__team-info__team-stats__stats">
-                  3
-                </div>
-                <div class="aside-left__league-container__table-info__team-info__team-stats__stats">
-                  2
-                </div>
-              </div>
-            </div>
-
-            <div class="aside-left__league-container__table-info__team-info">
-              <div class="aside-left__league-container__table-info__team-info__image-name">
-                <img class="aside-left__league-container__table-info__team-info__image-name__img" 
-                  src="./images/escudos/barcelona.png" alt="escudo" width="18%">
-                <div class="aside-left__league-container__table-info__team-info__image-name__name">
-                  Barcelona
-                </div>
-              </div>
-              <div class="aside-left__league-container__table-info__team-info__team-stats">
-                <div class="aside-left__league-container__table-info__team-info__team-stats__stats">
-                  1
-                </div>
-                <div class="aside-left__league-container__table-info__team-info__team-stats__stats">
-                  3
-                </div>
-                <div class="aside-left__league-container__table-info__team-info__team-stats__stats">
-                  2
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </aside>
-
-      <main class="main-event --main">
-        <h1 class="main-event__header --header">
-          Evento
-        </h1>
-        <div class="main-event__event">
-          <div class="main-event__event__top">
-            <div class="main-event__event__top__live-sign">
-              <i class="fa-solid fa-circle fa-2xs"></i>
-              Live
-            </div>
-            <div class="main-event__event__top__league">
-              <img src="./images/escudos/LaLigaLogo.png" alt="logo laliga santander" class="main-event__event__top__league__logo">
-              LaLiga Santander
-            </div>
-            <button class="main-event__event__top__add-fav">
-              <i class="fa-solid fa-circle-plus fa-lg --color-gray-3"></i>
-            </button>
-          </div>
-          <div class="main-event__event__body">
-            <div class="main-event__event__body__shield-name">
-              <img src="./images/escudos/barcelona.png" alt="escudo barcelona" class="main-event__event__body__shield-name__shield">
-              <p class="main-event__event__body__shield-name__name">
-                Barcelona
-              </p>
-            </div>
-            <div class="main-event__event__body__info">
-              <p class="main-event__event__body__info__result">
-                1
-                <span class="main-event__event__body__info__result__colon">: </span>
-                0
-              </p>
-              <p class="main-event__event__body__info__minute">45'</p>
-            </div>
-            <div class="main-event__event__body__shield-name">
-              <img src="./images/escudos/barcelona.png" alt="escudo barcelona" class="main-event__event__body__shield-name__shield">
-              <p class="main-event__event__body__shield-name__name">
-                Barcelona
-              </p>
-            </div>
-          </div>
-        </div>
-        <h2 class="main-event__header-2 --header">
-          Progreso del evento
-        </h2>
-        <div class="main-event__progress">
-            <div class="main-event__progress__ocurrences">
-              <div class="main-event__progress__ocurrences__ocurrence-right">
-                <p class="main-event__progress__ocurrences__ocurrence-right__minute">23'</p>
-                <div class="main-event__progress__ocurrences__ocurrence-right__team-icon">
-                  <div class="main-event__progress__ocurrences__ocurrence-right__team-icon__team-circle">
-                    <img src="./images/escudos/barcelona.png" alt="escudo barcelona" class="main-event__progress__ocurrences__ocurrence-right__team-icon__team-circle__team">
+              <div class="section-modal__main-container__card-group__card-container__body__price-description">
+                <div class="section-modal__main-container__card-group__card-container__body__price-description__price-time">
+                  <div class="section-modal__main-container__card-group__card-container__body__price-description__price-time__price">
+                    U$D14.99
                   </div>
-                  <div class="main-event__progress__ocurrences__ocurrence-right__team-icon__icon-circle">
-                    <i class="fa-solid fa-futbol --color-green"></i>
+                  <div class="section-modal__main-container__card-group__card-container__body__price-description__price-time__time">
+                    /mes
                   </div>  
                 </div>
-                <p class="main-event__progress__ocurrences__ocurrence-right__player">
-                  Rodrigo Garcia
-                </p>
+                <div class="section-modal__main-container__card-group__card-container__body__price-description__description">
+                  Plan gratis para todos los usuarios
+                </div>
               </div>
-              <div class="main-event__progress__ocurrences__ocurrence-right --flex-row-reverse">
-                <p class="main-event__progress__ocurrences__ocurrence-right__minute">23'</p>
-                <div class="main-event__progress__ocurrences__ocurrence-right__team-icon">
-                  <div class="main-event__progress__ocurrences__ocurrence-right__team-icon__team-circle">
-                    <img src="./images/escudos/barcelona.png" alt="escudo barcelona" class="main-event__progress__ocurrences__ocurrence-right__team-icon__team-circle__team">
+              <div class="section-modal__main-container__card-group__card-container__body__pros-group">
+                <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro">
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__image">
+                    <i class="fa-solid fa-circle-check"></i>
                   </div>
-                  <div class="main-event__progress__ocurrences__ocurrence-right__team-icon__icon-circle">
-                    <i class="fa-solid fa-futbol --color-green"></i>
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__pro">
+                    Acceso a todos los resultados
                   </div>
                 </div>
-                <p class="main-event__progress__ocurrences__ocurrence-right__player">
-                  Rodrigo Garcia
-                </p>
+                <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro">
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__image">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__pro">
+                    Lista de favoritos
+                  </div>
+                </div>
+                <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro">
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__image">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__pro">
+                    Sin publicidad
+                  </div>
+                </div>
+                <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro">
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__image">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__pro">
+                    Notificaciones por navegador
+                  </div>
+                </div>
+                <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro">
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__image">
+                    <i class="fa-solid fa-circle-check"></i>
+                  </div>
+                  <div class="section-modal__main-container__card-group__card-container__body__pros-group__image-pro__pro">
+                    Notificaciones por correo
+                  </div>
+                </div>                
               </div>
             </div>
+            <button class="section-modal__main-container__card-group__card-container__button">
+              <div class="section-modal__main-container__card-group__card-container__button__text">
+                Suscribirse
+              </div>
+            </button>
           </div>
-        
-      </main>
 
-      <aside class="aside-right">
-        <div class="aside-right__ad"></div>
-        <a href="#" class="aside-right__ad-delete">
-          ¿Quieres eliminar los anuncios?
-        </a>
-      </aside>
+        </div>
+      </div>
+  </section>
 
-      </main>
 </body>
 </html>

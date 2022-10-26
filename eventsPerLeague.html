@@ -7,8 +7,12 @@
 	<link rel="icon" href="images/icono.ico" />
     <link rel="stylesheet" href="./dist/styles.css">
     <link rel="stylesheet" href="./dist/styles.css.map">
-		<script src="https://kit.fontawesome.com/d2e8cc781d.js" crossorigin="anonymous"></script>
-    <title>Lysis | Liga</title>
+	<script src="https://kit.fontawesome.com/d2e8cc781d.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+	<script src="./js/openSubscriptionModal.js"></script>
+	<script src="./js/openLeaguesAsideLeft.js"></script>
+	<script src="./js/changeAsideLeft.js"></script>
+	<title>Lysis | Liga</title>
 </head>
 <body>
 	<main class="container-main">
@@ -54,95 +58,230 @@
 				  </a>
 			</div> 
 		</nav>
-		<aside class="aside-left">
-				<button class="aside-left__back">
-					<i class="fa-solid fa-angle-left"></i>
-					Volver
-				</button>
-
-				<div class="aside-left__live-container">
-					<div class="aside-left__live-container__title">
-						<i class="fa-solid fa-circle fa-2xs"></i>
-						Live
+		<aside class="aside-left" id="aside-left__countries-id">
+      
+			<div class="aside-left__live-container">
+			  <div class="aside-left__live-container__title">
+				<i class="fa-solid fa-circle fa-2xs"></i>
+				Live
+			  </div>
+			
+			
+	  
+			  <div class="aside-left__live-container__match-set">
+				<div class="aside-left__live-container__match-set__live-matches">
+				  <div class="aside-left__live-container__match-set__live-matches__match">
+					<div class="aside-left__live-container__match-set__live-matches__match__info">
+					  <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
+						class="aside-left__live-container__match-set__live-matches__match__info__shield">
+					  <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
+						<p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
+						  3 <span
+							class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
+						  </span> 2
+						</p>
+						<p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
+						  90'
+						</p>
+					  </div>
+					  <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
+						class="aside-left__live-container__match-set__live-matches__match__info__shield">
 					</div>
-
-					<div class="aside-left__live-container__match-set">
-						<div class="aside-left__live-container__match-set__live-matches">
-							<div class="aside-left__live-container__match-set__live-matches__match">
-								<div class="aside-left__live-container__match-set__live-matches__match__info">
-									<img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
-										class="aside-left__live-container__match-set__live-matches__match__info__shield">
-									<div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
-										<p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
-											3 <span
-												class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
-											</span> 2
-										</p>
-										<p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
-											90'
-										</p>
-									</div>
-									<img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
-										class="aside-left__live-container__match-set__live-matches__match__info__shield">
-								</div>
-							</div>
-							<div class="aside-left__live-container__match-set__live-matches__match">
-								<div class="aside-left__live-container__match-set__live-matches__match__info">
-									<img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
-										class="aside-left__live-container__match-set__live-matches__match__info__shield">
-									<div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
-										<p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
-											3 <span
-												class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
-											</span> 2
-										</p>
-										<p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
-											90'
-										</p>
-									</div>
-									<img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
-										class="aside-left__live-container__match-set__live-matches__match__info__shield">
-								</div>
-							</div>
-						</div>
-						<div class="aside-left__live-container__match-set__line"></div>
-						<button class="aside-left__live-container__match-set__more">
-							<i class="fa-solid fa-ellipsis"></i>
-						</button>
+				  </div>
+				  <div class="aside-left__live-container__match-set__live-matches__match">
+					<div class="aside-left__live-container__match-set__live-matches__match__info">
+					  <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
+						class="aside-left__live-container__match-set__live-matches__match__info__shield">
+					  <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
+						<p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
+						  3 <span
+							class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
+						  </span> 2
+						</p>
+						<p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
+						  90'
+						</p>
+					  </div>
+					  <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
+						class="aside-left__live-container__match-set__live-matches__match__info__shield">
 					</div>
+				  </div>
 				</div>
-
-				<form action="#" class="aside-left__look-up">
-					<input type="text" class="aside-left__look-up__search" placeholder="Buscar">
-					<button type="submit" class="aside-left__look-up__submit">
-						<i class="fa-solid fa-magnifying-glass --color-gray-2"></i>
-					</button>
-				</form>
-
-				<ul class="aside-left__country-list">
-					<li class="aside-left__country-list__heading">
-						Países
-					</li>
-					<li class="aside-left__country-list__country">
-						<button class="aside-left__country-list__country__button">
-							<i class="fa-solid fa-globe --color-gray-3"></i>
-							España
-						</button>
-					</li>
-					<li class="aside-left__country-list__country">
-						<button class="aside-left__country-list__country__button">
-							<i class="fa-solid fa-globe --color-gray-3"></i>
-							España
-						</button>
-					</li>
-					<li class="aside-left__country-list__country">
-						<button class="aside-left__country-list__country__button">
-							<i class="fa-solid fa-globe --color-gray-3"></i>
-							España
-						</button>
-					</li>
-				</ul>
-		</aside>
+				<div class="aside-left__live-container__match-set__line"></div>
+				<button class="aside-left__live-container__match-set__more">
+				  <i class="fa-solid fa-ellipsis"></i>
+				</button>
+			  </div>
+			</div>
+	  
+			<form action="#" class="aside-left__look-up">
+			  <input type="text" class="aside-left__look-up__search" placeholder="Buscar">
+			  <button type="submit" class="aside-left__look-up__submit">
+				<i class="fa-solid fa-magnifying-glass --color-gray-2"></i>
+			  </button>
+			</form>
+	  
+			<ul class="aside-left__country-list">
+			  <li class="aside-left__country-list__heading">
+				Países
+			  </li>
+			  <li class="aside-left__country-list__country">
+				<button class="aside-left__country-list__country__button" id="aside-left__country-list__country__button-id">
+				  <i class="fa-solid fa-globe --color-gray-3"></i>
+				  España
+				</button>
+			  </li>
+			  <li class="aside-left__country-list__country">
+				<button class="aside-left__country-list__country__button">
+				  <i class="fa-solid fa-globe --color-gray-3"></i>
+				  España
+				</button>
+			  </li>
+			  <li class="aside-left__country-list__country">
+				<button class="aside-left__country-list__country__button">
+				  <i class="fa-solid fa-globe --color-gray-3"></i>
+				  España
+				</button>
+			  </li>
+			</ul>
+		  </aside>
+	  
+		  <aside class="aside-left" id="aside-left__leagues-id">
+			<button class="aside-left__back">
+			  <i class="fa-solid fa-angle-left"></i>
+			  Volver
+			</button>
+		
+			<div class="aside-left__live-container">
+			  <div class="aside-left__live-container__title">
+				<i class="fa-solid fa-circle fa-2xs"></i>
+				Live
+			  </div>
+		
+			  <div class="aside-left__live-container__match-set">
+				<div class="aside-left__live-container__match-set__live-matches">
+				  <div class="aside-left__live-container__match-set__live-matches__match">
+					<div class="aside-left__live-container__match-set__live-matches__match__info">
+					  <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
+						class="aside-left__live-container__match-set__live-matches__match__info__shield">
+					  <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
+						<p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
+						  3 <span
+							class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
+						  </span> 2
+						</p>
+						<p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
+						  90'
+						</p>
+					  </div>
+					  <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
+						class="aside-left__live-container__match-set__live-matches__match__info__shield">
+					</div>
+				  </div>
+				  <div class="aside-left__live-container__match-set__live-matches__match">
+					<div class="aside-left__live-container__match-set__live-matches__match__info">
+					  <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
+						class="aside-left__live-container__match-set__live-matches__match__info__shield">
+					  <div class="aside-left__live-container__match-set__live-matches__match__info__result-time">
+						<p class="aside-left__live-container__match-set__live-matches__match__info__result-time__result">
+						  3 <span
+							class="aside-left__live-container__match-set__live-matches__match__info__result-time__result__colon">:
+						  </span> 2
+						</p>
+						<p class="aside-left__live-container__match-set__live-matches__match__info__result-time__time">
+						  90'
+						</p>
+					  </div>
+					  <img src="./images/escudos/barcelona.png" alt="escudo de futbol club barcelona"
+						class="aside-left__live-container__match-set__live-matches__match__info__shield">
+					</div>
+				  </div>
+				</div>
+				<div class="aside-left__live-container__match-set__line"></div>
+				<button class="aside-left__live-container__match-set__more">
+				  <i class="fa-solid fa-ellipsis"></i>
+				</button>
+			  </div>
+			</div>
+			
+			<div class="aside-left__title">
+				Ligas
+			</div>
+	  
+			<div class="aside-left__league-container">
+			  <div class="aside-left__league-container__league-group">
+				<div class="aside-left__league-container__league-group__league-info">
+				  <img class="aside-left__league-container__league-group__league-info__img"
+				  src="./images/escudos/LaLigaLogo.png" alt="logo de liga" width="8%">
+				  <div class="aside-left__league-container__league-group__league-info__name">
+					LaLiga Santander
+				  </div>
+				</div>
+				<a class="aside-left__league-container__league-group__open" id="aside-left__league-container__league-group__open-id">
+				  <i class="fa-solid fa-angle-down --color-gray-1" id=""></i>
+				</a>
+			  </div>
+			  <div class="aside-left__league-container__table-info" id="aside-left__league-container__table-info__anchor">
+				<div class="aside-left__league-container__table-info__head-group">
+				  <div class="aside-left__league-container__table-info__head-group__name">
+					Equipo
+				  </div>
+				  <div class="aside-left__league-container__table-info__head-group__stats-group">
+					<div class="aside-left__league-container__table-info__head-group__stats-group__stats">
+					  Gol
+					</div>
+					<div class="aside-left__league-container__table-info__head-group__stats-group__stats">
+					  G
+					</div>
+					<div class="aside-left__league-container__table-info__head-group__stats-group__stats">
+					  Pts
+					</div>
+				  </div>
+				</div>
+				<div class="aside-left__league-container__table-info__team-info">
+				  <div class="aside-left__league-container__table-info__team-info__image-name">
+					<img class="aside-left__league-container__table-info__team-info__image-name__img" 
+					  src="./images/escudos/barcelona.png" alt="escudo" width="18%">
+					<div class="aside-left__league-container__table-info__team-info__image-name__name">
+					  Barcelona
+					</div>
+				  </div>
+				  <div class="aside-left__league-container__table-info__team-info__team-stats">
+					<div class="aside-left__league-container__table-info__team-info__team-stats__stats">
+					  1
+					</div>
+					<div class="aside-left__league-container__table-info__team-info__team-stats__stats">
+					  3
+					</div>
+					<div class="aside-left__league-container__table-info__team-info__team-stats__stats">
+					  2
+					</div>
+				  </div>
+				</div>
+	  
+				<div class="aside-left__league-container__table-info__team-info">
+				  <div class="aside-left__league-container__table-info__team-info__image-name">
+					<img class="aside-left__league-container__table-info__team-info__image-name__img" 
+					  src="./images/escudos/barcelona.png" alt="escudo" width="18%">
+					<div class="aside-left__league-container__table-info__team-info__image-name__name">
+					  Barcelona
+					</div>
+				  </div>
+				  <div class="aside-left__league-container__table-info__team-info__team-stats">
+					<div class="aside-left__league-container__table-info__team-info__team-stats__stats">
+					  1
+					</div>
+					<div class="aside-left__league-container__table-info__team-info__team-stats__stats">
+					  3
+					</div>
+					<div class="aside-left__league-container__table-info__team-info__team-stats__stats">
+					  2
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </aside>
 
 		<div class="main-league --main">
 			<h1 class="main-league__header --header">
@@ -244,12 +383,14 @@
 		</div>
 	</div>
 
-		<aside class="aside-right">
-			<div class="aside-right__ad"></div>
-			<a href="#" class="aside-right__ad-delete">
+	<aside class="aside-right">
+		<div class="aside-right__ad-container">
+			<div class="aside-right__ad-container__ad"></div>
+			<a href="#" class="aside-right__ad-container__ad-delete">
 				¿Quieres eliminar los anuncios?
-			  </a>
-		</aside>
+			</a>
+			</div>
+	</aside>
 	</main>
 </body>
 </html>

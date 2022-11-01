@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./dist/styles.css">
     <link rel="stylesheet" href="./dist/styles.css.map">
     <script src="https://kit.fontawesome.com/d2e8cc781d.js" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/openRegisterModal.js"></script>
     <title>Lysis | Login</title>
 </head>
 <body>
@@ -79,11 +81,42 @@
             </a>
             <button type="submit" class="main-login__card-login__login__submit --login-btn">Iniciar sesión</button>
         </form>
-        <button class="main-login__login-card__register --login-btn">
+        <a href="#" class="main-login__login-card__register --login-btn" id="main-login__login-card__register-id">
           Registrate
-        </button>
+        </a>
       </div>
     </div>
   </main>
+
+  <section class="register-modal">
+    <div class="register-modal__header-container">
+      <div class="register-modal__header-container__text-group">
+        <div class="register-modal__header-container__text-group__title">
+          Registrate
+        </div>
+        <div class="register-modal__header-container__text-group__text">
+          Es fácil y rápido.
+        </div>
+      </div>
+      <div class="register-modal__header-container__close">
+        <a class="register-modal__header-container__close__a" href="">
+          <i class="fa-solid fa-xmark"></i>
+        </a>
+      </div>
+    </div>
+    <div class="register-modal__line"></div>
+    <form action="#" class="register-modal__register-form">
+      <input type="text" name="user" id="userInput" class="register-modal__register-form__user-input --input" placeholder="Nombre de usuario">
+      <input type="email" name="emailRegister" id="emailInputRegister" class="register-modal__register-form__email-input --input" placeholder="Correo electronico">
+      <input type="password" name="passwordRegister" id="passwordInputRegister" class="register-modal__register-form__passwd-input --input" placeholder="Contraseña">
+      <input type="password" name="passwordRepeat" id="passwordRepeat" class="register-modal__register-form__passwdRepeat-input --input" placeholder="Repetir contraseña">
+      <div class="register-modal__register-form__bottom-text">
+        Al presionar Registrarme usted acepta nuestros terminos <br>
+        de uso, politica de privacidad y politica de coockies.
+      </div>
+      <button type="submit" class="register-modal__register-form__submit --login-btn">Registrarme</button>
+    </form>
+    
+  </section>
 </body>
 </html>

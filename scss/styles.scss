@@ -1750,6 +1750,120 @@ body {
     }
 }
 
+.register-modal {
+    @include flexMix.flex(column, nowrap, center, center, f.rem(19px));
+    padding: f.rem(12px);
+    width: f.rem(424px);
+    background: colors.$gray-5;
+    border-radius: f.rem(10px);
+    display: none;
+    position: absolute;
+    margin: f.rem(56px);
+    box-shadow: 0px f.rem(8px) f.rem(15px) rgba(0, 0, 0, 0.15);
+
+    &__header-container {
+        @include flexMix.flex(row, nowrap, space-between, flex-start, none);
+        width: f.rem(400px);
+
+        &__text-group {
+            @include flexMix.flex(column, nowrap, center, flex-start, f.rem(4px));
+        
+            &__title {
+                font-weight: 600;
+                font-size: f.rem(24px);
+                color: colors.$dark-text;
+            }
+
+            &__text {
+                font-weight: 600;
+                font-size: f.rem(14px);
+                color: colors.$dark-text;
+            }
+        }
+    }
+
+    &__line {
+        width: f.rem(400px);
+        height: f.rem(1px);
+        background-color: colors.$gray-2;
+        margin-top: f.rem(18px);
+        margin-bottom: f.rem(18px);
+    }
+
+    &__register-form {
+        @include flexMix.flex(column, nowrap, flex-start, center, f.rem(19px));
+
+        &__bottom-text {
+            @include flexMix.flex(column, nowrap, flex-start, flex-start, none);
+            width: 100%;
+            font-weight: 300;
+            font-size: f.rem(12px);
+            color: colors.$dark-text;
+        }
+    }
+
+    &__register-form > input {
+        width: f.rem(360px);
+    }   
+}
+
+.pay-modal {
+    @include flexMix.flex(column, nowrap, none, flex-start, f.rem(18px));
+    padding: f.rem(12px) f.rem(8px) f.rem(24px);
+    width: f.rem(315px);
+    display: none;
+    position: absolute;
+    background: colors.$gray-5;
+    border-radius: f.rem(10px);
+    margin: f.rem(56px);
+    box-shadow: 0px f.rem(8px) f.rem(15px) rgba(0, 0, 0, 0.15);
+
+    &__top-container {
+        @include flexMix.flex(column, nowrap, none, flex-start, f.rem(4px));
+        padding: 0;
+        width: f.rem(300px);
+
+        &__title-close {
+            @include flexMix.flex(row, nowrap, space-between, center, f.rem(1px));
+            width: 100%;
+
+            &__title {
+                font-weight: 700;
+                font-size: f.rem(16px);
+                color: colors.$dark-text;
+            }
+        }
+
+        &__line {
+            width: f.rem(300px);
+            height: f.rem(1px);
+            background-color: colors.$gray-2;
+            margin-top: f.rem(4px);
+            margin-bottom: f.rem(12px);
+        }
+    }
+
+    &__body-container {
+        @include flexMix.flex(column, nowrap, none, flex-start, f.rem(24px));
+        padding: 0 f.rem(24px);
+        width: f.rem(300px);
+
+        &__form-container {
+            @include flexMix.flex(column, nowrap, none, flex-start, f.rem(8px));
+            width: f.rem(250px);
+
+            &__label-input {
+                @include flexMix.flex(column, nowrap, none, flex-start, f.rem(2px));
+                width: 100%;
+            }
+
+            &__middle-group {
+                @include flexMix.flex(row, nowrap, none, flex-start, f.rem(8px));
+            }
+        }
+    }
+}
+
 .--main {
     @include flexMix.flex(column, nowrap, flex-start, center, f.rem(32px));
     padding: f.rem(36px) f.rem(32px);

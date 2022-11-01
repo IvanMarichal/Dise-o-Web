@@ -12341,6 +12341,152 @@ body {
   color: white;
 }
 
+.register-modal {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.1875rem;
+  padding: 0.75rem;
+  width: 26.5rem;
+  background: hsl(200deg, 12%, 95%);
+  border-radius: 0.625rem;
+  display: none;
+  position: absolute;
+  margin: 3.5rem;
+  box-shadow: 0px 0.5rem 0.9375rem rgba(0, 0, 0, 0.15);
+}
+.register-modal__header-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: none;
+  width: 25rem;
+}
+.register-modal__header-container__text-group {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+.register-modal__header-container__text-group__title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: hsl(208deg, 50%, 15%);
+}
+.register-modal__header-container__text-group__text {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: hsl(208deg, 50%, 15%);
+}
+.register-modal__line {
+  width: 25rem;
+  height: 0.0625rem;
+  background-color: hsl(224deg, 8%, 74%);
+  margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
+}
+.register-modal__register-form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.1875rem;
+}
+.register-modal__register-form__bottom-text {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: none;
+  width: 100%;
+  font-weight: 300;
+  font-size: 0.75rem;
+  color: hsl(208deg, 50%, 15%);
+}
+.register-modal__register-form > input {
+  width: 22.5rem;
+}
+
+.pay-modal {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: flex-start;
+  gap: 1.125rem;
+  padding: 0.75rem 0.5rem 1.5rem;
+  width: 19.6875rem;
+  display: none;
+  position: absolute;
+  background: hsl(200deg, 12%, 95%);
+  border-radius: 0.625rem;
+  margin: 3.5rem;
+  box-shadow: 0px 0.5rem 0.9375rem rgba(0, 0, 0, 0.15);
+}
+.pay-modal__top-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: flex-start;
+  gap: 0.25rem;
+  padding: 0;
+  width: 18.75rem;
+}
+.pay-modal__top-container__title-close {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.0625rem;
+  width: 100%;
+}
+.pay-modal__top-container__title-close__title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: hsl(208deg, 50%, 15%);
+}
+.pay-modal__top-container__line {
+  width: 18.75rem;
+  height: 0.0625rem;
+  background-color: hsl(224deg, 8%, 74%);
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+.pay-modal__body-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+  width: 18.75rem;
+}
+.pay-modal__body-container__form-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 15.625rem;
+}
+.pay-modal__body-container__form-container__label-input {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: flex-start;
+  gap: 0.125rem;
+  width: 100%;
+}
+.pay-modal__body-container__form-container__middle-group {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: none;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
 .--main {
   display: flex;
   flex-flow: column nowrap;

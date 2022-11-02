@@ -12417,7 +12417,6 @@ body {
   align-items: flex-start;
   gap: 1.125rem;
   padding: 0.75rem 0.5rem 1.5rem;
-  width: 19.6875rem;
   display: none;
   position: absolute;
   background: hsl(200deg, 12%, 95%);
@@ -12432,7 +12431,6 @@ body {
   align-items: flex-start;
   gap: 0.25rem;
   padding: 0;
-  width: 18.75rem;
 }
 .pay-modal__top-container__title-close {
   display: flex;
@@ -12447,8 +12445,10 @@ body {
   font-size: 1rem;
   color: hsl(208deg, 50%, 15%);
 }
+.pay-modal__top-container__title-close__close {
+  cursor: pointer;
+}
 .pay-modal__top-container__line {
-  width: 18.75rem;
   height: 0.0625rem;
   background-color: hsl(224deg, 8%, 74%);
   margin-top: 0.25rem;
@@ -12461,7 +12461,6 @@ body {
   align-items: flex-start;
   gap: 1.5rem;
   padding: 0 1.5rem;
-  width: 18.75rem;
 }
 .pay-modal__body-container__form-container {
   display: flex;
@@ -12469,7 +12468,6 @@ body {
   justify-content: none;
   align-items: flex-start;
   gap: 0.5rem;
-  width: 15.625rem;
 }
 .pay-modal__body-container__form-container__label-input {
   display: flex;
@@ -12485,6 +12483,14 @@ body {
   justify-content: none;
   align-items: flex-start;
   gap: 0.5rem;
+}
+.pay-modal__body-container__form-container__middle-group__label-input {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: none;
+  align-items: flex-start;
+  gap: 0.125rem;
+  width: 100%;
 }
 
 .--main {

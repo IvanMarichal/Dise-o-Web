@@ -1810,7 +1810,7 @@ body {
 .pay-modal {
     @include flexMix.flex(column, nowrap, none, flex-start, f.rem(18px));
     padding: f.rem(12px) f.rem(8px) f.rem(24px);
-    width: f.rem(315px);
+    
     display: none;
     position: absolute;
     background: colors.$gray-5;
@@ -1821,7 +1821,6 @@ body {
     &__top-container {
         @include flexMix.flex(column, nowrap, none, flex-start, f.rem(4px));
         padding: 0;
-        width: f.rem(300px);
 
         &__title-close {
             @include flexMix.flex(row, nowrap, space-between, center, f.rem(1px));
@@ -1832,10 +1831,13 @@ body {
                 font-size: f.rem(16px);
                 color: colors.$dark-text;
             }
+
+            &__close {
+                cursor: pointer;
+            }
         }
 
         &__line {
-            width: f.rem(300px);
             height: f.rem(1px);
             background-color: colors.$gray-2;
             margin-top: f.rem(4px);
@@ -1846,11 +1848,9 @@ body {
     &__body-container {
         @include flexMix.flex(column, nowrap, none, flex-start, f.rem(24px));
         padding: 0 f.rem(24px);
-        width: f.rem(300px);
 
         &__form-container {
             @include flexMix.flex(column, nowrap, none, flex-start, f.rem(8px));
-            width: f.rem(250px);
 
             &__label-input {
                 @include flexMix.flex(column, nowrap, none, flex-start, f.rem(2px));
@@ -1859,6 +1859,11 @@ body {
 
             &__middle-group {
                 @include flexMix.flex(row, nowrap, none, flex-start, f.rem(8px));
+
+                &__label-input {
+                    @include flexMix.flex(column, nowrap, none, flex-start, f.rem(2px));
+                    width: 100%;
+                }
             }
         }
     }

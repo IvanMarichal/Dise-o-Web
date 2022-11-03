@@ -13,6 +13,7 @@
 	<script src="./js/openLeaguesAsideLeft.js"></script>
 	<script src="./js/changeAsideLeft.js"></script>
 	<script src="./js/openPayModal.js"></script>
+	<script src="./js/hamburguerMenu.js"></script>
 	<title>Lysis | Liga</title>
 </head>
 <body>
@@ -58,6 +59,50 @@
 					<i class="fa-solid fa-person-running fa-xl"></i>
 				  </a>
 			</div> 
+
+			<div class="nav__hamburger-container">
+				<button class="nav__hamburger-container__btn"><i class="fa-solid fa-bars"></i></button>
+				<button class="nav__hamburger-container__cross"><i class="fa-solid fa-xmark"></i></button>
+				
+				<div class="nav__hamburger-container__main-group">
+				  <ul class="nav__hamburger-container__main-group__ul-group">
+					<div class="nav_hamburger-container__main-group__ul-group__link-group">
+					  <a href="./login.html" class="nav__hamburger-container__main-group__ul-group__link-group__link">
+						<li><i class="fa-solid fa-user fa-xl"></i></li>
+					  </a>
+					  <a href="./configAccount.html" class="nav__hamburger-container__main-group__ul-group__link-group__link">
+						<li><i class="fa-solid fa-gear fa-xl"></i></li>
+					  </a>
+					  <a href="#" class="nav__hamburger-container__main-group__ul-group__link-group__link">
+						<li><i class="fa-solid fa-magnifying-glass fa-xl"></i></li>
+					  </a>
+					  <a href="./configFavorites.html" class="nav__hamburger-container__main-group__ul-group__link-group__link">
+						<li><i class="fa-solid fa-star fa-xl"></i></li>
+					  </a>
+					</div>
+		
+					<div class="nav__hamburger-container__main-group__ul-group__line"></div>
+					
+					<div class="nav_hamburger-container__main-group__ul-group__link-group">
+					  <a href="./eventsPerSport.html" class="nav__hamburger-container__main-group__ul-group__link-group__link">
+						<li><i class="fa-solid fa-futbol fa-xl --color-purple"></i></li>
+					  </a>
+					  <a href="#" class="nav__hamburger-container__main-group__ul-group__link-group__link">
+						<li><i class="fa-solid fa-volleyball fa-xl"></i></li>
+					  </a>
+					  <a href="#" class="nav__hamburger-container__main-group__ul-group__link-group__link">
+						<li><i class="fa-solid fa-basketball fa-xl"></i></li>
+					  </a>
+					  <a href="./eventsPerMark.html" class="nav__hamburger-container__main-group__ul-group__link-group__link">
+						<li><i class="fa-solid fa-person-running fa-xl"></i></li>
+					  </a>
+					</div>
+		
+				  </ul>
+				</div>
+			  </div>
+
+			  
 		</nav>
 		<aside class="aside-left" id="aside-left__countries-id">
       
@@ -297,10 +342,10 @@
 				<td class="main-league__table-container__standings__body__row__cell">PJ</td>
 				<td class="main-league__table-container__standings__body__row__cell">G</td>
 				<td class="main-league__table-container__standings__body__row__cell">P</td>
-				<td class="main-league__table-container__standings__body__row__cell">E</td>
-				<td class="main-league__table-container__standings__body__row__cell">GF</td>
-				<td class="main-league__table-container__standings__body__row__cell">GC</td>
-				<td class="main-league__table-container__standings__body__row__cell">DG</td>
+				<td class="main-league__table-container__standings__body__row__cell" id="main-league__table-container__standings__body__row__cell__e-id">E</td>
+				<td class="main-league__table-container__standings__body__row__cell" id="main-league__table-container__standings__body__row__cell__gf-id">GF</td>
+				<td class="main-league__table-container__standings__body__row__cell" id="main-league__table-container__standings__body__row__cell__gc-id">GC</td>
+				<td class="main-league__table-container__standings__body__row__cell" id="main-league__table-container__standings__body__row__cell__dg-id">DG</td>
 			</tr>
 			<tr class="main-league__table-container__standings__body__row">
 				<td class="main-league__table-container__standings__body__row__cell">1.</td>
@@ -313,10 +358,10 @@
 				<td class="main-league__table-container__standings__body__row__cell">8</td>
 				<td class="main-league__table-container__standings__body__row__cell">8</td>
 				<td class="main-league__table-container__standings__body__row__cell">8</td>
-				<td class="main-league__table-container__standings__body__row__cell">8</td>
-				<td class="main-league__table-container__standings__body__row__cell">8</td>
-				<td class="main-league__table-container__standings__body__row__cell">8</td>
-				<td class="main-league__table-container__standings__body__row__cell">8</td>
+				<td class="main-league__table-container__standings__body__row__cell" id="main-league__table-container__standings__body__row__cell__e-value">8</td>
+				<td class="main-league__table-container__standings__body__row__cell" id="main-league__table-container__standings__body__row__cell__gf-value">8</td>
+				<td class="main-league__table-container__standings__body__row__cell" id="main-league__table-container__standings__body__row__cell__gc-value">8</td>
+				<td class="main-league__table-container__standings__body__row__cell" id="main-league__table-container__standings__body__row__cell__dg-value">8</td>
 			</tr>
 			</tbody>
 		</table>
@@ -338,7 +383,7 @@
 			<button class="main-league__events__button-set__button --button-set__button">
 			Programados
 			</button>
-			<button class="main-league__events__button-set__button --button-set__button --ml-auto">
+			<button class="main-league__events__button-set__button --button-set__button">
 			<i class="fa-solid fa-calendar"></i>
 			</button>
 		</div>
@@ -354,7 +399,7 @@
 				<p class="main-league__events__table__row__cell__text --col-name__name">Res</p>
 			</td>
 			</tr>
-			<tr class="main-league__events__table__row main-league__events__table__row--event">
+			<tr class="main-league__events__table__row main-league__events__table__row --event">
 			<td class="main-league__events__table__row__cell">
 				<div class="main-league__events__table__row__cell__info">
 				<p class="main-league__events__table__row__cell__info__text">14:00</p>

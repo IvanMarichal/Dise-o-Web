@@ -10785,6 +10785,48 @@ body {
   padding: 0.75rem;
   color: hsl(210deg, 6%, 58%);
 }
+.aside-left__table {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border: 0.0625rem solid hsl(0deg, 0%, 91%);
+  border-radius: 0.625rem;
+  width: 100%;
+  min-width: 15rem;
+  max-width: 18.75rem;
+  margin-top: 1.25rem;
+}
+.aside-left__table__head__row__data {
+  padding-left: 0.875rem;
+  border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
+  padding-bottom: 0.5rem;
+}
+.aside-left__table__head__row__data__h2 {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+.aside-left__table__body__league__info {
+  padding: 0.75rem 1rem;
+  border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
+}
+.aside-left__table__body__league__info__logo-text {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.375rem;
+}
+.aside-left__table__body__league__info__logo-text__logo {
+  width: 1.125rem;
+}
+.aside-left__table__body__league__info__logo-text__league-country__league {
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+.aside-left__table__body__league__info__logo-text__league-country__country {
+  font-size: 0.75rem;
+  color: hsl(210deg, 6%, 58%);
+  white-space: nowrap;
+}
 
 .main-home {
   grid-area: main;
@@ -11161,6 +11203,9 @@ body {
   border-radius: 50%;
 }
 
+.main-league {
+  width: 100%;
+}
 .main-league__table-container {
   background: white;
   border-radius: 0.625rem;
@@ -11736,6 +11781,7 @@ body {
   max-width: 83.5rem;
 }
 .main-login__presentation {
+  grid-area: login-presentation;
   display: flex;
   flex-flow: column nowrap;
   justify-content: none;
@@ -11767,6 +11813,7 @@ body {
   font-weight: 400;
 }
 .main-login__login-card {
+  grid-area: login-card;
   display: flex;
   flex-flow: column nowrap;
   justify-content: none;
@@ -12684,7 +12731,7 @@ body {
   color: hsl(0deg, 0%, 91%);
 }
 
-@media (max-width: 620px) {
+@media (max-width: 570px) {
   .container-main {
     display: flex;
     flex-flow: row nowrap;
@@ -12698,6 +12745,1270 @@ body {
     grid-template-columns: repeat(1);
     grid-template-rows: repeat(2);
     grid-template-areas: "nav" "main";
+  }
+  .main-login {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4rem;
+    background: white;
+    padding: 5rem;
+    height: 100%;
+    min-height: 100vh;
+    width: 37.5rem;
+  }
+  .main-login__presentation {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    width: 100%;
+    padding-top: 0.3125rem;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    height: 3.4375rem;
+    grid-area: nav;
+  }
+  .nav__logo-link {
+    display: none;
+  }
+  .nav__line {
+    display: none;
+  }
+  .nav__link-group {
+    display: none;
+  }
+  .nav__hamburger-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: none;
+    width: 100%;
+  }
+  .nav__hamburger-container__btn {
+    line-height: 2.8125rem;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    z-index: 1;
+    position: absolute;
+  }
+  .nav__hamburger-container__cross {
+    line-height: 2.8125rem;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    z-index: 1;
+    position: absolute;
+  }
+  .nav__hamburger-container__main-group {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: none;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 0.8em;
+    width: 20%;
+    background: white;
+    margin-right: 5%;
+    margin-top: 30%;
+    box-shadow: 0px 0.5rem 0.9375rem rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom: 0.0625rem solid hsl(217deg, 15%, 83%);
+  }
+  .nav__hamburger-container__main-group__ul-group {
+    display: block;
+    padding: 0.9375rem 0 0.9375rem 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: none;
+  }
+  .nav__hamburger-container__main-group__ul-group__link-group__link {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: none;
+    text-decoration: none;
+    color: hsl(208deg, 50%, 15%);
+    padding: 0.5rem;
+  }
+  .nav__hamburger-container__main-group__ul-group__link-group__link > li {
+    list-style: none;
+  }
+  .nav__hamburger-container__main-group__ul-group__line {
+    height: 7.5rem;
+    width: 0.0625rem;
+    border: 0.0625rem solid black;
+  }
+  .nav__hamburger-container__main-group__ul-group:hover {
+    background: #ffffff;
+  }
+  .aside-left {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: flex-start;
+    gap: 1.1875rem;
+    width: 18.75rem;
+    height: auto;
+    padding: 1.25rem 1.5rem;
+    grid-area: aside-left;
+    display: none;
+  }
+  .aside-right {
+    display: none;
+  }
+  .section-modal {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0.125rem;
+    padding: 0.375rem 0.5rem;
+    margin: 6rem;
+    width: 41.25rem;
+    height: 34.0625rem;
+    border-radius: 1rem;
+    border: 0.0625rem solid hsl(217deg, 15%, 83%);
+    background: white;
+    box-shadow: 0px 0.5rem 0.9375rem rgba(0, 0, 0, 0.15);
+    display: none;
+    position: absolute;
+  }
+  .section-modal__close {
+    margin-left: 98%;
+    cursor: pointer;
+  }
+  .section-modal__main-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.375rem 1.5rem 1.125rem;
+  }
+  .section-modal__main-container__title {
+    font-family: "Roboto";
+    font-size: 3rem;
+    font-weight: 700;
+    color: hsl(208deg, 50%, 15%);
+  }
+  .section-modal__main-container__card-group {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: none;
+    width: 39rem;
+  }
+  .section-modal__main-container__card-group__card-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1.75rem 1.5rem;
+    background: hsl(200deg, 12%, 95%);
+    width: 14.8125rem;
+    height: 23.25rem;
+    box-shadow: 0px 0.25rem 0.9375rem rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+  }
+  .section-modal__main-container__card-group__card-container__body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: flex-start;
+    gap: 1.125rem;
+  }
+  .section-modal__main-container__card-group__card-container__body__type {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: hsl(208deg, 50%, 15%);
+  }
+  .section-modal__main-container__card-group__card-container__body__price-description {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .section-modal__main-container__card-group__card-container__body__price-description__price {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: hsl(208deg, 50%, 15%);
+  }
+  .section-modal__main-container__card-group__card-container__body__price-description__description {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 0.75rem;
+    color: hsl(208deg, 50%, 15%);
+  }
+  .section-modal__main-container__card-group__card-container__body__price-description__price-time {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: flex-end;
+    gap: 0rem;
+  }
+  .section-modal__main-container__card-group__card-container__body__price-description__price-time__price {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: hsl(208deg, 50%, 15%);
+  }
+  .section-modal__main-container__card-group__card-container__body__pros-group {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .section-modal__main-container__card-group__card-container__body__pros-group__image-pro {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .section-modal__main-container__card-group__card-container__body__pros-group__image-pro__image {
+    width: 1.5rem;
+    height: auto;
+  }
+  .section-modal__main-container__card-group__card-container__body__pros-group__image-pro__pro {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: hsl(208deg, 50%, 15%);
+  }
+  .section-modal__main-container__card-group__card-container__button {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: flex-end;
+    gap: 0.625rem;
+    padding: 0.5rem 1.25rem;
+    background: linear-gradient(90deg, #070B7E 13.65%, #D80C6D 81.12%);
+    border: 0.04375rem solid hsl(0deg, 0%, 91%);
+    border-radius: 0.625rem;
+    cursor: pointer;
+  }
+  .section-modal__main-container__card-group__card-container__button__text {
+    font-family: "Roboto";
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: white;
+  }
+  .main-event__event {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 0 1.25rem;
+    background: white;
+    border-radius: 0.625rem;
+    width: 100%;
+  }
+  .main-event__event__top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3.75rem;
+    padding: 0.75rem 2rem;
+    border-bottom: 0.0625rem solid hsl(217deg, 15%, 83%);
+    width: 100%;
+  }
+  .main-event__event__top__live-sign {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.25rem;
+    color: hsl(0deg, 100%, 38%);
+    background-color: hsl(354deg, 83%, 95%);
+    padding: 0.625rem;
+    border-radius: 0.375rem;
+    font-size: 0.8125rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .main-event__event__top__league {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.25rem;
+    color: hsl(208deg, 50%, 15%);
+  }
+  .main-event__event__top__league__logo {
+    width: 1.5rem;
+  }
+  .main-event__event__top__add-fav:hover {
+    cursor: pointer;
+  }
+  .main-event__event__body {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  .main-event__event__body__shield-name {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .main-event__event__body__shield-name__shield {
+    width: 3.25rem;
+  }
+  .main-event__event__body__shield-name__name {
+    font-size: 1rem;
+  }
+  .main-event__event__body__info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .main-event__event__body__info__result {
+    font-size: 1.5rem;
+  }
+  .main-event__event__body__info__result__colon {
+    color: hsl(217deg, 15%, 83%);
+  }
+  .main-event__event__body__info__minute {
+    font-size: 1rem;
+    color: hsl(29deg, 79%, 52%);
+  }
+  .main-event__progress {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: flex-end;
+    gap: 1.25rem;
+    padding: 0.5rem 0;
+    background: white;
+    border-radius: 0.625rem;
+    width: 80%;
+  }
+  .main-event__progress__ocurrences {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.625rem;
+    width: 80%;
+  }
+  .main-event__progress__ocurrences__ocurrence-right__minute {
+    color: hsl(210deg, 6%, 58%);
+  }
+  .main-event__progress__ocurrences__ocurrence-right__team-icon {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0;
+  }
+  .main-event__progress__ocurrences__ocurrence-right__team-icon__team-circle {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    border: 0.0625rem solid hsl(0deg, 0%, 91%);
+    border-radius: 50%;
+  }
+  .main-event__progress__ocurrences__ocurrence-right__team-icon__team-circle__team {
+    width: 1.25rem;
+  }
+  .main-event__progress__ocurrences__ocurrence-right__team-icon__icon-circle {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    border: 0.0625rem solid hsl(0deg, 0%, 91%);
+    border-radius: 50%;
+  }
+  .main-config-favorites__title {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: none;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .main-config-favorites__config-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.625rem;
+    width: 100%;
+  }
+  .main-league {
+    width: 100%;
+  }
+  .main-league__events {
+    background: white;
+    border-radius: 0.625rem;
+    overflow: hidden;
+  }
+  .main-league__events__table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    min-width: 18.75rem;
+    max-width: 39.0625rem;
+  }
+  .main-set__event {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 0 2.5rem;
+    background: white;
+    border-radius: 0.625rem;
+    width: 90%;
+    max-width: 50rem;
+    min-width: 18.75rem;
+  }
+  .main-set__event__top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    padding: 0.75rem 4rem;
+    border-bottom: 0.0625rem solid hsl(217deg, 15%, 83%);
+    width: 100%;
+  }
+  .main-set__event__top__live-sign {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.25rem;
+    color: hsl(0deg, 100%, 38%);
+    background-color: hsl(354deg, 83%, 95%);
+    padding: 0.625rem;
+    border-radius: 0.375rem;
+    font-size: 0.8125rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .main-set__event__top__league {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.25rem;
+    color: hsl(208deg, 50%, 15%);
+  }
+  .main-set__event__top__league__logo {
+    width: 1.5rem;
+  }
+  .main-set__event__top__add-fav:hover {
+    cursor: pointer;
+  }
+  .main-set__event__body {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  .main-set__event__body__shield-name {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .main-set__event__body__shield-name__shield {
+    width: 3.25rem;
+  }
+  .main-set__event__body__shield-name__name {
+    font-size: 1rem;
+  }
+  .main-set__event__body__info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .main-set__event__body__info__result {
+    font-size: 1.5rem;
+  }
+  .main-set__event__body__info__result__colon {
+    color: hsl(217deg, 15%, 83%);
+  }
+  .main-set__event__body__info__minute {
+    font-size: 1rem;
+    color: hsl(29deg, 79%, 52%);
+  }
+  .main-set__scores {
+    background: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    width: 90%;
+  }
+  .main-set__scores__table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    min-width: 25rem;
+    max-width: 39.0625rem;
+  }
+  .main-set__scores__table > tbody > tr:first-child {
+    background: hsl(260deg, 60%, 99%);
+    border-radius: 0.625rem;
+    color: hsl(224deg, 8%, 74%);
+  }
+  .main-set__scores__table > tbody > tr {
+    border-bottom: 0.0625rem solid #EAEAEA;
+  }
+  .main-set__scores__table > tbody > tr > td:not(:first-child) {
+    width: 2%;
+  }
+  .main-set__scores__table > tbody > tr > td:first-child {
+    padding-left: 1.5rem;
+    width: 13%;
+  }
+  .main-set__scores__table > tbody > tr > td:last-child {
+    padding-right: 1.5rem;
+  }
+  .main-set__scores__table > tbody > tr > td {
+    padding: 0.5rem 0;
+  }
+  .main-set__scores__table > tbody > tr > td > .--team {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .main-set__scores__table > tbody > tr > td > .--team > img {
+    width: 2rem;
+  }
+  .main-set__progress {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1rem 0;
+    background: white;
+    border-radius: 0.625rem;
+    width: 80%;
+    max-width: 50rem;
+    min-width: 25rem;
+  }
+  .main-set__progress__ocurrences {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.625rem;
+    width: 100%;
+  }
+  .main-set__progress__ocurrences__ocurrence-right {
+    padding: 0 1.25rem 0.75rem;
+    border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
+    width: 100%;
+  }
+  .main-set__progress__ocurrences__ocurrence-right__minute {
+    color: hsl(210deg, 6%, 58%);
+  }
+  .main-set__progress__ocurrences__ocurrence-right__team-icon {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0;
+  }
+  .main-set__progress__ocurrences__ocurrence-right__team-icon__team-circle {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    border: 0.0625rem solid hsl(0deg, 0%, 91%);
+    border-radius: 50%;
+  }
+  .main-set__progress__ocurrences__ocurrence-right__team-icon__team-circle__team {
+    width: 1.25rem;
+  }
+  .main-set__progress__ocurrences__ocurrence-right__team-icon__icon-circle {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 1.875rem;
+    height: 1.875rem;
+    border: 0.0625rem solid hsl(0deg, 0%, 91%);
+    border-radius: 50%;
+  }
+  #main-league__table-container__standings__body__row__cell__gf-id,
+#main-league__table-container__standings__body__row__cell__gc-id,
+#main-league__table-container__standings__body__row__cell__dg-id,
+#main-league__table-container__standings__body__row__cell__e-id {
+    display: none;
+  }
+  #main-league__table-container__standings__body__row__cell__gf-value,
+#main-league__table-container__standings__body__row__cell__gc-value,
+#main-league__table-container__standings__body__row__cell__dg-value,
+#main-league__table-container__standings__body__row__cell__e-value {
+    display: none;
+  }
+  .--standings-table {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: space-between;
+    gap: 1rem;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    min-width: 25rem;
+    max-width: 39.0625rem;
+  }
+  .--standings-table > tbody > tr:first-child {
+    background: hsl(260deg, 60%, 99%);
+    border-radius: 0.625rem;
+    color: hsl(224deg, 8%, 74%);
+  }
+  .--standings-table > tbody > tr > td:not(:nth-child(2)) {
+    width: 5%;
+    text-align: center;
+  }
+  .--standings-table > tbody > tr > td:first-child {
+    padding-left: 1.5rem;
+    width: 6%;
+    text-align: left;
+  }
+  .--standings-table > tbody > tr > td:nth-child(2) {
+    width: 22%;
+  }
+  .--standings-table > tbody > tr > td:last-child {
+    padding-right: 1.5rem;
+  }
+  .--standings-table > tbody > tr > td {
+    padding: 0.5rem 0;
+  }
+  .--standings-table > tbody > tr > td > .--standings__team {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .--standings-table > tbody > tr > td > .--standings__team > img {
+    width: 2rem;
+  }
+  .--button-set {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: none;
+    gap: 0.5rem;
+    padding: 1.5rem 0.5rem 1.5rem;
+    width: 100%;
+  }
+  .--button-set__button {
+    font-size: 1rem;
+    color: hsl(210deg, 6%, 58%);
+  }
+  .--button-set__button:hover {
+    cursor: pointer;
+  }
+  .main-mark__event-match {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    width: 80%;
+    height: 11.5625rem;
+    background: white;
+    border-radius: 0.625rem;
+    padding: 2.25rem;
+  }
+  .main-mark__event-match__group-event {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .main-mark__event-match__favs-img {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  .main-mark__container-mark {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 0 0.625rem;
+  }
+  .main-mark__container-mark__group-selector {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.125rem;
+    padding: 0.75rem 1.125rem;
+    background: white;
+    border-radius: 0.625rem;
+    width: 9.375rem;
+    font-size: 0.9375rem;
+    font-weight: 400;
+  }
+  .main-mark__table-marks {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: none;
+    padding: 0 0 0.75rem;
+    width: 80%;
+    background: white;
+    border-radius: 0.625rem;
+  }
+  .main-mark__table-marks__table {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: none;
+    width: 100%;
+  }
+  .main-mark__table-marks__table > tbody {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+  }
+  .main-mark__table-marks__table > tbody > tr:first-child {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 6.875rem;
+    background: hsl(260deg, 60%, 99%);
+    padding: 0.5rem 0 0.5rem 0.625rem;
+    border-radius: 0.75rem;
+    width: 100%;
+  }
+  .main-mark__table-marks__table > tbody > tr:first-child > td:first-child {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .main-mark__table-marks__table > tbody > tr:first-child > td:first-child p {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  .main-mark__table-marks__table > tbody > tr:first-child > td:not(:first-child) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .main-mark__table-marks__table > tbody > tr:first-child > td:not(:first-child) p {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  .main-mark__table-marks__table > tbody > tr:not(:first-child) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.875rem;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    height: 2.5rem;
+  }
+  .main-mark__table-marks__table > tbody > tr:not(:first-child) > td:first-child {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: none;
+    align-items: center;
+    gap: 1.5625rem;
+    padding: 0px;
+    width: 8.125rem;
+    height: 1.3125rem;
+  }
+  .main-mark__table-marks__table > tbody > tr:not(:first-child) > td:first-child p {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  .main-mark__table-marks__table > tbody > tr:not(:first-child) > td:first-child > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.3125rem;
+    width: 4.375rem;
+    height: 1.25rem;
+  }
+  .main-mark__table-marks__table > tbody > tr:not(:first-child) > td:not(:first-child) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0rem;
+    width: 40%;
+    height: 1.5rem;
+  }
+  .main-mark__table-marks__table > tbody > tr:not(:first-child) > td:not(:first-child) > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.3125rem;
+    height: 1.25rem;
+  }
+  .main-mark__table-marks__table > tbody > tr:not(:first-child) > td:not(:first-child) p {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  #main-mark__table-marks__table__body__row__cell__mark-id {
+    display: none;
+  }
+  .main-mark__table-marks__table__body__row__cell__mark-value {
+    display: none;
+  }
+  #main-home__popular-events__table__col-name__cell__id-league-value,
+#main-home__popular-events__table__col-name__cell__id-league {
+    display: none;
+  }
+  .main-home {
+    grid-area: main;
+  }
+  .main-home__popular-events {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0 0 0.75rem;
+    background: white;
+    border-radius: 0.625rem;
+  }
+  .main-home__popular-events__button-set {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: none;
+    gap: 1rem;
+    padding: 1.5rem 1.5rem 1.5rem;
+    width: 100%;
+  }
+  .main-home__popular-events__button-set__button {
+    font-size: 1rem;
+    color: hsl(210deg, 6%, 58%);
+  }
+  .main-home__popular-events__button-set__button:hover {
+    cursor: pointer;
+  }
+  .main-home__popular-events__table {
+    padding: 1rem 0 0.75rem;
+    border-radius: 0.625rem;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    max-width: 56.25rem;
+    min-width: 25rem;
+  }
+  .main-home__popular-events__table__col-name {
+    width: 100%;
+    border-top: 0.125rem solid hsl(0deg, 0%, 91%);
+    border-bottom: 0.125rem solid hsl(0deg, 0%, 91%);
+    background: hsl(260deg, 60%, 99%);
+  }
+  .main-home__popular-events__table__col-name__cell:first-child {
+    width: 18%;
+  }
+  .main-home__popular-events__table__col-name__cell:last-child {
+    width: 25%;
+  }
+  .main-home__popular-events__table__col-name__cell__layout__name {
+    color: hsl(224deg, 8%, 74%);
+    text-align: center;
+  }
+  .main-home__popular-events__table__event__cell:first-child {
+    width: 12%;
+  }
+  .main-home__popular-events__table__event__cell:last-child {
+    width: 25%;
+  }
+  .main-home__popular-events__table__event__cell:nth-child(2) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .main-home__popular-events__table__event__cell {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
+    overflow: hidden;
+  }
+  .main-home__popular-events__table__event__cell__time-live-sign {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .main-home__popular-events__table__event__cell__hour-date {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0;
+  }
+  .main-home__popular-events__table__event__cell__hour-date__hour {
+    font-size: 0.875rem;
+  }
+  .main-home__popular-events__table__event__cell__hour-date__date {
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+  .main-home__popular-events__table__event__cell__layout {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .main-home__popular-events__table__event__cell__layout__live-sign {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.25rem;
+    color: hsl(0deg, 100%, 38%);
+    background-color: hsl(354deg, 83%, 95%);
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.8125rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .main-home__popular-events__table__event__cell__layout__team {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 1rem;
+  }
+  .main-home__popular-events__table__event__cell__layout__team__shield {
+    width: 1.75rem;
+  }
+  .main-home__popular-events__table__event__cell__layout__result__text {
+    font-size: 1.125rem;
+    white-space: nowrap;
+  }
+  .main-home__popular-events__table__event__cell__layout__result__text__colon {
+    color: hsl(210deg, 6%, 58%);
+  }
+  .main-home__popular-events__table__event__cell__logo-text {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.375rem;
+  }
+  .main-home__popular-events__table__event__cell__logo-text__logo {
+    width: 1.25rem;
+  }
+  .main-home__popular-events__table__event__cell__logo-text__text__league {
+    font-size: 0.8125rem;
+    white-space: nowrap;
+  }
+  .main-home__popular-events__table__event__cell__logo-text__text__country {
+    font-size: 0.6875rem;
+    color: hsl(210deg, 6%, 58%);
+    white-space: nowrap;
+  }
+  .--main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    padding: 2% 2%;
+    background: hsl(214deg, 33%, 96%);
+    border-width: 0 0.125rem;
+    border-style: solid;
+    border-color: hsl(0deg, 0%, 91%);
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+  }
+  .--header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: hsl(210deg, 6%, 58%);
+    width: 100%;
+  }
+  .main-player {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: none;
+  }
+  .main-player__player-team {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4.875rem;
+    width: 100%;
+  }
+  .main-player__player-team__info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .main-player__player-team__info__img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .main-player__player-team__img {
+    width: 4.6875rem;
+    height: 4.6875rem;
+  }
+  .main-player__table-container {
+    width: 80%;
+  }
+  .main-player__table-container__last-events {
+    width: 100%;
+    min-width: 18.75rem;
+    max-width: 39.0625rem;
+  }
+  .main-player__table-container__last-events tbody tr:first-child td {
+    padding: 0.375rem 0;
+    color: hsl(224deg, 8%, 74%);
+    font-size: 0.75rem;
+    text-align: center;
+  }
+  .main-player__table-container__last-events tbody tr:not(:first-child) td:nth-child(3), .main-player__table-container__last-events tbody tr:not(:first-child) td:last-child {
+    font-weight: 700;
+    font-size: 0.9375rem;
+  }
+  .main-player__table-container__last-events tbody tr:not(:first-child) td:nth-child(3) div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .main-player__table-container__team-history {
+    width: 100%;
+    min-width: 18.75rem;
+    max-width: 39.0625rem;
+  }
+  .main-player__table-container__team-history tbody tr:first-child td:nth-child(4) {
+    display: none;
+  }
+  .main-player__table-container__team-history tbody tr:not(:first-child) td:nth-child(4) {
+    display: none;
+  }
+  .main-player__table-container__team-history tbody tr td:first-child, .main-player__table-container__team-history tbody tr td:nth-child(2) {
+    width: 25%;
+  }
+  .main-team {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: flex-end;
+    gap: none;
+  }
+  .main-team__shield-name {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: 600;
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+    width: 100%;
+  }
+  .main-team__prog-event {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 1rem;
+    background: white;
+    border-radius: 0.625rem;
+    width: 80%;
+    max-width: 26.5625rem;
+    min-width: 37.5rem;
+  }
+  .main-team__prog-event__team {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.125rem;
+    line-height: 1.3125rem;
+  }
+  .main-team__prog-event__team > img {
+    width: 3rem;
+  }
+  .main-team__prog-event__result-date {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: center;
+    gap: 0.125rem;
+  }
+  .main-team__prog-event__result-date__text:nth-child(2) {
+    font-size: 1rem;
+  }
+  .main-team__players {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  .main-team__players__player {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0 0.5rem;
+    background: white;
+    border-radius: 0.625rem;
+  }
+  .main-team__players__player img {
+    width: 4.0625rem;
+    height: 4.0625rem;
+    border-radius: 50%;
+    box-shadow: 0.0625rem 0 0.25rem -0.0625rem hsl(208deg, 50%, 15%);
+  }
+  .main-team__players__player p {
+    text-align: center;
+    width: 2.375rem;
+  }
+  .main-team__players__player__posi-country {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.375rem;
+    padding: 0.125rem 0;
+    border-width: 0.04375rem 0;
+    border-style: solid;
+    border-color: hsl(0deg, 0%, 91%);
+  }
+  .main-team__logo-league {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.4375rem;
+    width: 100%;
+  }
+  .main-team__logo-league > img {
+    width: 3rem;
+  }
+}
+@media only screen and (min-width: 570px) and (max-width: 620px) {
+  .container-main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: none;
+    box-shadow: -1px 10px 59px -12px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: -1px 10px 59px -12px rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: -1px 10px 59px -12px rgba(0, 0, 0, 0.24);
+    display: grid;
+    grid-template-columns: repeat(1);
+    grid-template-rows: repeat(2);
+    grid-template-areas: "nav" "main";
+  }
+  .main-login {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background: white;
+    padding: 5rem;
+    height: 100%;
+    min-height: 100vh;
+    width: 37.5rem;
+  }
+  .main-login__presentation {
+    display: none;
   }
   .nav {
     display: flex;
@@ -12736,7 +14047,6 @@ body {
   }
   .nav__hamburger-container__btn {
     line-height: 2.8125rem;
-    padding: 0;
     font-size: 1.4em;
     font-weight: bold;
     cursor: pointer;
@@ -12746,7 +14056,6 @@ body {
   }
   .nav__hamburger-container__cross {
     line-height: 2.8125rem;
-    padding: 0;
     font-size: 1.4em;
     font-weight: bold;
     cursor: pointer;
@@ -12815,74 +14124,7 @@ body {
     display: none;
   }
   .aside-right {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 2.5rem 2.375rem;
-    grid-area: aside-right;
-    background: hsl(214deg, 33%, 96%);
-    border-bottom: 0.0625rem solid hsl(210deg, 6%, 58%);
     display: none;
-  }
-  .aside-right__ad-container__ad {
-    width: 37.5rem;
-    height: 6.25rem;
-    background-color: hsl(0deg, 0%, 85%);
-  }
-  .aside-right__ad-container__ad-delete {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: none;
-    text-decoration: underline;
-    color: hsl(208deg, 50%, 15%);
-    font-size: 0.75rem;
-    font-weight: bold;
-  }
-  .aside-right__table {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border: 0.0625rem solid hsl(0deg, 0%, 91%);
-    border-radius: 0.625rem;
-    width: 100%;
-    min-width: 15rem;
-    max-width: 18.75rem;
-    margin-top: 2.5rem;
-  }
-  .aside-right__table__head__row__data {
-    padding-left: 0.875rem;
-    border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
-    padding-bottom: 0.5rem;
-  }
-  .aside-right__table__head__row__data__h2 {
-    font-weight: 600;
-    font-size: 1.125rem;
-  }
-  .aside-right__table__body__league__info {
-    padding: 0.75rem 1rem;
-    border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
-  }
-  .aside-right__table__body__league__info__logo-text {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.375rem;
-  }
-  .aside-right__table__body__league__info__logo-text__logo {
-    width: 1.125rem;
-  }
-  .aside-right__table__body__league__info__logo-text__league-country__league {
-    font-size: 0.875rem;
-    white-space: nowrap;
-  }
-  .aside-right__table__body__league__info__logo-text__league-country__country {
-    font-size: 0.75rem;
-    color: hsl(210deg, 6%, 58%);
-    white-space: nowrap;
   }
   .section-modal {
     display: flex;
@@ -13070,6 +14312,21 @@ body {
     grid-template-rows: repeat(2);
     grid-template-areas: "nav" "aside-right" "main";
   }
+  .main-login {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background: white;
+    padding: 5rem;
+    height: 100%;
+    min-height: 100vh;
+    width: 43.125rem;
+  }
+  .main-login__presentation {
+    display: none;
+  }
   .nav {
     display: flex;
     flex-flow: row nowrap;
@@ -13138,14 +14395,7 @@ body {
     font-weight: bold;
   }
   .aside-right__table {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border: 0.0625rem solid hsl(0deg, 0%, 91%);
-    border-radius: 0.625rem;
-    width: 100%;
-    min-width: 15rem;
-    max-width: 18.75rem;
-    margin-top: 2.5rem;
+    display: none;
   }
   .aside-right__table__head__row__data {
     padding-left: 0.875rem;
@@ -13406,46 +14656,28 @@ body {
     font-weight: bold;
   }
   .aside-right__table {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border: 0.0625rem solid hsl(0deg, 0%, 91%);
-    border-radius: 0.625rem;
-    width: 100%;
-    min-width: 15rem;
-    max-width: 18.75rem;
-    margin-top: 2.5rem;
+    display: none;
   }
-  .aside-right__table__head__row__data {
-    padding-left: 0.875rem;
-    border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
-    padding-bottom: 0.5rem;
-  }
-  .aside-right__table__head__row__data__h2 {
-    font-weight: 600;
-    font-size: 1.125rem;
-  }
-  .aside-right__table__body__league__info {
-    padding: 0.75rem 1rem;
-    border-bottom: 0.0625rem solid hsl(0deg, 0%, 91%);
-  }
-  .aside-right__table__body__league__info__logo-text {
+  .main-login {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
+    flex-flow: row wrap;
+    justify-content: space-between;
     align-items: center;
-    gap: 0.375rem;
+    gap: 4rem;
+    background: white;
+    padding: 5rem;
+    height: 100%;
+    min-height: 100vh;
+    width: 61.875rem;
   }
-  .aside-right__table__body__league__info__logo-text__logo {
-    width: 1.125rem;
-  }
-  .aside-right__table__body__league__info__logo-text__league-country__league {
-    font-size: 0.875rem;
-    white-space: nowrap;
-  }
-  .aside-right__table__body__league__info__logo-text__league-country__country {
-    font-size: 0.75rem;
-    color: hsl(210deg, 6%, 58%);
-    white-space: nowrap;
+  .main-login__presentation {
+    display: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: none;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 40%;
   }
 }
 @media (min-width: 1345px) {
@@ -13465,5 +14697,16 @@ body {
   }
   .nav__hamburger-container {
     display: none;
+  }
+  .aside-left__table {
+    display: none;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border: 0.0625rem solid hsl(0deg, 0%, 91%);
+    border-radius: 0.625rem;
+    width: 100%;
+    min-width: 15rem;
+    max-width: 18.75rem;
+    margin-top: 1.25rem;
   }
 }/*# sourceMappingURL=styles.css.map */

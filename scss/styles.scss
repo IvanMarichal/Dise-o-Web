@@ -317,8 +317,62 @@ body {
                 
             }
         }
+    }
 
+    &__table {
+        padding-top: f.rem(12px);
+        padding-bottom: f.rem(12px);
+        border: f.rem(1px) solid colors.$gray-4;
+        border-radius: f.rem(10px);
+        width: 100%;
+        min-width: f.rem(240px);
+        max-width: f.rem(300px);
+        margin-top: f.rem(20px);
 
+        &__head {
+            &__row{
+                &__data {
+                    padding-left: f.rem(14px);
+                    border-bottom: f.rem(1px) solid colors.$gray-4;
+                    padding-bottom: f.rem(8px);
+    
+                    &__h2 {
+                        font-weight: 600;
+                        font-size: f.rem(18px);
+                    }
+                }
+            }
+        }
+
+        &__body {
+            &__league {
+                &__info {
+                    padding: f.rem(12px) f.rem(16px);
+                    border-bottom: f.rem(1px) solid colors.$gray-4;
+
+                    &__logo-text {
+                        @include flexMix.flex(row, nowrap, flex-start, center, f.rem(6px));
+
+                        &__logo {
+                            width: f.rem(18px);
+                        }
+
+                        &__league-country {
+                            &__league {
+                                font-size: f.rem(14px);
+                                white-space: nowrap;
+                            }
+
+                            &__country {
+                                font-size: f.rem(12px);
+                                color: colors.$gray-1;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -679,6 +733,7 @@ body {
 }
 
 .main-league {
+    width: 100%;
     &__table-container {
         background: white;
         border-radius: f.rem(10px);
@@ -1220,6 +1275,7 @@ body {
     max-width: f.rem(1336px); 
 
     &__presentation {
+        grid-area: login-presentation;
         @include flexMix.flex(column, nowrap, none, flex-start, f.rem(32px));
         width: 50%;
 
@@ -1248,6 +1304,7 @@ body {
     }
 
     &__login-card {
+        grid-area: login-card;
         @include flexMix.flex(column, nowrap, none, center, f.rem(38px));
         width: f.rem(417px);
         height: f.rem(515px);
@@ -2066,7 +2123,7 @@ body {
     color: colors.$gray-4;
 }
 
-@media (max-width: 620px) {
+@media (max-width: 570px) {
     .container-main {
         @include flexMix.flex(row, nowrap, center, flex-start, none);
         box-shadow: -1px 10px 59px -12px rgba(0,0,0,0.24);
@@ -2078,6 +2135,1160 @@ body {
         grid-template-rows: repeat(2);
         grid-template-areas: "nav"
                              "main"
+    }
+
+    .main-login {
+        @include flexMix.flex(row, wrap, flex-end, center, f.rem(64px));
+        background: white;
+        padding: f.rem(80px);
+        height: 100%;
+        min-height: 100vh;
+        width: f.rem(600px);
+    
+        &__presentation {
+            display: none;
+        }
+    }
+
+    .nav {
+        @include flexMix.flex(row, nowrap, center, center, f.rem(10px));
+        width: 100%;
+        padding-top: f.rem(5px);
+        padding-right: f.rem(12px);
+        padding-left: f.rem(12px);
+        height: f.rem(55px);
+        grid-area: nav;
+
+        &__logo-link {
+            display: none;
+        }
+
+        &__line {
+            display: none
+        }
+
+        &__link-group {
+            display: none;
+        }
+
+        &__hamburger-container {
+            @include flexMix.flex(row, nowrap, flex-end, center, none);
+            width: 100%;
+
+            &__btn {
+                line-height: f.rem(45px);
+                font-size: 1.4em;
+                font-weight: bold;
+                cursor: pointer;
+                outline: none;
+                z-index: 1;
+                position: absolute;
+            }
+
+            &__cross {
+                line-height: f.rem(45px);
+                font-size: 1.4em;
+                font-weight: bold;
+                cursor: pointer;
+                outline: none;
+                z-index: 1;
+                position: absolute;
+            }
+
+            &__main-group {
+                @include flexMix.flex(column, nowrap, center, center, none);
+                z-index: 1; 
+                font-weight: bold; 
+                font-size: 0.8em; 
+                width: 20%; 
+                background: white;
+                margin-right: 5%;
+                margin-top: 30%;
+                box-shadow: 0px f.rem(8px) f.rem(15px) rgba(0, 0, 0, 0.30);
+                border-bottom-left-radius: f.rem(16px);
+                border-bottom-right-radius: f.rem(16px);
+                border-bottom: f.rem(1px) solid colors.$gray-3;
+
+                &__ul-group {
+                    display: block;
+                    padding: f.rem(15px) 0 f.rem(15px) 0; 
+                    @include flexMix.flex(row, nowrap, center, center, none);
+
+                    &__link-group {
+
+                        &__link {
+                            @include flexMix.flex(column, nowrap, center, center, none);
+                            text-decoration:none;  
+                            color: colors.$dark-text;
+                            padding: f.rem(8px);
+                        }
+
+                        &__link > li {
+                            list-style: none;
+                        }
+                    }
+
+                    &__line {
+                        height: f.rem(120px);
+                        width: f.rem(1px);
+                        border: f.rem(1px) solid black;
+                    }
+                }
+
+                &__ul-group:hover {
+                    background:#ffffff; 
+                }
+            }
+        }
+    }
+
+    .aside-left {
+        @include flexMix.flex(column, nowrap, none, flex-start, f.rem(19px));
+        width: f.rem(300px);
+        height: auto;
+        padding: f.rem(20px) f.rem(24px);
+        grid-area: aside-left;
+        display: none;
+    }
+  
+    .aside-right {        
+        display: none;
+
+    } 
+
+    .section-modal {
+        @include flexMix.flex(column, nowrap, center, flex-end, f.rem(2px));
+        padding: f.rem(6px) f.rem(8px);
+        margin: f.rem(96px);
+        width: f.rem(660px);
+        height: f.rem(545px);
+        border-radius: f.rem(16px);
+        border: f.rem(1px) solid colors.$gray-3;
+        background: white;
+        box-shadow: 0px f.rem(8px) f.rem(15px) rgba(0, 0, 0, 0.15);
+        display: none;
+        position: absolute;
+    
+        &__close {
+            margin-left: 98%;
+            cursor: pointer;
+        }
+    
+        &__main-container {
+            @include flexMix.flex(column, nowrap, center, center, f.rem(6px));
+            padding: f.rem(6px) f.rem(24px) f.rem(18px);
+    
+            &__title {
+                font-family: 'Roboto';
+                font-size: f.rem(48px);
+                font-weight: 700;
+                color: colors.$dark-text;
+            }
+    
+            &__card-group {
+                @include flexMix.flex(row, nowrap, space-between, center, none);
+                width: f.rem(624px);
+    
+                &__card-container {
+                    @include flexMix.flex(column, nowrap, space-between, flex-start, f.rem(8px));
+                    padding: f.rem(28px) f.rem(24px);
+                    background: colors.$gray-5;
+                    width: f.rem(237px);
+                    height: f.rem(372px);
+                    box-shadow: 0px f.rem(4px) f.rem(15px) rgba(0, 0, 0, 0.15);
+                    border-radius: f.rem(16px);
+    
+                    &__body {
+                        @include flexMix.flex(column, nowrap, none, flex-start, f.rem(18px));
+    
+                        &__type {
+                            font-family: 'Roboto';
+                            font-weight: 400;
+                            font-size: f.rem(12px);
+                            color: colors.$dark-text;
+                        }
+    
+                        &__price-description {
+                            @include flexMix.flex(column, nowrap, none, flex-start, f.rem(12px));
+    
+                            &__price {
+                                font-family: 'Roboto';
+                                font-weight: 700;
+                                font-size: f.rem(24px);
+                                color: colors.$dark-text;
+                            }
+    
+                            &__description {
+                                font-family: 'Roboto';
+                                font-weight: 300;
+                                font-size: f.rem(12px);
+                                color: colors.$dark-text;
+                            }
+    
+                            &__price-time {
+                                @include flexMix.flex(row, nowrap, none, flex-end, f.rem(0px));
+    
+                                &__price {
+                                    font-family: 'Roboto';
+                                    font-weight: 700;
+                                    font-size: f.rem(24px);
+                                    color: colors.$dark-text;
+                                }
+                            }
+                        }
+    
+                        &__pros-group {
+                            @include flexMix.flex(column, nowrap, none, flex-start, f.rem(8px));
+    
+                            &__image-pro {
+                                @include flexMix.flex(row, nowrap, none, center, f.rem(4px));
+    
+                                &__image {
+                                    width: f.rem(24px);
+                                    height: auto;
+                                }
+    
+                                &__pro {
+                                    font-family: 'Roboto';
+                                    font-weight: 400;
+                                    font-size: f.rem(12px);
+                                    color: colors.$dark-text;
+                                }
+                            }
+                        }
+                    }
+    
+                    &__button {
+                        @include flexMix.flex(column, nowrap, none, flex-end, f.rem(10px));
+                        padding: f.rem(8px) f.rem(20px);
+                        background: linear-gradient(90deg, #070B7E 13.65%, #D80C6D 81.12%);
+                        border: f.rem(0.7px) solid colors.$gray-4;
+                        border-radius: f.rem(10px);
+                        cursor: pointer;
+    
+                        &__text {
+                            font-family: 'Roboto';
+                            font-weight: 600;
+                            font-size: f.rem(18px);
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-event {
+        &__event {
+            @include flexMix.flex(column, nowrap, center, center, f.rem(32px));
+            padding: 0 0 f.rem(20px);
+            background: white;
+            border-radius: f.rem(10px);
+            width: 100%;
+    
+            &__top {
+                @include flexMix.flex(row, nowrap, center, center, f.rem(60px));
+                padding: f.rem(12px) f.rem(32px);
+                border-bottom: f.rem(1px) solid colors.$gray-3;
+                width: 100%;
+    
+                &__live-sign {
+                    @include flexMix.flex(row, nowrap, none, center, f.rem(4px));
+                    color: colors.$red;
+                    background-color: colors.$live-background;
+                    padding: f.rem(10px);
+                    border-radius: f.rem(6px);
+                    font-size: f.rem(13px);
+                    width: fit-content;
+                }
+    
+                &__league {
+                    @include flexMix.flex(row, nowrap, none, center, f.rem(4px));
+                    color: colors.$dark-text;
+    
+                    &__logo {
+                        width: f.rem(24px);
+                    }
+                }
+    
+                &__add-fav:hover {
+                    cursor: pointer;
+                }
+            }
+    
+            &__body {
+                @include flexMix.flex(row, nowrap, center, center, f.rem(64px));
+    
+                &__shield-name {
+                    @include flexMix.flex(column, nowrap, center, center, f.rem(4px));
+                    &__shield {
+                        width: f.rem(52px);
+                    }
+    
+                    &__name {
+                        font-size: f.rem(16px);
+                    }
+                }
+    
+                &__info {
+                    @include flexMix.flex(column, nowrap, none, center, f.rem(8px));
+    
+                    &__result {
+                        font-size: f.rem(24px);
+    
+                        &__colon {
+                            color: colors.$gray-3;
+                        }
+                    }
+    
+                    &__minute {
+                        font-size: f.rem(16px);
+                        color: colors.$orange;
+                    }
+                }
+            }
+        }
+    
+        &__progress {
+            @include flexMix.flex(column, nowrap, none, flex-end, f.rem(20px));
+            padding: f.rem(8px) 0;
+            background: white;
+            border-radius: f.rem(10px);
+            width: 80%;
+    
+            &__ocurrences {
+                @include flexMix.flex(column, nowrap, center, flex-start, f.rem(10px));
+                width: 80%;
+    
+                &__ocurrence-right {
+                    
+                    &__minute {
+                        color: colors.$gray-1;
+                    }
+    
+                    &__team-icon {
+                        @include flexMix.flex(row, nowrap, none, center, 0);
+    
+                        &__team-circle {
+                            @include flexMix.flex(row, nowrap, center, center, 0);
+                            width: f.rem(30px);
+                            height: f.rem(30px);
+                            border: f.rem(1px) solid colors.$gray-4;
+                            border-radius: 50%;
+    
+                            &__team {
+                                width: f.rem(20px);
+                            }
+                        }
+    
+                        &__icon-circle {
+                            @include flexMix.flex(row, nowrap, center, center, 0);
+                            width: f.rem(30px);
+                            height: f.rem(30px);
+                            border: f.rem(1px) solid colors.$gray-4;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-config-favorites {
+    
+        &__title {
+            @include flexMix.flex(column, nowrap, center, center, none);
+            width: 100%;
+            font-size: f.rem(24px);
+            font-weight: 500;
+        }
+
+        &__config-container {
+            @include flexMix.flex(row, nowrap, flex-end, center, f.rem(26px));
+            width: 100%;
+        }
+    }
+
+    .main-league {
+        width: 100%;
+        &__events {
+            background: white;
+            border-radius: f.rem(10px);
+            overflow: hidden;
+            
+            &__table {
+                border-collapse: collapse;
+                table-layout: fixed;
+                width: 100%;
+                min-width: f.rem(300px);
+                max-width: f.rem(625px);
+            }
+        }
+    }
+
+    .main-set {
+        &__event {
+            @include flexMix.flex(column, nowrap, center, center, f.rem(32px));
+            padding: 0 0 f.rem(40px);
+            background: white;
+            border-radius: f.rem(10px);
+            width: 90%;
+            max-width: f.rem(800px);
+            min-width: f.rem(300px);
+    
+            &__top {
+                @include flexMix.flex(row, nowrap, space-between, center, 0);
+                padding: f.rem(12px) f.rem(64px);
+                border-bottom: f.rem(1px) solid colors.$gray-3;
+                width: 100%;
+    
+                &__live-sign {
+                    @include flexMix.flex(row, nowrap, none, center, f.rem(4px));
+                    color: colors.$red;
+                    background-color: colors.$live-background;
+                    padding: f.rem(10px);
+                    border-radius: f.rem(6px);
+                    font-size: f.rem(13px);
+                    width: fit-content;
+                }
+    
+                &__league {
+                    @include flexMix.flex(row, nowrap, none, center, f.rem(4px));
+                    color: colors.$dark-text;
+    
+                    &__logo {
+                        width: f.rem(24px);
+                    }
+                }
+    
+                &__add-fav:hover {
+                    cursor: pointer;
+                }
+            }
+    
+            &__body {
+                @include flexMix.flex(row, nowrap, center, center, f.rem(64px));
+    
+                &__shield-name {
+                    @include flexMix.flex(column, nowrap, center, center, f.rem(4px));
+                    &__shield {
+                        width: f.rem(52px);
+                    }
+    
+                    &__name {
+                        font-size: f.rem(16px);
+                    }
+                }
+    
+                &__info {
+                    @include flexMix.flex(column, nowrap, none, center, f.rem(8px));
+    
+                    &__result {
+                        font-size: f.rem(24px);
+    
+                        &__colon {
+                            color: colors.$gray-3;
+                        }
+                    }
+    
+                    &__minute {
+                        font-size: f.rem(16px);
+                        color: colors.$orange;
+                    }
+                }
+            }
+        }
+    
+        &__scores {
+            background: white;
+            border-radius: f.rem(12px);
+            overflow: hidden;
+            width: 90%;
+
+            &__table {
+                border-collapse: collapse;
+                table-layout: fixed;
+                width: 100%;
+                min-width: f.rem(400px);
+                max-width: f.rem(625px);    
+    
+                & > tbody {
+                    & > tr:first-child {
+                        background: colors.$gray-6;
+                        border-radius: f.rem(10px);
+                        color: colors.$gray-2;
+                    }
+                    
+                    & > tr {
+                        border-bottom: f.rem(1px) solid #EAEAEA;
+    
+                        & > td:not(:first-child){
+                            width: 2%;
+                        }
+                        
+                        & > td:first-child {
+                            padding-left: f.rem(24px);
+                            width: 13%;
+                        }
+                        
+                        & > td:last-child {
+                            padding-right: f.rem(24px);
+                        }
+                        
+                        & > td {
+                            padding: f.rem(8px) 0;
+                            
+                            & > .--team {
+                                @include flexMix.flex(row, nowrap, none, center, f.rem(8px));
+                            }
+                            
+                            & > .--team > img {
+                                width: f.rem(32px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+        &__progress {
+            @include flexMix.flex(column, nowrap, none, flex-start, f.rem(20px));
+            padding: f.rem(16px) 0;
+            background: white;
+            border-radius: f.rem(10px);
+            width: 80%;
+            max-width: f.rem(800px);
+            min-width: f.rem(400px);
+    
+            &__ocurrences {
+                @include flexMix.flex(column, nowrap, center, flex-start, f.rem(10px));
+                width: 100%;
+    
+                &__ocurrence-right {
+                    padding: 0 f.rem(20px) f.rem(12px);
+                    border-bottom: f.rem(1px) solid colors.$gray-4;
+                    width: 100%;
+    
+                    &__minute {
+                        color: colors.$gray-1;
+                    }
+    
+                    &__team-icon {
+                        @include flexMix.flex(row, nowrap, none, center, 0);
+    
+                        &__team-circle {
+                            @include flexMix.flex(row, nowrap, center, center, 0);
+                            width: f.rem(30px);
+                            height: f.rem(30px);
+                            border: f.rem(1px) solid colors.$gray-4;
+                            border-radius: 50%;
+    
+                            &__team {
+                                width: f.rem(20px);
+                            }
+                        }
+    
+                        &__icon-circle {
+                            @include flexMix.flex(row, nowrap, center, center, 0);
+                            width: f.rem(30px);
+                            height: f.rem(30px);
+                            border: f.rem(1px) solid colors.$gray-4;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #main-league__table-container__standings__body__row__cell__gf-id,
+    #main-league__table-container__standings__body__row__cell__gc-id,
+    #main-league__table-container__standings__body__row__cell__dg-id,
+    #main-league__table-container__standings__body__row__cell__e-id {
+        display: none;
+    }
+
+    #main-league__table-container__standings__body__row__cell__gf-value,
+    #main-league__table-container__standings__body__row__cell__gc-value,
+    #main-league__table-container__standings__body__row__cell__dg-value,
+    #main-league__table-container__standings__body__row__cell__e-value {
+        display: none;
+    }
+
+    .--standings-table {
+        @include flexMix.flex(column, wrap, flex-end, space-between, f.rem(16px));
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 100%;
+        min-width: f.rem(400px);
+        max-width: f.rem(625px);    
+        
+        & > tbody {
+            & > tr:first-child {
+                background: colors.$gray-6;
+                border-radius: f.rem(10px);
+                color: colors.$gray-2;
+            }
+            
+            & > tr {
+                & > td:not(:nth-child(2)){
+                    width: 5%;
+                    text-align: center;
+                }
+    
+                & > td:first-child {
+                    padding-left: f.rem(24px);
+                    width: 6%;
+                    text-align: left;
+                }
+    
+                & > td:nth-child(2) {
+                    width: 22%;
+                }
+    
+                & > td:last-child {
+                    padding-right: f.rem(24px);
+                }
+    
+                & > td {
+                    padding: f.rem(8px) 0;
+    
+                    & > .--standings__team {
+                        @include flexMix.flex(row, nowrap, none, center, f.rem(8px));
+                    }
+    
+                    & > .--standings__team > img {
+                        width: f.rem(32px);
+                    }
+                }
+            }
+        }
+    }
+
+    .--button-set {
+        @include flexMix.flex(row, nowrap, flex-end, none, f.rem(8px));
+        padding: f.rem(24px) f.rem(8px) f.rem(24px);
+        width: 100%;
+    
+        &__button {
+            font-size: f.rem(16px);
+            color: colors.$gray-1;
+        }
+    
+        &__button:hover{
+            cursor: pointer;
+        }
+    }
+    
+    .main-mark {
+
+        &__event-match {
+            @include flexMix.flex(row, nowrap, space-between, center, f.rem(24px));
+            width: 80%;
+            height: f.rem(185px);
+            background: white;
+            border-radius: f.rem(10px);
+            padding: f.rem(36px);
+    
+            &__group-event {
+                @include flexMix.flex(row, nowrap, flex-start, center, f.rem(24px));
+                width: 100%;
+                font-size: f.rem(32px);
+                font-weight: 400;
+            }
+    
+            &__favs-img {
+                @include flexMix.flex(row, nowrap, flex-end, center, f.rem(24px));
+                padding: f.rem(32px);
+            }
+    
+        }
+    
+        &__container-mark {
+            @include flexMix.flex(row, nowrap, space-between, center, f.rem(40px));
+            padding: 0 f.rem(10px);
+    
+            &__group-selector {
+                @include flexMix.flex(row, wrap, space-between, center, f.rem(18px));
+                padding: f.rem(12px) f.rem(18px);
+                background: white;
+                border-radius: f.rem(10px);
+                width: f.rem(150px);
+                font-size: f.rem(15px);
+                font-weight: 400;
+            }
+        }
+    
+        &__table-marks {
+            @include flexMix.flex(column, nowrap, none, center, none);
+            padding: 0 0 f.rem(12px);
+            width: 80%;
+            background: white;
+            border-radius: f.rem(10px);
+        
+            &__table {
+                @include flexMix.flex(column, nowrap, flex-end, center, none);
+                width: 100%;
+    
+                & > tbody {
+                    border-collapse: collapse;
+                    table-layout: fixed;
+                    width: 100%;
+    
+                    & > tr:first-child {
+                        @include flexMix.flex(row, nowrap, none, center, f.rem(110px));
+                        background: colors.$gray-6;
+                        padding: f.rem(8px) 0 f.rem(8px) f.rem(10px);
+                        border-radius: f.rem(12px);
+                        width: 100%;
+    
+                        & > td:first-child {
+                            @include flexMix.flex(row, nowrap, none, flex-start, f.rem(20px));
+                            
+                            p {
+                                font-size: f.rem(12px);
+                                font-weight: 400;
+                            }
+                        }
+    
+                        & > td:not(:first-child) {
+                            @include flexMix.flex(row, nowrap, none, center, f.rem(20px));
+                            
+                            p {
+                                font-size: f.rem(12px);
+                                font-weight: 400;
+                            }
+                        }
+                    }
+    
+                    & > tr:not(:first-child) {
+                        @include flexMix.flex(row, wrap, flex-start, center, f.rem(30px));
+                        padding: f.rem(8px) f.rem(12px);
+                        width: 100%;
+                        height: f.rem(40px);
+    
+                        & > td:first-child {
+                            @include flexMix.flex(row, wrap, none, center, f.rem(25px));
+                            padding: 0px;
+                            width: f.rem(130px);
+                            height: f.rem(21px);
+    
+                            p {
+                                font-size: f.rem(12px);
+                                font-weight: 400;
+                            }
+    
+                            & > div {
+                                @include flexMix.flex(row, wrap, none, center, f.rem(5px));
+                                width: f.rem(70px);
+                                height: f.rem(20px);
+                            }
+                        }
+    
+                        & > td:not(:first-child) {
+                            @include flexMix.flex(row, wrap, flex-start, center, f.rem(0px));
+                            width: 40%;
+                            height: f.rem(24px);
+    
+                            & > div {
+                                @include flexMix.flex(row, wrap, none, center, f.rem(5px));
+                                height: f.rem(20px);
+                            }
+    
+                            p {
+                                font-size: f.rem(12px);
+                                font-weight: 400;
+                            }
+                        }
+    
+                    }
+    
+                }            
+            }
+        }
+    
+    }
+
+    #main-mark__table-marks__table__body__row__cell__mark-id {
+        display: none;
+    }
+
+    .main-mark__table-marks__table__body__row__cell__mark-value {
+        display: none;
+    }
+
+    #main-home__popular-events__table__col-name__cell__id-league-value,
+    #main-home__popular-events__table__col-name__cell__id-league {
+        display: none;
+    }
+
+    .main-home {
+        grid-area: main;
+        &__popular-events {
+            @include flexMix.flex(column, nowrap, flex-end, flex-start, 0);
+            padding: 0 0 f.rem(12px);
+            background: white;
+            border-radius: f.rem(10px);
+            
+            &__button-set {
+                @include flexMix.flex(row, nowrap, flex-end, none, f.rem(16px));
+                padding: f.rem(24px) f.rem(24px) f.rem(24px);
+                width: 100%;
+    
+                &__button {
+                    font-size: f.rem(16px);
+                    color: colors.$gray-1;
+                }
+    
+                &__button:hover{
+                    cursor: pointer;
+                }
+            }
+            
+            &__table {
+                padding: f.rem(16px) 0 f.rem(12px);
+                border-radius: f.rem(10px);
+                border-collapse: collapse;
+                table-layout: fixed;
+                width: 100%;
+                max-width: f.rem(900px);
+                min-width: f.rem(400px);
+    
+                &__col-name {
+                    width: 100%;
+                    border-top: f.rem(2px) solid colors.$gray-4;
+                    border-bottom: f.rem(2px) solid colors.$gray-4;
+                    background: colors.$gray-6;
+    
+                    &__cell:first-child {
+                        width: 18%;
+                    }
+    
+                    &__cell:last-child {
+                        width: 25%;
+                    }
+    
+                    &__cell {
+                        &__layout {
+                            &__name {
+                                color: colors.$gray-2;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+    
+                &__event {
+                    &__cell:first-child {
+                        width: 12%;
+                    }
+    
+                    &__cell:last-child {
+                        width: 25%;
+                    }
+    
+                    &__cell:nth-child(2) {
+                        padding-left: f.rem(32px);
+                        padding-right: f.rem(32px);
+                    }
+    
+                    &__cell {
+                        padding-top: f.rem(20px);
+                        padding-bottom: f.rem(20px);
+                        border-bottom: f.rem(1px) solid colors.$gray-4;
+                        overflow: hidden;
+    
+                        &__time-live-sign {
+                            @include flexMix.flex(row, nowrap, center, center, f.rem(32px));
+                        }
+    
+                        &__hour-date {
+                            @include flexMix.flex(column, nowrap, none, center, 0);
+    
+                            &__hour {
+                                font-size: f.rem(14px);
+                            }
+    
+                            &__date {
+                                font-size: f.rem(12px);
+                                white-space: nowrap;
+                            }
+                        }
+    
+                        &__layout {
+                            @include flexMix.flex(row, nowrap, center, center, f.rem(8px));
+    
+                            &__live-sign {
+                                @include flexMix.flex(row, nowrap, none, center, f.rem(4px));
+                                color: colors.$red;
+                                background-color: colors.$live-background;
+                                padding: f.rem(8px);
+                                border-radius: f.rem(6px);
+                                font-size: f.rem(13px);
+                                width: fit-content;
+                            }
+    
+                            &__team {
+                                @include flexMix.flex(row, nowrap, center, center, f.rem(4px));
+                                font-size: f.rem(16px);
+    
+                                &__shield {
+                                    width: f.rem(28px);
+                                }
+                            }
+    
+                            &__result {
+                                &__text {
+                                    font-size: f.rem(18px);
+                                    white-space: nowrap;
+    
+                                    &__colon {
+                                        color: colors.$gray-1;
+                                    }
+                                }
+                            }
+                        }
+    
+                        &__logo-text {
+                            @include flexMix.flex(row, nowrap, center, center, f.rem(6px));
+    
+                            &__logo {
+                                width: f.rem(20px);
+                            }
+    
+                            &__text {
+                                &__league {
+                                    font-size: f.rem(13px);
+                                    white-space: nowrap;
+                                }
+    
+                                &__country {
+                                    font-size: f.rem(11px);
+                                    color: colors.$gray-1;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .--main {
+        @include flexMix.flex(column, nowrap, flex-start, center, f.rem(16px));
+        padding: 2% 2%;
+        background: colors.$gray-8;
+        border-width: 0 f.rem(2px);
+        border-style: solid;
+        border-color: colors.$gray-4;
+        height: 100%;
+        min-height: 100vh;
+        width: 100%;
+    }
+
+    .--header {
+        @include flexMix.flex(column, nowrap, flex-start, flex-end, none);
+        font-weight: 700;
+        font-size: f.rem(20px);
+        line-height: f.rem(24px);
+        color: colors.$gray-1;
+        width: 100%;
+    }
+
+    .main-player {
+        @include flexMix.flex(column, nowrap, none, center, none);
+        &__player-team {
+            @include flexMix.flex(row, nowrap, space-between, center, f.rem(78px));
+            width: 100%;
+    
+            &__info {
+                @include flexMix.flex(row, nowrap, none, center, f.rem(8px));
+    
+                &__img {
+                    width: f.rem(80px);
+                    height: f.rem(80px);
+                }
+            }
+    
+            &__img {
+                width: f.rem(75px);
+                height: f.rem(75px);
+            }
+        }
+    
+        &__table-container {
+            width: 80%;
+    
+            &__last-events {
+                width: 100%;
+                min-width: f.rem(300px);
+                max-width: f.rem(625px);  
+    
+                tbody {
+                    tr:first-child {
+                        td {
+                            padding: f.rem(6px) 0;
+                            color: colors.$gray-2;
+                            font-size: f.rem(12px);
+                            text-align: center;
+                        }
+                    }
+    
+                    tr:not(:first-child) {
+                        td:nth-child(3), td:last-child {
+                            font-weight: 700;
+                            font-size: f.rem(15px);
+                        }
+    
+                        td:nth-child(3) {
+                            div {
+                                @include flexMix.flex(column, nowrap, center, center, f.rem(8px));
+                            }
+                        }
+                       
+                    }
+                }
+            }
+    
+            &__team-history {
+                width: 100%;
+                min-width: f.rem(300px);
+                max-width: f.rem(625px);  
+    
+                tbody {
+                    tr:first-child {
+                        td:nth-child(4) {
+                            display: none;
+                        }
+                    }
+        
+                    tr:not(:first-child) {                        
+                        td:nth-child(4) {
+                            display: none;
+                        }
+                    }
+    
+                    tr {  
+                        td:first-child, td:nth-child(2) {
+                            width: 25%;
+                        }
+                    }
+    
+                }
+            }
+        }
+    }
+
+    .main-team {
+        @include flexMix.flex(column, nowrap, none, flex-end, none);
+        &__shield-name {
+            @include flexMix.flex(row, nowrap, flex-end, center, f.rem(24px));
+            font-weight: 600;
+            font-size: f.rem(36px);
+            line-height: f.rem(42px);
+            width: 100%;
+        }
+    
+        &__prog-event {
+            @include flexMix.flex(row, nowrap, flex-end, center, f.rem(32px));
+            padding: f.rem(16px) f.rem(16px);
+            background: white;
+            border-radius: f.rem(10px);
+            width: 80%;
+            max-width: f.rem(425px);
+            min-width: f.rem(600px);
+    
+            &__team {
+                @include flexMix.flex(row, nowrap, none, center, f.rem(12px));
+                font-size: f.rem(18px);
+                line-height: f.rem(21px);
+    
+                & > img {
+                    width: f.rem(48px);
+                }
+            }
+    
+            &__result-date {
+                @include flexMix.flex(column, nowrap, none, center, f.rem(2px));
+                &__text:nth-child(2) {
+                    font-size: f.rem(16px);
+                }
+            }
+    
+        }
+    
+        &__players {
+            @include flexMix.flex(row, wrap, space-between, center, f.rem(10px));
+    
+            &__player {
+                @include flexMix.flex(column, nowrap, center, center, f.rem(4px));
+                padding: f.rem(4px) 0 f.rem(8px);
+                background: white;
+                border-radius: f.rem(10px);
+    
+                & img {
+                    width: f.rem(65px);
+                    height: f.rem(65px);
+                    border-radius: 50%;
+                    box-shadow: f.rem(1px) 0 f.rem(4px) f.rem(-1px) colors.$dark-text;
+                }
+    
+                & p {
+                    text-align: center;
+                    width: f.rem(38px)
+                }
+    
+                &__posi-country {
+                    @include flexMix.flex(row, nowrap, center, center, f.rem(38px));
+                    padding: f.rem(2px) 0;
+                    border-width: f.rem(.7) 0;
+                    border-style: solid;
+                    border-color: colors.$gray-4;
+                }
+    
+            }
+        }
+    
+        &__logo-league {
+            @include flexMix.flex(row, nowrap, flex-end, center, f.rem(12px));
+            font-weight: 600;
+            font-size: f.rem(20px);
+            line-height: f.rem(23px);
+            width: 100%;
+    
+            & > img {
+                width: f.rem(48px);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 570px) and (max-width:620px) {
+    .container-main {
+        @include flexMix.flex(row, nowrap, center, flex-start, none);
+        box-shadow: -1px 10px 59px -12px rgba(0,0,0,0.24);
+        -webkit-box-shadow: -1px 10px 59px -12px rgba(0,0,0,0.24);
+        -moz-box-shadow: -1px 10px 59px -12px rgba(0,0,0,0.24);
+
+        display: grid;
+        grid-template-columns: repeat(1);
+        grid-template-rows: repeat(2);
+        grid-template-areas: "nav"
+                             "main"
+    }
+
+    .main-login {
+        @include flexMix.flex(row, wrap, center, center, f.rem(64px));
+        background: white;
+        padding: f.rem(80px);
+        height: 100%;
+        min-height: 100vh;
+        width: f.rem(600px);
+    
+        &__presentation {
+            display: none;
+        }
     }
 
     .nav {
@@ -2107,7 +3318,6 @@ body {
 
             &__btn {
                 line-height: f.rem(45px);
-                padding: 0;
                 font-size: 1.4em;
                 font-weight: bold;
                 cursor: pointer;
@@ -2118,7 +3328,6 @@ body {
 
             &__cross {
                 line-height: f.rem(45px);
-                padding: 0;
                 font-size: 1.4em;
                 font-weight: bold;
                 cursor: pointer;
@@ -2183,86 +3392,9 @@ body {
         display: none;
     }
   
-    .aside-right {
-        @include flexMix.flex(row, nowrap, center, center, f.rem(24px));
-        padding: f.rem(40px) f.rem(38px);
-        grid-area: aside-right;
-        background: colors.$gray-8;
-        border-bottom: f.rem(1px) solid colors.$gray-1;
+    .aside-right {        
         display: none;
 
-        &__ad-container {
-        
-            &__ad {
-                width: f.rem(600px);
-                height: f.rem(100px);
-                background-color: hsl(0, 0%, 85%);
-            }
-
-            &__ad-delete {
-                @include flexMix.flex(column, nowrap, center, center, none);
-                text-decoration: underline;
-                color: colors.$dark-text;
-                font-size: f.rem(12px);
-                font-weight: bold;
-            }
-        }
-
-        &__table {
-            padding-top: f.rem(12px);
-            padding-bottom: f.rem(12px);
-            border: f.rem(1px) solid colors.$gray-4;
-            border-radius: f.rem(10px);
-            width: 100%;
-            min-width: f.rem(240px);
-            max-width: f.rem(300px);
-            margin-top: f.rem(40px);
-
-            &__head {
-                &__row{
-                    &__data {
-                        padding-left: f.rem(14px);
-                        border-bottom: f.rem(1px) solid colors.$gray-4;
-                        padding-bottom: f.rem(8px);
-        
-                        &__h2 {
-                            font-weight: 600;
-                            font-size: f.rem(18px);
-                        }
-                    }
-                }
-            }
-
-            &__body {
-                &__league {
-                    &__info {
-                        padding: f.rem(12px) f.rem(16px);
-                        border-bottom: f.rem(1px) solid colors.$gray-4;
-
-                        &__logo-text {
-                            @include flexMix.flex(row, nowrap, flex-start, center, f.rem(6px));
-
-                            &__logo {
-                                width: f.rem(18px);
-                            }
-
-                            &__league-country {
-                                &__league {
-                                    font-size: f.rem(14px);
-                                    white-space: nowrap;
-                                }
-
-                                &__country {
-                                    font-size: f.rem(12px);
-                                    color: colors.$gray-1;
-                                    white-space: nowrap;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
     } 
 
     .section-modal {
@@ -2424,6 +3556,19 @@ body {
                              "main"
     }
 
+    .main-login {
+        @include flexMix.flex(row, wrap, center, center, f.rem(64px));
+        background: white;
+        padding: f.rem(80px);
+        height: 100%;
+        min-height: 100vh;
+        width: f.rem(690px);
+    
+        &__presentation {
+            display: none;
+        }
+    }
+
     .nav {
         @include flexMix.flex(row, nowrap, none, center, f.rem(16px));
         width: 100%;
@@ -2482,14 +3627,7 @@ body {
         }
 
         &__table {
-            padding-top: f.rem(12px);
-            padding-bottom: f.rem(12px);
-            border: f.rem(1px) solid colors.$gray-4;
-            border-radius: f.rem(10px);
-            width: 100%;
-            min-width: f.rem(240px);
-            max-width: f.rem(300px);
-            margin-top: f.rem(40px);
+            display: none;
 
             &__head {
                 &__row{
@@ -2736,62 +3874,26 @@ body {
         }
 
         &__table {
-            padding-top: f.rem(12px);
-            padding-bottom: f.rem(12px);
-            border: f.rem(1px) solid colors.$gray-4;
-            border-radius: f.rem(10px);
-            width: 100%;
-            min-width: f.rem(240px);
-            max-width: f.rem(300px);
-            margin-top: f.rem(40px);
-
-            &__head {
-                &__row{
-                    &__data {
-                        padding-left: f.rem(14px);
-                        border-bottom: f.rem(1px) solid colors.$gray-4;
-                        padding-bottom: f.rem(8px);
-        
-                        &__h2 {
-                            font-weight: 600;
-                            font-size: f.rem(18px);
-                        }
-                    }
-                }
-            }
-
-            &__body {
-                &__league {
-                    &__info {
-                        padding: f.rem(12px) f.rem(16px);
-                        border-bottom: f.rem(1px) solid colors.$gray-4;
-
-                        &__logo-text {
-                            @include flexMix.flex(row, nowrap, flex-start, center, f.rem(6px));
-
-                            &__logo {
-                                width: f.rem(18px);
-                            }
-
-                            &__league-country {
-                                &__league {
-                                    font-size: f.rem(14px);
-                                    white-space: nowrap;
-                                }
-
-                                &__country {
-                                    font-size: f.rem(12px);
-                                    color: colors.$gray-1;
-                                    white-space: nowrap;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+            display: none;
         }
     } 
+
+    .main-login {
+        @include flexMix.flex(row, wrap, space-between, center, f.rem(64px));
+        background: white;
+        padding: f.rem(80px);
+        height: 100%;
+        min-height: 100vh;
+        width: f.rem(990px);
+    
+        &__presentation {
+            display: none;
+            @include flexMix.flex(column, nowrap, none, flex-start, f.rem(32px));
+            width: 40%;
+        }
+    }
 }
+
 
 @media (min-width: 1345px) {
     .container-main {
@@ -2806,9 +3908,25 @@ body {
         grid-template-areas: "nav aside-left main main aside-right"
     }
 
+
     .nav {
         &__hamburger-container {
             display: none;
+        }
+    }
+
+    .aside-left {
+
+        &__table {
+            display: none;
+            padding-top: f.rem(12px);
+            padding-bottom: f.rem(12px);
+            border: f.rem(1px) solid colors.$gray-4;
+            border-radius: f.rem(10px);
+            width: 100%;
+            min-width: f.rem(240px);
+            max-width: f.rem(300px);
+            margin-top: f.rem(20px);
         }
     }
 }

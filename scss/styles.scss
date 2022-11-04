@@ -1926,6 +1926,59 @@ body {
     }
 }
 
+.search-modal {
+    @include flexMix.flex(column, nowrap, center, center, none);
+    width: f.rem(300px);
+    height: f.rem(100px);
+    display: none;
+    position: absolute;
+    background: white;
+    border-radius: f.rem(10px);
+    margin: f.rem(56px);
+    box-shadow: 0px f.rem(8px) f.rem(15px) rgba(0, 0, 0, 0.25);
+
+    &__close-btn {
+        @include flexMix.flex(row, nowrap, flex-end, flex-start, none);
+        width: 98%;
+        padding: f.rem(10px);
+
+        &__btn {
+            cursor: pointer;
+        }
+    }
+
+    &__main-container {
+        margin: auto;
+        padding: f.rem(0px) f.rem(24px) f.rem(24px) f.rem(24px);
+
+        &__look-up {
+            margin: auto;
+            @include flexMix.flex(row, nowrap, space-between, center, f.rem(0px));
+            width: 80%;
+            height: f.rem(35px);
+            color: colors.$gray-3;
+            padding-left: f.rem(12px);
+            padding-right: f.rem(12px);
+            border: f.rem(1px) solid colors.$gray-3;
+            border-radius: f.rem(10px);
+    
+            // Input
+            &__search {
+                width: 100%;
+                height: f.rem(28px);
+            }
+            
+            // Boton icono lupa
+            &__submit {
+                height: 100%;
+                padding-left: f.rem(12px);
+                border-left: f.rem(1px) solid colors.$gray-3;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
 .--main {
     @include flexMix.flex(column, nowrap, flex-start, center, f.rem(32px));
     padding: f.rem(36px) f.rem(32px);

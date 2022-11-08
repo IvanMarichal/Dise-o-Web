@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $(".nav__link-group__link").click(function(){
+    $("#nav__link-group__link__search-id").click(function(){
         $(".search-modal").show(120);
     });
     $(".search-modal__close-btn__btn").click(function(){

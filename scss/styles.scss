@@ -70,6 +70,10 @@ body {
     }
 }
 
+#nav__link-group__link__search-id {
+    cursor: pointer;
+}
+
 // Menu de la izquieda
 .aside-left {
     @include flexMix.flex(column, nowrap, none, flex-start, f.rem(19px));
@@ -1085,6 +1089,10 @@ body {
                 &__vs {
                     font-size: f.rem(16px);
                 }
+
+                &__ad-fav {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -1557,7 +1565,6 @@ body {
 }
 
 .main-mark {
-
     &__event-match {
         @include flexMix.flex(row, nowrap, space-between, center, f.rem(24px));
         width: f.rem(620px);
@@ -2272,7 +2279,7 @@ body {
                         &__link {
                             @include flexMix.flex(column, nowrap, center, center, none);
                             text-decoration:none;  
-                            color: colors.$dark-text;
+                            color: colors.$gray-3;
                             padding: f.rem(8px);
                         }
 
@@ -3413,7 +3420,7 @@ body {
                         &__link {
                             @include flexMix.flex(column, nowrap, center, center, none);
                             text-decoration:none;  
-                            color: colors.$dark-text;
+                            color: colors.$gray-3;
                             padding: f.rem(8px);
                         }
 

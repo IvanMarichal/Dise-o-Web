@@ -10515,6 +10515,10 @@ body {
   transition: all 0.5s;
 }
 
+#nav__link-group__link__search-id {
+  cursor: pointer;
+}
+
 .aside-left {
   display: flex;
   flex-flow: column nowrap;
@@ -11566,6 +11570,9 @@ body {
 }
 .main-ev-per-sport__event__info__team__vs {
   font-size: 1rem;
+}
+.main-ev-per-sport__event__info__team__ad-fav {
+  cursor: pointer;
 }
 
 .main-set__event {
@@ -12900,7 +12907,7 @@ body {
     align-items: center;
     gap: none;
     text-decoration: none;
-    color: hsl(208deg, 50%, 15%);
+    color: hsl(217deg, 15%, 83%);
     padding: 0.5rem;
   }
   .nav__hamburger-container__main-group__ul-group__link-group__link > li {
@@ -14154,7 +14161,7 @@ body {
     align-items: center;
     gap: none;
     text-decoration: none;
-    color: hsl(208deg, 50%, 15%);
+    color: hsl(217deg, 15%, 83%);
     padding: 0.5rem;
   }
   .nav__hamburger-container__main-group__ul-group__link-group__link > li {

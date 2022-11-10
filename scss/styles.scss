@@ -2232,6 +2232,7 @@ body {
         }
 
         &__hamburger-container {
+            display: inline; 
             @include flexMix.flex(row, nowrap, flex-end, center, none);
             width: 100%;
 
@@ -2245,7 +2246,7 @@ body {
                 position: absolute;
             }
 
-            &__cross {
+            &__cross { 
                 line-height: f.rem(45px);
                 font-size: 1.4em;
                 font-weight: bold;
@@ -3373,6 +3374,7 @@ body {
         }
 
         &__hamburger-container {
+            display: inline; 
             @include flexMix.flex(row, nowrap, flex-end, center, none);
             width: 100%;
 

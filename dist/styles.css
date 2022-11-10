@@ -12848,6 +12848,7 @@ body {
     display: none;
   }
   .nav__hamburger-container {
+    display: inline;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
@@ -14102,6 +14103,7 @@ body {
     display: none;
   }
   .nav__hamburger-container {
+    display: inline;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;

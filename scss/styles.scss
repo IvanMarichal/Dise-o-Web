@@ -308,7 +308,8 @@ body {
             border-left: colors.$gray-3 solid f.rem(1px);
             border-right: colors.$gray-3 solid f.rem(1px);
             height: f.rem(40px);
-
+            color: black;
+            
             &__image-name {
                 @include flexMix.flex(row, nowrap, flex-start, center, f.rem(8px));
                 padding: f.rem(16px);
@@ -827,6 +828,7 @@ body {
 
     &__players {
         @include flexMix.flex(row, wrap, space-between, center, f.rem(10px));
+        color: black;
 
         &__player {
             @include flexMix.flex(column, nowrap, center, center, f.rem(4px));

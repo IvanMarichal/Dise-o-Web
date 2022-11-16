@@ -10771,6 +10771,7 @@ body {
   border-left: hsl(217deg, 15%, 83%) solid 0.0625rem;
   border-right: hsl(217deg, 15%, 83%) solid 0.0625rem;
   height: 2.5rem;
+  color: black;
 }
 .aside-left__league-container__table-info__team-info__image-name {
   display: flex;
@@ -11309,6 +11310,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 0.625rem;
+  color: black;
 }
 .main-team__players__player {
   display: flex;
